@@ -1,0 +1,39 @@
+.testimonial{
+	@include rem(padding-top, 5rem);
+	@include rem(padding-bottom, 4rem);		
+	&__item{		
+		h3{
+			color: site-color(white);
+			font-weight: bold-of($display-type);
+			border: 0px;
+		}
+		blockquote{
+			p{
+				color: site-color(white);
+				&:before{
+					color:rgba(255, 255, 255, 0.15);					
+				}
+			}
+		}
+		@include breakpoint-layout(break-2) {
+			float: left;
+			@include rem(max-width, 28.75rem);
+		}
+	}
+	&__cover{
+		display: none;
+		float: left;
+		@include rem(width, 14.94rem);
+		@include rem(margin-left, 3.75rem);
+		@include rem(margin-top, -5rem);
+		img{
+			@include filter_elements(grayscale(100%));
+			opacity: 0.4;
+		}
+		@include breakpoint-layout(break-2) {
+			display: block;
+		}
+	}
+	// theming colors
+	@extend %has-background-color;		
+}

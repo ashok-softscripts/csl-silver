@@ -1,0 +1,82 @@
+// =====================================================
+// ------------- Siegmeyer II Global Styles ------------
+// =====================================================
+// @author Thomas Bredin-Grey <tbredin@gmail.com>
+// Siegmeyer II: https://github.com/tbredin/Siegmeyer2
+// =====================================================
+
+
+html, body {
+    margin: 0;
+    background-color: site-color(white);
+}
+
+@if $debug-breakpoints == true and $debug-allow == true {
+    @include debug-breakpoints;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+    height: auto;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+svg {
+    max-width: 99.8%; // not 100% - to avoid clipping
+    max-height: 99.8%;
+}
+
+::placeholder {
+    color: site-color(gray_dark);
+    transition: color 0.25s ease;    
+}
+
+:focus::placeholder {
+    color: lighter(site-color(gray_light), 10);
+}
+
+.container {
+    @include set-container;
+    @extend %typeset;
+    clear: both;
+	@include rem(padding-left, 2.308rem);
+	@include rem(padding-right, 2.308rem);
+	@include breakpoint-layout(break-2) {
+		@include rem(padding-left, 3rem);
+		@include rem(padding-right, 3rem);	
+		&.is-offset{
+			max-width: 100%;
+			padding-right: 0px;
+			margin-right: 0px;
+		}
+	}
+	box-sizing: border-box;
+	&.is-full{
+		padding: 0px;
+	}
+}
+
+#main{
+	background-color: site-color(blue_mid_light);
+	overflow: hidden;
+}
+
+.content{
+	background-color: site-color(white);
+	transition: all 0.2s ease;
+	@include breakpoint-layout(break-2) {
+		transition: none;	
+	}
+	&--has-nav{
+		transform: translate3d(19.06rem, 0px, 0px);
+		@include breakpoint-layout(break-2) {
+			transform: none;
+			@include rem(margin-left, 19.06rem);
+			
+			.container, .footer__left__container, .pre-footer__container{
+				@include rem(margin-left, 3rem);
+			}
+		}		
+	}	
+}

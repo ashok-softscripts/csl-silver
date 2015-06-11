@@ -1,0 +1,20 @@
+.faq-section{
+	@include rem(padding-top, 2rem);
+	@include rem(padding-bottom, 4rem);
+	@include breakpoint-layout(break-2) {
+		@include rem(padding-top, 4.5rem);
+		@include rem(padding-bottom, 5rem);
+	}		
+	&__content{
+		@include breakpoint-layout(break-2) {
+			width: 50%;
+		}
+	}
+	h3{
+		font-weight: bold-of($display-type);
+		@include breakpoint-layout(break-2) {
+			border-bottom: 0px;
+		}
+	}
+	
+}

@@ -1,0 +1,22 @@
+{
+    "name": "gulpapp2",
+    "private": true,
+    "dependencies": {
+        "modernizr": "~2.6.2",
+        "jquery": "~1.11.0",
+        "ajaxchimp": "~1.3.0",
+        "symbolset-sass": "~0.2.1"
+    },
+    "devDependencies": {
+        "scut": "~0.10.4",
+        "svg-injector": "~1.1.0",
+        "enquire": "~2.1.2",
+        "velocity": "~1.2.2",
+        "svgeezy": "~1.0.0",
+        "respond": "~1.4.2",
+        "matchMedia": "~0.2.0",
+        "matchHeight": "~0.6.0",
+        "scrollr": "~0.6.29",
+        "loadcss": "~0.1.6"
+    }
+}

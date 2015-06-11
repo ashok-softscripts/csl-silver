@@ -1,0 +1,8 @@
+.general{
+	@include rem(padding-top, 2.308rem);
+	@include rem(padding-bottom, 2.308rem);
+	@include breakpoint-layout(break-2) {
+		@include rem(padding-top, 5rem);
+		@include rem(padding-bottom, 5rem);	
+	}
+}

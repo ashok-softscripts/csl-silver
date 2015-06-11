@@ -1,0 +1,36 @@
+// button module
+.button {
+    @include button;
+
+    // small variant
+    &_small {
+        @include rem(font-size, 13rem / 16);
+        font-weight: regular-of($display-type);
+        min-height: 0;
+        margin: 0 0.25em 0.5em 0;
+        padding: 0.45em 1em 0.3em;
+    }
+
+    &_full {
+        width: 100%;
+        box-sizing: border-box;        
+        text-align: center;
+        @include rem(font-size, 1.375rem);
+        padding-bottom: 0.7em;
+    }
+
+    &_disabled {
+        cursor: default;
+        pointer-events: none;
+        border-color: transparent !important;
+        background-color: site-color(gray_light) !important;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            color: site-color(gray_light) !important;
+        }
+    }
+}

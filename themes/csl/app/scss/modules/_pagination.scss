@@ -1,0 +1,38 @@
+.pagination {
+    clear: both;
+    text-align: center;
+	position: relative;
+	@include rem(margin-top, 2rem);
+	@include rem(margin-bottom, 3rem);
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		@include clearfix;
+		li{
+			padding: 0;
+			display: none;
+			color: site-color(blue);
+			&.prev{
+				display: block;
+				float: left;
+			}
+			&.next{
+				display: block;
+				float: right;
+			}
+			@include breakpoint-layout(break-2) {			
+				@include rem(padding-left, 0.7059rem);
+				@include rem(padding-right, 0.7059rem);
+				display: inline-block;				
+				@include rem(font-size, 1.5rem);
+				&.current{
+					color: site-color(blue_dark);
+				}
+				&.more{
+					padding: 0;
+				}				
+			}
+		}
+	}
+}

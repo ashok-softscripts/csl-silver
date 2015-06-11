@@ -1,0 +1,111 @@
+.nav {
+	position: absolute;
+	z-index: 99;
+	left: 0;
+	top: 0;
+	@include breakpoint-layout(break-2) {
+		position: fixed;
+	}
+	&__badge {
+    	display: inline-block;
+		@include rem(padding, 1.353rem);
+		@include rem(padding-top, 0.8824rem);
+		@include rem(padding-bottom, 0.5882rem);
+		background: site-color(blue_mid_light);
+		cursor: pointer;
+		transition: all 0.2s ease;
+		a {	
+			font-weight: regular-of($display-type);
+			outline: none;
+			span{ 
+				@include rem(width, 1rem);
+				@include rem(height, 0.1765rem);
+				background: site-color(blue);
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				@include rem(margin-top, -0.2353rem);
+				@include rem(margin-right, 0.4118rem);
+				transition: all 0.2s ease;
+				&:before, &:after{
+					display: block;
+					position: absolute;					
+					content: "";
+					@include rem(width, 1rem);
+					@include rem(height, 0.1765rem);
+					@include rem(top, -0.4118rem);					
+					background: site-color(blue);
+					transition: all 0.2s ease;
+				}
+				&:after{
+					@include rem(top, 0.4118rem);					
+				}
+			}			
+		}
+		@include breakpoint-layout(break-3) {
+			&:hover{
+				background: site-color(blue_light);
+			}
+		}
+    }
+
+	&__list {
+		@include rem(padding-left, 2.765rem);
+		list-style: none;
+		@include rem(padding-top, 1.294rem);
+		@include rem(padding-bottom, 1.294rem);
+		display: none;
+	}
+
+    &__item {
+		display: block;
+		padding: 0;
+		margin: 0;
+		@include rem(margin-bottom, 0.94rem);
+		border: 0;
+		text-align: left;		
+    }
+
+    &__link {		
+        @include rem(font-size, 1.5rem);
+		&.is-current{
+			@include text-link(site-color(blue_dark));			
+		}
+    }
+	
+	&--smaller{
+		.nav__item{
+			@include rem(margin-bottom, 0.4rem);
+		}
+		.nav__link{
+			@include rem(font-size, 1rem);			
+		}
+	}    
+	
+	&--open{
+		@include rem(width, 19.06rem);	
+		height: 100%;
+		background: site-color(blue_mid_light);		
+		.nav__badge{
+			a {
+				span{
+					background: transparent;
+					&:before{
+						transform: rotate(-45deg);
+						top: 0 !important;
+					}
+					&:after{
+						transform: rotate(45deg);
+						top: 0 !important;
+					}
+				}
+			}
+		}
+		.breadcrumb{
+			display: none;
+		}
+		.nav__list{
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,539 @@
+// =====================================================
+// ---------------- Siegmeyer II Mixins ----------------
+// =====================================================
+// @author Thomas Bredin-Grey <tom@studiothick.com>
+// Siegmeyer II: https://github.com/tbredin/Siegmeyer2
+// =====================================================
+
+
+// Breakpoints. Either set one to one of the breakpoint variables, or use a custom value for minor breakpoints.
+// Defaults to min-width, but both min->max and max-width are available too.
+// Parts based on https://gist.github.com/timknight/03e6335b8816aa534cf7
+@mixin breakpoint($break: 0, $max: 0) {
+    // Type of break variable
+    $value: type-of($break);
+    $unit: "";
+
+    @if $value != string {
+        $unit: unit($break);
+    }
+
+    // If it is a string (i.e. a breakpoint variable).
+    @if $value == string {
+        // If using 'break-1', 'break-2' etc output the correct breakpoints from map.
+        @if map-has-key($breakpoint-map, $break) {
+            @media screen and (min-width: #{break-get($break, start) / 16px * 1em} ) { @content; }
+        } @else {
+            @warn "#{$break} is not a set breakpoint variable";
+        }
+    } @else if  $value == number {
+        @if $unit == "px" or $unit == "" {
+            $break-get: no-unit($break);
+            $max-val: no-unit($max);
+
+            // If using other numbers output value in ems either for min, min & max or max width breakpoints.
+            $query: "all" !default;
+            @if $break-get != 0 and $max-val != 0 {
+                $query: "(min-width: #{$break-get / 16 * 1em}) and (max-width: #{$max-val / 16 * 1em})";
+            } @else if $break-get != 0 and $max-val == 0 {
+                $query: "(min-width: #{$break-get / 16 * 1em})";
+            } @else if $break-get == 0 and $max-val != 0 {
+                $query: "(max-width: #{$max-val / 16 * 1em})";
+            }
+            @media #{$query} { @content; }
+        } @else {
+            @warn "#{$break} is not valid for use in breakpoint - use a unitless number, pixels, or a breakpoint key";
+        }
+    }
+}
+
+
+// wrapper for combining breakpoint mixin and susy 'with layout' mixin. Also exposes current breakpoint to content via $current-breakpoint/root variables
+@mixin breakpoint-layout($match-breakpoint) {
+    @if map-has-key($breakpoint-map, $match-breakpoint) {
+        // make current breakpoint context available in global scope
+        $current-breakpoint: $match-breakpoint !global;
+        $current-root: break-get($match-breakpoint, size) !global;
+
+        @include breakpoint($match-breakpoint) {
+            @include with-layout(break-get($match-breakpoint, layout)) {
+                @content;
+            }
+        }
+
+        // reset current breakpoint context
+        $current-breakpoint: break-0 !global;
+        $current-root: break-get(break-0, size) !global;
+    } @else {
+        @warn "#{$match-breakpoint} is not a set breakpoint variable";
+    }
+}
+
+// shorthand function to retreive breakpoint values
+@function break-get($break, $val) {
+    @return map-get(map-get($breakpoint-map, $break), $val);
+}
+
+// sets containers for all breakpoints. It is important to use this to avoid incorrect breakpoint values due to type scaling
+@mixin set-container {
+    @extend %container;
+}
+// extend helper for cleaner markup
+%container {
+    @include layout(break-get(break-0, layout));
+
+    @if break-get(break-0, max) != none {
+        $break-adjusted: px-to-ems(break-get(break-0, max), 1px * nth($sizes, 1));
+        @if $debug-grid == true and $debug-allow == true {
+            @include container($break-adjusted show-columns);
+        } @else {
+            @include container($break-adjusted hide);
+        }
+    }
+
+    $i: 1;
+    @each $break in $breaks {
+         @if ($break != break-0) and break-get($break, max) != none {
+            @include breakpoint-layout($break) {
+                $break-adjusted: px-to-ems(break-get($break, max), 1px * nth($sizes, $i));
+
+                @if $debug-grid == true and $debug-allow == true {
+                    @include container($break-adjusted show-columns);
+                } @else {
+                    @include container($break-adjusted hide);
+                }
+            }
+        }
+        $i: $i + 1;
+    }
+}
+
+// debug breakpoints
+@mixin debug-breakpoints{
+    body {
+        // margin-bottom: 2rem;
+
+        &:before, &:after {
+            display: block;
+            position: fixed;
+            box-sizing: border-box;
+            bottom: 0;
+            animation-fill-mode: both;
+            @include rem(height, 2rem);
+            @include rem(line-height, 2rem);
+        }
+
+        &:before {
+            text-align: center;
+            background-color: $debug-color;
+            background-color: transparentize($debug-color, 0.15);
+            color: #fff;
+            @include rem(font-size, 0.875rem);
+            z-index: 10000;
+            // @include fontsize(iota, all);
+            @include rem(padding, 0 2rem);
+            border: 1px solid lighten($debug-color, 10%);
+            text-shadow: 0 -1px 0 darken($debug-color, 25%);
+            width: 100%;
+            animation: breakpoint-info-in 1s ease-out;
+
+            @each $break in $breaks {
+                @include breakpoint-layout($break) {
+                    content: "#{$break} ---- cols: #{break-get($break, cols)} ---- start: #{break-get($break, start)} ---- max-width: #{break-get($break, max)}"
+                }
+            }
+        }
+
+        &:after {
+            content: ".";
+            color: transparent;
+            z-index: 10001;
+            left: 50%;
+            transform: translateX(-50%);
+            @include rem(padding, 0.25rem 0 0);
+            animation: breakpoint-marker-in 1s ease-out;
+
+            @include breakpoint(break-1) {
+                border-left: 1px dotted lighten($debug-color, 15%);
+                border-right: 1px dotted lighten($debug-color, 15%);
+            }
+
+            @each $break in $breaks {
+                @include breakpoint-layout($break) {
+                    width: break-get($break, start);
+                }
+            }
+        }
+    }
+
+    @keyframes breakpoint-info-in {
+        0% {
+            transform: translateY(100%) translateZ(0);
+        }
+        100% {
+            transform: translateZ(0);
+        }
+    }
+
+    @keyframes breakpoint-marker-in {
+        0% {
+            transform: translateY(100%) translateX(-50%) translateZ(0);
+        }
+        100% {
+            transform: translateX(-50%) translateZ(0);
+        }
+    }
+}
+
+
+// type shorthand helpers
+// get font family
+@function font-family-of($type) {
+    @return unquote(map-get($type, font-family));
+}
+
+// get bold weight
+@function bold-of($type) {
+    @return unquote(map-get($type, bold));
+}
+
+// get regular weight
+@function regular-of($type) {
+    @return unquote(map-get($type, regular));
+}
+
+// get cap-height
+@function cap-height-of($type) {
+    @return unquote(map-get($type, cap-height));
+}
+
+// get cap-height weight
+@function italic-of($type) {
+    @return unquote(map-get($type, italic));
+}
+
+// recommended technique for svg img inclusion - use a wrapper that will maintain aspect ratio
+@mixin svg-frame($w: 1, $h: 1) {
+    @include scut-ratio-box($w / $h);
+    display: block;
+    transform: translateZ(0);  
+    > svg, > img {
+        @extend %svg-fill;
+    }
+}
+
+%svg-fill {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+// svg background image with png fallbacks
+@mixin svg-bg($name, $size: false, $hires: false){
+    background-image: url(#{$image-path}/#{$name}.svg);
+
+    @if ($size) {
+        background-size: $size;
+    }
+
+    @at-root .no-svg & {
+        background-image: url(#{$image-path}/#{$name}.png);
+
+        @if ($hires) {
+            @media only screen and (min-device-pixel-ratio: 1.5) {
+                background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.png);
+            }
+        }
+    }
+}
+
+
+// Clearfix.
+@mixin clearfix {
+    &:before, &:after{
+        display: table;
+        content: "";
+    }
+    &:after{
+        clear: both;
+    }
+}
+
+
+// set on typeset items to extend typography found in typography.scss
+@mixin typeset {
+    @extend %typeset;
+
+    position: relative;
+}
+
+
+// Root font-size in %, outputted in correct breakpoints.
+@mixin rootsize {
+    $max-size: nth($sizes, $breakpoint-count) / 16 * 100;
+
+    $size: nth($sizes, 1) / 16 * 100;
+    font-size: $size * 1%;
+
+    @if $fluid-type == true {
+        $fluid: 1 + (0.05 * ($max-size - $size) * 1);
+        font-size: 1vw * $fluid;
+
+        @media screen and (max-width: #{nth($sizes, 1) / $fluid * 100}px) {
+            font-size: $size * 1%;
+        }
+    }
+
+    // Loop through breakpoints.
+    @for $i from 2 through $breakpoint-count {
+        @media screen and (min-width: break-get(nth($breaks, $i), start) / 16px * 1em ) {
+            $size: nth($sizes, $i) / 16 * 100;
+            font-size: $size * 1%;
+
+            @if $fluid-type == true {
+                $fluid: 1 + (0.05 * ($max-size - $size) * 1);
+                font-size: 1vw * $fluid;
+
+                @media screen and (max-width: #{nth($sizes, $i) / $fluid * 100}px) {
+                    font-size: $size * 1%;
+                }
+            }
+        }
+    }
+}
+
+
+// Set fontsize and baseline at once
+@mixin type($font, $fontsize, $lineheight: 2, $leader: 0, $trailer: 0, $scale-ratio: 1) {
+    $font-value: type-of($fontsize);
+    $cap-height: map-get($font, cap-height);
+    $context: index($breaks, $current-breakpoint);
+    $font-calc: $fontsize * nth($sizes, $context);
+    $font-unit: unit($fontsize);
+
+    //set line height if different to default
+
+    @include rem(line-height, $lineheight * 1rem);
+
+    @include leader($leader);
+    @include trailer($trailer);
+
+    @if $font-value == number or $font-unit != rem {
+        @include rem(font-size, $fontsize);
+
+        $baseline-shift: ($font-calc / 2 * (($lineheight * $current-root / $font-calc) - $cap-height)) / $current-root + + 0.00001;
+        $baseline-push: 0 - (($font-calc / 2 * (($lineheight * $current-root / $font-calc) - $cap-height)) / $current-root + 0.00001);
+
+        @if $baseline-shift < 0 {
+            @include rem(margin-top, $baseline-shift * 1rem);
+        } @else {
+            @include rem(padding-top, $baseline-shift * 1rem);
+        }
+        @if $baseline-push < 0 {
+            @include rem(margin-bottom, $baseline-push * 1rem);
+        } @else {
+            @include rem(padding-bottom, $baseline-push * 1rem);
+        }
+
+        @if $scale-ratio != 1 and $scale-ratio > 1 {
+            $multiplier: 1;
+            @if $current-breakpoint == break-0 {
+                @each $breakpoint in $breaks {
+                    @if $breakpoint != break-0 {
+
+                        @include breakpoint-layout($breakpoint) {
+                            $increment: ($scale-ratio - 1) / ($breakpoint-count - 1);
+                            $multiplier: $multiplier + $increment;
+
+                            $line-height-calc: round($lineheight * $multiplier);
+                            $context: index($breaks, $current-breakpoint);
+                            $font-calc: $fontsize * nth($sizes, $context) * $multiplier;
+
+                            @include rem(line-height, $line-height-calc * 1rem);
+                            @include rem(font-size, $fontsize * $multiplier);
+                            $baseline-shift: ($font-calc / 2 * (($lineheight * $current-root / $font-calc) - $cap-height)) / $current-root + + 0.00001;
+                            $baseline-push: 0 - (($font-calc / 2 * (($lineheight * $current-root / $font-calc) - $cap-height)) / $current-root + 0.00001);
+
+                            @if $baseline-shift < 0 {
+                                @include rem(margin-top, $baseline-shift * 1rem);
+                            } @else {
+                                @include rem(padding-top, $baseline-shift * 1rem);
+                            }
+                            @if $baseline-push < 0 {
+                                @include rem(margin-bottom, $baseline-push * 1rem);
+                            } @else {
+                                @include rem(padding-bottom, $baseline-push * 1rem);
+                            }
+                        }
+                    }
+                }
+            } @else {
+                @warn "ERROR: scale-ratio must be used from root context, not within media queries";
+            }
+        }
+    } @else {
+        @warn "#{$fontsize} is not a valid font size. Please use rems";
+    }
+}
+
+@mixin leader($units) {
+    @if ($units > 0) {
+        @include rem(border-top, $units * 1rem solid transparent);
+    } @else {
+        border-top: 0 none;
+    }
+}
+
+@mixin trailer($units) {
+    @if ($units > 0) {
+        @include rem(border-bottom, $units * 1rem solid transparent);
+    } @else {
+        border-bottom: 0 none;
+    }
+}
+
+@mixin type-match {
+    line-height: 0;
+}
+
+//outline animated focus
+@mixin focus-outline($color: darken(site-color(blue), 15%)) {
+    @if $focus-outline == true {
+        outline: 0 solid $color;
+        outline: 0 solid transparentize($color, 0.8);
+        transition: outline 0.25s ease, background-color 0.25s ease;
+
+        &:focus {
+            outline: 8px solid $color;
+            outline: 8px solid transparentize($color, 0.55);
+            background-color: rgba(255,255,255,0.1);
+        }
+    }
+}
+
+
+// Thick Content Mixins
+@mixin button($color: site-color(green), $hover: site-color(blue)) {
+    border: none;
+    padding: 0.9em 1.9em 0.7em;
+    @include rem(min-height, 3rem);
+    line-height: 1.375em;
+    @include rem(font-size, 18rem / 16);
+    font-family: font-family-of($display-type);
+	color: site-color(white);
+    display: inline-block;
+    background-image: none !important;
+    box-sizing: border-box;
+    margin: 0.5rem 1rem 0.5rem 0;
+    @include button-paint($color, $hover);
+    outline: 0 solid rgba(0,0,0,0.8);
+    font-weight: bold-of($display-type);
+    transition: none!important;
+    border-radius: 0;
+    font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 1;	
+    .no-csstransforms & { // custs the mustard?
+        min-height: 0;
+    }
+
+    &:hover {
+        background-image: none;
+		color: site-color(white);
+    }
+    @if $focus-outline == true {
+        transition: outline 0.25s ease;
+
+        &:focus {
+            outline: 8px solid rgba(0,0,0,0.3);
+        }
+    }
+}
+
+@mixin button-paint($color: site-color(green), $hover: site-color(blue)) {
+    @if ($color != false) {
+		background-color: $color;
+    }
+
+    &:hover {
+        @if ($color != false) {
+            background-color: $color;
+        }
+
+        @if ($hover != false) {
+            background-color: $hover;
+        }
+    }
+}
+//draws a nicer text decoration
+@mixin text-link($color: #fff, $hover: $color, $pos: 98%) {
+    font-family: font-family-of($display-type);
+    -webkit-font-smoothing: antialiased;
+    color: $color;
+	text-decoration: none;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,transparentize($color, 0.75) 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 $pos;
+    transition: color .1s ease, background .5s ease, outline 0.25s ease;
+    @include focus-outline;
+
+    &:hover {
+        color: $hover;
+        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,transparentize($hover, 0.75) 50%);
+    }
+
+    &.stealth-link {
+        background-image: none;
+    }
+}
+
+
+// returns a number without a unit
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+// generate legacy fallbacks for rem units
+@mixin rem($property, $values) {
+    $px : ();
+    $rem: ();
+    $context: index($breaks, $current-breakpoint);
+    $base: nth($sizes, $context);
+
+    @each $value in $values {
+        @if type-of($value) == number {
+            $unit: unit($value);
+            $val: parseInt($value);
+
+            @if $unit == "rem" {
+                $px : append($px,  ($val * $base + px));
+                $rem: append($rem, $value);
+            } @else {
+                $px : append($px,  $value);
+                $rem: append($rem, $value);
+            }
+        } @else {
+            $px : append($px , $value);
+            $rem: append($rem, $value);
+        }
+    }
+
+    @if $px == $rem {
+        #{$property}: $px;
+    } @else {
+        #{$property}: $px;
+
+        @if $parse-rem == true {
+            #{$property}: $rem;
+        }
+    }
+}
+
+
+// filter mixin
+@mixin filter_elements($value) {
+    -webkit-filter: #{$value};
+    -moz-filter: #{$value};
+    filter: #{$value};
+}

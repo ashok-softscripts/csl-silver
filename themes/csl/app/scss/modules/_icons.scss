@@ -1,0 +1,28 @@
+.icon {
+    &_date {
+        @include svg-frame(16, 16);
+        display: inline-block;
+        margin-right: 0.4em;
+        width: 16/16 * 1em;
+    }
+	&_time {
+        @include svg-frame(16, 16);
+        display: inline-block;
+        margin-right: 0.4em;
+		margin-left: 1em;
+        width: 16/16 * 1em;
+    }
+    &_back {
+        @include svg-frame(12, 14);
+        display: inline-block;
+        margin-right: 0.625em;
+        margin-left: -0.25em;
+        width: 11/17 * 1em;
+        margin-top: -0.125em;
+
+        .button & {
+            width: 12/17 * 1em; //proportionately slightly bigger on buttons
+        }
+    }
+
+}

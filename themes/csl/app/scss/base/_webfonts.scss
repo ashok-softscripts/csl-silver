@@ -1,0 +1,22 @@
+// Add fonts here
+@font-face {
+  font-family: 'TradeGothicLTStd';
+  src: url('../webfonts/TradeGothicLTStd.eot?#iefix') format('embedded-opentype'),  
+       url('../webfonts/TradeGothicLTStd.otf')  format('opentype'),
+       url('../webfonts/TradeGothicLTStd.woff') format('woff'), 
+       url('../webfonts/TradeGothicLTStd.ttf')  format('truetype'),              
+       url('../webfonts/TradeGothicLTStd.svg#TradeGothicLTStd') format('svg');
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'TradeGothicLTStd';
+  src: url('../webfonts/TradeGothicLTStd-Light.eot?#iefix') format('embedded-opentype'),  
+       url('../webfonts/TradeGothicLTStd-Light.otf')  format('opentype'),
+	   url('../webfonts/TradeGothicLTStd-Light.woff') format('woff'), 
+       url('../webfonts/TradeGothicLTStd-Light.ttf')  format('truetype'),
+       url('../webfonts/TradeGothicLTStd-Light.svg#TradeGothicLTStd-Light') format('svg');
+       font-weight: 300;
+       font-style: normal;
+}

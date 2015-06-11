@@ -1,0 +1,53 @@
+.arrows-nav{
+	@include rem(margin-top, 3.077rem);
+	@include breakpoint-layout(break-1) {	
+		@include rem(margin-top, 1.563rem);
+	}
+	&__list{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		@include breakpoint-layout(break-1) {	
+			display: inline-block;
+			@include rem(margin-right, 3.125rem);
+		}
+	}
+	&__item{				
+		padding: 0;
+		border-bottom-width: 1.538rem;
+		&:before{
+			content: "";
+			display: inline-block;
+			width: 5px;
+			height: 10px;
+			background: url(#{$image-path}/arrows/t-arrow.png) no-repeat left center;
+			@include rem(margin-right, 1rem);
+			@include breakpoint-layout(break-1) {	
+				@include rem(margin-left, -0.8125rem);
+				@include rem(margin-right, 0.8125rem);
+			}
+		}
+	}
+	&__link{
+		font-weight: bold;
+	}
+}
+
+.arrow-link{
+	padding-top: 0;	
+	transition: all 2s ease;
+	&:after{
+		content: "";
+		width: 20px;
+		height: 17px;
+		display: inline-block;
+		@include rem(margin-left, 0.5rem);
+		background: url(#{$image-path}/arrows/arrow-blue.png) no-repeat right center;
+	}
+	&.arrow-white{
+		&:after{
+			background-image: url(#{$image-path}/arrows/arrow.png);
+		}
+	}
+	
+}

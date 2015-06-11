@@ -1,0 +1,68 @@
+.header{
+	background: site-color(blue_ver_light);
+	@include rem(padding-top, 0.6471rem);
+	@include rem(padding-bottom, 2.353rem);
+	
+	@include breakpoint-layout(break-1) {
+		@include rem(padding-top, 3.125rem);
+		@include rem(padding-bottom, 6.875rem);	
+	}
+	.container{
+		.logo{
+			float: right;
+			width: span(1.944);
+			@include rem(max-width, 140/13 * 1rem);			
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: none !important;
+			transform: translateZ(0);
+			border-bottom: 0 none;
+			background-image: none !important;
+			@include svg-frame(383, 303);
+			z-index: 90;
+			position: relative;
+			@include breakpoint-layout(break-1) {
+				width: span(2.91);
+				@include rem(max-width, 140/15 * 1rem);				
+			}
+			@include breakpoint-layout(break-2) {
+				width: span(1.888);
+				@include rem(max-width, 271/17 * 1rem);				
+			}			
+		}
+		.header-intro{			
+			padding-top: 10.46rem;			
+			@include breakpoint-layout(break-2) {
+				padding-top: 10rem;
+				@include rem(max-width, 52rem);			
+				&.header-home{
+					padding-top: 7.5rem;	
+					@include rem(max-width, 32rem);
+				}
+			}
+			p{
+				&.intro{
+					@extend %default-style;	
+					@include breakpoint-layout(break-2) {	
+						@include type($body-type, 1.4rem, 2, 0, 1);
+					}
+				}
+			}
+			&.header-alumni, &.header-program { // Content Alumni template
+				p{
+					padding-top: 0;
+					@include rem(font-size, 1rem);					
+				}
+				.alumni-designation, .program-schedule{
+					display: block;
+					@include breakpoint-layout(break-1) {	
+						display: inline-block;
+						@include rem(margin-right, 2rem);	
+					}					
+				}				
+			}
+		}
+	}
+}
