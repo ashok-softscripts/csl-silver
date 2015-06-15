@@ -83,6 +83,16 @@
 		'Speakers' => 'Speaker',
 	);
 
+	private static $many_many_extraFields=array(
+		'Instructors'=>array(
+			'SortData'=>'Int'
+		),
+		'Speakers'=>array(
+			'SortData'=>'Int'
+		)
+	);
+
+
 	private static $belongs_to = array(
 	);
 
@@ -206,7 +216,8 @@
 		$FormatImages->setFolderName('formatimages');
 		$FormatImages->setConfig('allowedMaxFileNumber', 10);
 
-        $config = GridFieldConfig_RelationEditor::create();
+        $config = GridFieldConfig_RelationEditor::create(10);
+		$config->addComponent(new GridFieldSortableRows('SortOrder'));
         $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
             'Title' => 'Name',
             'Program.Title'=> 'Program'
@@ -231,7 +242,7 @@
 
 		$fields->addFieldToTab('Root.Instructors', new DropdownField('InstructorsBGC','Background Colour',$this->dbObject('InstructorsBGC')->enumValues()));
 
-        $config = GridFieldConfig_RelationEditor::create();
+        $config = GridFieldConfig_RelationEditor::create(10);
         $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
             'Name' => 'Name'
         ));    
@@ -255,7 +266,7 @@
 
 		$fields->addFieldToTab('Root.Speakers', new DropdownField('SpeakersBGC','Background Colour',$this->dbObject('SpeakersBGC')->enumValues()));
 
-        $config = GridFieldConfig_RelationEditor::create();
+        $config = GridFieldConfig_RelationEditor::create(10);
         $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
             'Name' => 'Name'
         ));    
@@ -298,7 +309,8 @@
 		$feesContent->setRows(15);
 		$fields->addFieldToTab('Root.Fees', $feesContent);
 
-        $config = GridFieldConfig_RelationEditor::create();
+        $config = GridFieldConfig_RelationEditor::create(10);
+		$config->addComponent(new GridFieldSortableRows('SortOrder'));
         $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
             'Name' => 'Fee Type',
 			'Cost' => 'Cost'
@@ -319,7 +331,8 @@
 		$datesContent->setRows(15);
 		$fields->addFieldToTab('Root.Fees', $datesContent);
 
-        $config = GridFieldConfig_RelationEditor::create();
+        $config = GridFieldConfig_RelationEditor::create(10);
+		$config->addComponent(new GridFieldSortableRows('SortOrder'));
         $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
             'Name' => 'Event',
 			'Date' => 'Date'
@@ -356,7 +369,8 @@
 		$FAQContent->setRows(15);
 		$fields->addFieldToTab('Root.FAQ', $FAQContent);
 
-        $config = GridFieldConfig_RelationEditor::create();
+        $config = GridFieldConfig_RelationEditor::create(10);
+		$config->addComponent(new GridFieldSortableRows('SortOrder'));
         $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
             'Name' => 'Question'
         ));    

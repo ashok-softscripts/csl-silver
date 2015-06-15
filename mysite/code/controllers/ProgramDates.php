@@ -1,13 +1,15 @@
 <?php class ProgramDates extends DataObject {
     private static $db = array(
         'Name' => 'Varchar',
-		'Date' => 'Varchar'
+		'Date' => 'Varchar',
+        'SortOrder'=>'Int'
     );
 
 	private static $has_one = array(	
 		'Program' => 'Program'
 	);		
 
+	private static $default_sort='SortOrder';
 
 	public function getCMSFields(){	
 		$fields = parent::getCMSFields();

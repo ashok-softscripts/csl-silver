@@ -9,6 +9,7 @@
 		list-style: none;
 		@include breakpoint-layout(break-1) {	
 			display: inline-block;
+			vertical-align: top;
 			@include rem(margin-right, 3.125rem);
 		}
 	}

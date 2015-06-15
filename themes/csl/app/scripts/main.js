@@ -44,6 +44,8 @@ $(function() {
 	var $features = $('.features__block');
 	var $news_excerpt = $('.news__excerpt');
 	var $partners_item = $('.partners__item');	
+	var $all_partners_item = $('.all_partners__item');	
+	var $all_partners_logo = $('.all_partners__logo');
 	var $alumni_excerpt = $('.alumni__excerpt');		
 	var $alumni_item = $('.alumni__item');
 	var $programs_title = $('.programs h3');
@@ -96,6 +98,16 @@ $(function() {
 				$(this).children('a').css('line-height',$partner_height + 'px');
 			});
 		}
+		// match height of partners blocks
+		if ($all_partners_item.length > 0) {
+			$all_partners_logo.matchHeight(true);
+			$all_partners_logo.each(function(){
+				var $partner_logo_height = $(this).height();
+				$(this).css('line-height',$partner_logo_height + 'px');
+			});
+			$all_partners_item.matchHeight(true);			
+		}
+			
 		// match height of footer blocks
 		if ($pre_footer.length > 0) {
 			$pre_footer.matchHeight(true);

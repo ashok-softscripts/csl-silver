@@ -6,7 +6,8 @@
 		"silverstripe/cms": "3.1.12",
 		"silverstripe/framework": "3.1.12",
 		"silverstripe-themes/simple": "*",
-		"i-lateral/silverstripe-custommenus": "*@stable"
+		"i-lateral/silverstripe-custommenus": "*@stable",
+		"undefinedoffset/sortablegridfield": "dev-master"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"

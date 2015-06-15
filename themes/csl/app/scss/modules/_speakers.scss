@@ -43,11 +43,7 @@
 			width: 100%;
         }
 		// theming colors
-        @each $color in $site-color-names {
-            &.has-background_#{'' + $color} {
-                background: site-color($color);
-            }
-        }
+       @extend %has-background-color;
         
     }
 	h3{

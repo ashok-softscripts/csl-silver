@@ -23,6 +23,7 @@ class InstructorAdmin extends ModelAdmin {
     private static $menu_title = 'Instructors';
 
 	private static $menu_icon = "mysite/Assets/Instructor.png";
+
 }
 
 

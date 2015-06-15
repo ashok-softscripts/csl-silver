@@ -9,7 +9,7 @@
 	);		
 
 	private static $belongs_many_many = array(
-		 'Program' => 'Program'
+		 'Programs' => 'Program'
     );
 
 	private static $summary_fields = array(

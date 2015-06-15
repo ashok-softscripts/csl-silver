@@ -20,6 +20,12 @@ class Page extends SiteTree {
 		return DataObject::get_by_id("SiteTree", (int)$id);
 	}
 
+	public function CountMiddle($val){
+		if($val){
+			return round($val/2);
+		}
+	}
+
 	public function NotAwards() {
 
 
