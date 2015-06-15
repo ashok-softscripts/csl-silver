@@ -6,16 +6,14 @@
 		</div>
 	</div>        	
 </header>
-<!-- Alumni grid -->
-<section class="alumnies-directory">
+<!-- Program grid -->
+<section class="programs">
 	<div class="container">
-		<div class="alumni">
-			<% if Children %>
-				<% loop Children %>
-					<% include AlumniTeaser %>
-				<% end_loop %>
-			<% end_if %>
-		</div>
+		<% if Children %>
+			<% loop Children %>
+				<% include ProgramTeaser %>
+			<% end_loop %>
+		<% end_if %>
 	</div>
 </section>
 

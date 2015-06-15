@@ -54,6 +54,9 @@ $(function() {
 	var $injectedSVGs = $('img.inject-me');
 	var $instructors_item = $('.instructors__item');
 	var $speakers_item = $('.speakers__item');
+	var $programs_applicants = $('.program-applicants__item');
+	var $programs_applicants_quote = $('.program-applicants__item blockquote');
+	
 	
 	// Nav togggle
 	if($navToggle.length > 0) {
@@ -68,23 +71,16 @@ $(function() {
 	}
 	
 	// Anchor spots
-	$('a[href*=#]:not([href=#])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-		  //console.log(target);
-	      if (target.length) {
-	        $('html,body').animate({ scrollTop: target.offset().top }, 1000);
-			return false;
-	      }
-	    }
-	  });
-	
 	if ($indexnav.length > 0) {	
 		$($indexnav).find('.indexnav__link').click(function(){
-			var section_id = $(this).attr('href');
-			$($indexnav).find('.indexnav__link').removeClass('is-active');
-			$(this).addClass('is-active');
+			var section_id = $(this).attr('data-target');
+			if(section_id.length) {
+				var target = $('#' + section_id);
+				$('html,body').animate({ scrollTop: target.offset().top }, 1000);
+				$($indexnav).find('.indexnav__link').removeClass('is-active');
+				$(this).addClass('is-active');
+			}
+			return false;
 		});
 	}
 	function adjustHeight(){
@@ -136,6 +132,15 @@ $(function() {
 		if ($speakers_item.length > 0) {
 			$speakers_item.matchHeight(true);
 		}
+		// match height of program applicants quote
+		if ($programs_applicants_quote.length > 0) {
+			$programs_applicants_quote.matchHeight(true);
+		}
+		// match height of program applicants
+		if ($programs_applicants.length > 0) {
+			$programs_applicants.matchHeight(true);
+		}
+		
 				
 	}
 	
@@ -187,7 +192,7 @@ $(function() {
 	
 	if (($section_overview.length > 0) && ($indexnav.length > 0) ) {
 		var firstScrollTop = $section_overview.offset().top;
-		var lastSection = $indexnav.find('.indexnav__item:last-child').children('a').attr('href');
+		var lastSection = '#' + $indexnav.find('.indexnav__item:last-child').children('a').attr('data-target');
 		var lastScrollTop = $(lastSection).offset().top + ($(lastSection).height()/2); 
 		$(window).scroll(function(event){
 			var st = jQuery(this).scrollTop();

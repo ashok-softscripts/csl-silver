@@ -7,20 +7,11 @@ class Page extends SiteTree {
 	);
 
 	private static $has_one = array(
-		'Thumbnail' => 'Image',
-		'HeroImage' => 'Image'
+
 	);
 
 	public function getCMSFields() {
 			$fields = parent::getCMSFields();
-
-			$fields->addFieldToTab('Root.Images', $thumbnail = new UploadField('Thumbnail', 'Thumbnail Image'));
-			$thumbnail->allowedExtensions = array('jpg', 'png', 'svg');
-			$thumbnail->setFolderName('thumbnails');
-
-			$fields->addFieldToTab('Root.Images', $hero = new UploadField('HeroImage', 'Hero Image'));
-			$hero->allowedExtensions = array('jpg', 'png', 'svg');
-			$hero->setFolderName('heroes');
 
 			return $fields;
 	}
@@ -30,6 +21,8 @@ class Page extends SiteTree {
 	}
 
 	public function NotAwards() {
+
+
 		$url = Director::protocolAndHost();
 
 		if(stristr($url, 'awards') === FALSE) {
