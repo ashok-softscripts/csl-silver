@@ -10,13 +10,17 @@
 <section class="alumnies-directory">
 	<div class="container">
 		<div class="alumni">
-			<% if Children %>
-				<% loop Children %>
+			<% if $PaginatedAlumni.Exists %>
+				<% loop $PaginatedAlumni %>
 					<% include AlumniTeaser %>
 				<% end_loop %>
 			<% end_if %>
 		</div>
+		<% with $PaginatedAlumni %>
+			<% include Pagination %>
+		<% end_with %>	
 	</div>
+	
 </section>
 
 <% include Features %>   

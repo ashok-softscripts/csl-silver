@@ -50,12 +50,12 @@
 					}
 				}
 			}
-			&.header-alumni, &.header-program { // Content Alumni template
+			&.header-alumni, &.header-program, &.header-news { // Content Alumni template
 				p{
 					padding-top: 0;
 					@include rem(font-size, 1rem);					
 				}
-				.alumni-designation, .program-schedule{
+				.alumni-designation, .program-schedule, .news-author{
 					display: block;
 					@include breakpoint-layout(break-1) {	
 						display: inline-block;

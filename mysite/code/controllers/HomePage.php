@@ -84,6 +84,7 @@
 		return $fields;
 
   }
+	
 
 	
 }
@@ -96,11 +97,15 @@ class HomePage_Controller extends Page_Controller {
   public function init() {
     parent::init();
   }
-
 	
   public function FeaturedPartners($num=8) {
     $holder = PartnerCollection::get()->First();
     return ($holder) ? Partner::get()->filter('ParentID', $holder->ID)->limit($num) : false;
+  }
+
+  function LatestNews($num=2){
+	$holder = Blog::get()->First();
+    return ($holder) ? BlogPost::get()->filter('ParentID', $holder->ID)->limit($num) : false;
   }
 
 

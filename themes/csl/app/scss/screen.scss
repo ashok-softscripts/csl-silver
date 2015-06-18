@@ -25,6 +25,7 @@ $debug-allow: true;
 @import "base/filters";
 
 // Import all modules
+@import "modules/forms";
 @import "modules/nav";
 @import "modules/breadcrumb";
 @import "modules/header";
@@ -38,6 +39,7 @@ $debug-allow: true;
 @import "modules/faq-section";
 @import "modules/features";
 @import "modules/news-items";
+@import "modules/single-news";
 @import "modules/partners";
 @import "modules/all-partners";
 @import "modules/general-content";
@@ -52,6 +54,7 @@ $debug-allow: true;
 @import "modules/speakers";
 @import "modules/program-applicants";
 @import "modules/program-fees";
+@import "modules/apply-form";
 
 // Import all states
 // @import "states/state__name";

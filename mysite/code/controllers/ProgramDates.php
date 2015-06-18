@@ -1,12 +1,12 @@
 <?php class ProgramDates extends DataObject {
-    private static $db = array(
-        'Name' => 'Varchar',
+	private static $db = array(
+		'Name' => 'Varchar',
 		'Date' => 'Varchar',
-        'SortOrder'=>'Int'
-    );
+		'SortOrder'=>'Int'
+	);
 
 	private static $has_one = array(	
-		'Program' => 'Program'
+		'ProgramFeesDates' => 'ProgramFeesDates'
 	);		
 
 	private static $default_sort='SortOrder';
@@ -16,6 +16,5 @@
 		$fields->renameField('Name', 'Event');
 		return $fields;
 	}
-
 }
 ?>

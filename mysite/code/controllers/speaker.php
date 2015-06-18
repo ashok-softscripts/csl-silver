@@ -5,11 +5,11 @@
     );
 
 	private static $has_one = array(	
-		'Thumbnail' => 'Image'
+		'Thumbnail' => 'Image'		
 	);		
 
 	private static $belongs_many_many = array(
-		 'Program' => 'Program'
+		 'ProgramSpeakerss' => 'ProgramSpeakers'
     );
 
 	private static $summary_fields = array(

@@ -196,7 +196,7 @@ a.stealth-link {
   background-image: none;
 }
 
-p, li, .header .container .header-intro p.intro {
+p, li, form label:not(.radio-label), .header .container .header-intro p.intro {
   line-height: 26px;
   line-height: 2rem;
   border-top: 0 none;
@@ -210,7 +210,7 @@ p, li, .header .container .header-intro p.intro {
   margin-bottom: -0.549885rem;
 }
 @media screen and (min-width: 47.9375em) {
-  p, li, .header .container .header-intro p.intro {
+  p, li, form label:not(.radio-label), .header .container .header-intro p.intro {
     line-height: 30px;
     line-height: 2rem;
     border-top: 0 none;
@@ -254,61 +254,61 @@ p.intro, li.intro, blockquote p, .pre-footer .get-in-touch .contact-email, .news
   }
 }
 
-.has-background_blue.testimonial, .has-background_blue.seansonal-section, .has-background_blue.faq-section, .has-background_blue.features__block, .partners-section .has-background_blue.container, .has-background_blue.all_partners, .has-background_blue.alumni__cover, .has-background_blue.programs__cover, .has-background_blue.overview, .has-background_blue.program-format, .has-background_blue.instructors__cover, .has-background_blue.instructors, .has-background_blue.speakers__cover, .has-background_blue.speakers, .has-background_blue.program-applicants, .has-background_blue.program-fees {
+.has-background_blue.testimonial, .has-background_blue.seansonal-section, .has-background_blue.faq-section, .has-background_blue.features__block, .partners-section .has-background_blue.container, .has-background_blue.all_partners, .has-background_blue.general, .has-background_blue.alumni__cover, .has-background_blue.programs__cover, .has-background_blue.overview, .has-background_blue.program-format, .has-background_blue.instructors__cover, .has-background_blue.instructors, .has-background_blue.speakers__cover, .has-background_blue.speakers, .has-background_blue.program-applicants, .has-background_blue.program-fees, .has-background_blue.apply-form {
   background: #006d81;
 }
-.has-background_blue_dark.testimonial, .has-background_blue_dark.seansonal-section, .has-background_blue_dark.faq-section, .has-background_blue_dark.features__block, .partners-section .has-background_blue_dark.container, .has-background_blue_dark.all_partners, .has-background_blue_dark.alumni__cover, .has-background_blue_dark.programs__cover, .has-background_blue_dark.overview, .has-background_blue_dark.program-format, .has-background_blue_dark.instructors__cover, .has-background_blue_dark.instructors, .has-background_blue_dark.speakers__cover, .has-background_blue_dark.speakers, .has-background_blue_dark.program-applicants, .has-background_blue_dark.program-fees {
+.has-background_blue_dark.testimonial, .has-background_blue_dark.seansonal-section, .has-background_blue_dark.faq-section, .has-background_blue_dark.features__block, .partners-section .has-background_blue_dark.container, .has-background_blue_dark.all_partners, .has-background_blue_dark.general, .has-background_blue_dark.alumni__cover, .has-background_blue_dark.programs__cover, .has-background_blue_dark.overview, .has-background_blue_dark.program-format, .has-background_blue_dark.instructors__cover, .has-background_blue_dark.instructors, .has-background_blue_dark.speakers__cover, .has-background_blue_dark.speakers, .has-background_blue_dark.program-applicants, .has-background_blue_dark.program-fees, .has-background_blue_dark.apply-form {
   background: #31555c;
 }
-.has-background_blue_light.testimonial, .has-background_blue_light.seansonal-section, .has-background_blue_light.faq-section, .has-background_blue_light.features__block, .partners-section .has-background_blue_light.container, .has-background_blue_light.all_partners, .has-background_blue_light.alumni__cover, .has-background_blue_light.programs__cover, .has-background_blue_light.overview, .has-background_blue_light.program-format, .has-background_blue_light.instructors__cover, .has-background_blue_light.instructors, .has-background_blue_light.speakers__cover, .has-background_blue_light.speakers, .has-background_blue_light.program-applicants, .has-background_blue_light.program-fees {
+.has-background_blue_light.testimonial, .has-background_blue_light.seansonal-section, .has-background_blue_light.faq-section, .has-background_blue_light.features__block, .partners-section .has-background_blue_light.container, .has-background_blue_light.all_partners, .has-background_blue_light.general, .has-background_blue_light.alumni__cover, .has-background_blue_light.programs__cover, .has-background_blue_light.overview, .has-background_blue_light.program-format, .has-background_blue_light.instructors__cover, .has-background_blue_light.instructors, .has-background_blue_light.speakers__cover, .has-background_blue_light.speakers, .has-background_blue_light.program-applicants, .has-background_blue_light.program-fees, .has-background_blue_light.apply-form {
   background: #b5dfdc;
 }
-.has-background_blue_mid_light.testimonial, .has-background_blue_mid_light.seansonal-section, .has-background_blue_mid_light.faq-section, .has-background_blue_mid_light.features__block, .partners-section .has-background_blue_mid_light.container, .has-background_blue_mid_light.all_partners, .has-background_blue_mid_light.alumni__cover, .has-background_blue_mid_light.programs__cover, .has-background_blue_mid_light.overview, .has-background_blue_mid_light.program-format, .has-background_blue_mid_light.instructors__cover, .has-background_blue_mid_light.instructors, .has-background_blue_mid_light.speakers__cover, .has-background_blue_mid_light.speakers, .has-background_blue_mid_light.program-applicants, .has-background_blue_mid_light.program-fees {
+.has-background_blue_mid_light.testimonial, .has-background_blue_mid_light.seansonal-section, .has-background_blue_mid_light.faq-section, .has-background_blue_mid_light.features__block, .partners-section .has-background_blue_mid_light.container, .has-background_blue_mid_light.all_partners, .has-background_blue_mid_light.general, .has-background_blue_mid_light.alumni__cover, .has-background_blue_mid_light.programs__cover, .has-background_blue_mid_light.overview, .has-background_blue_mid_light.program-format, .has-background_blue_mid_light.instructors__cover, .has-background_blue_mid_light.instructors, .has-background_blue_mid_light.speakers__cover, .has-background_blue_mid_light.speakers, .has-background_blue_mid_light.program-applicants, .has-background_blue_mid_light.program-fees, .has-background_blue_mid_light.apply-form {
   background: #e8f3f5;
 }
-.has-background_blue_ver_light.testimonial, .has-background_blue_ver_light.seansonal-section, .has-background_blue_ver_light.faq-section, .has-background_blue_ver_light.features__block, .partners-section .has-background_blue_ver_light.container, .has-background_blue_ver_light.all_partners, .has-background_blue_ver_light.alumni__cover, .has-background_blue_ver_light.programs__cover, .has-background_blue_ver_light.overview, .has-background_blue_ver_light.program-format, .has-background_blue_ver_light.instructors__cover, .has-background_blue_ver_light.instructors, .has-background_blue_ver_light.speakers__cover, .has-background_blue_ver_light.speakers, .has-background_blue_ver_light.program-applicants, .has-background_blue_ver_light.program-fees {
+.has-background_blue_ver_light.testimonial, .has-background_blue_ver_light.seansonal-section, .has-background_blue_ver_light.faq-section, .has-background_blue_ver_light.features__block, .partners-section .has-background_blue_ver_light.container, .has-background_blue_ver_light.all_partners, .has-background_blue_ver_light.general, .has-background_blue_ver_light.alumni__cover, .has-background_blue_ver_light.programs__cover, .has-background_blue_ver_light.overview, .has-background_blue_ver_light.program-format, .has-background_blue_ver_light.instructors__cover, .has-background_blue_ver_light.instructors, .has-background_blue_ver_light.speakers__cover, .has-background_blue_ver_light.speakers, .has-background_blue_ver_light.program-applicants, .has-background_blue_ver_light.program-fees, .has-background_blue_ver_light.apply-form {
   background: #f3f9fa;
 }
-.has-background_orange.testimonial, .has-background_orange.seansonal-section, .has-background_orange.faq-section, .has-background_orange.features__block, .partners-section .has-background_orange.container, .has-background_orange.all_partners, .has-background_orange.alumni__cover, .has-background_orange.programs__cover, .has-background_orange.overview, .has-background_orange.program-format, .has-background_orange.instructors__cover, .has-background_orange.instructors, .has-background_orange.speakers__cover, .has-background_orange.speakers, .has-background_orange.program-applicants, .has-background_orange.program-fees {
+.has-background_orange.testimonial, .has-background_orange.seansonal-section, .has-background_orange.faq-section, .has-background_orange.features__block, .partners-section .has-background_orange.container, .has-background_orange.all_partners, .has-background_orange.general, .has-background_orange.alumni__cover, .has-background_orange.programs__cover, .has-background_orange.overview, .has-background_orange.program-format, .has-background_orange.instructors__cover, .has-background_orange.instructors, .has-background_orange.speakers__cover, .has-background_orange.speakers, .has-background_orange.program-applicants, .has-background_orange.program-fees, .has-background_orange.apply-form {
   background: #f36f43;
 }
-.has-background_orange_mid.testimonial, .has-background_orange_mid.seansonal-section, .has-background_orange_mid.faq-section, .has-background_orange_mid.features__block, .partners-section .has-background_orange_mid.container, .has-background_orange_mid.all_partners, .has-background_orange_mid.alumni__cover, .has-background_orange_mid.programs__cover, .has-background_orange_mid.overview, .has-background_orange_mid.program-format, .has-background_orange_mid.instructors__cover, .has-background_orange_mid.instructors, .has-background_orange_mid.speakers__cover, .has-background_orange_mid.speakers, .has-background_orange_mid.program-applicants, .has-background_orange_mid.program-fees {
+.has-background_orange_mid.testimonial, .has-background_orange_mid.seansonal-section, .has-background_orange_mid.faq-section, .has-background_orange_mid.features__block, .partners-section .has-background_orange_mid.container, .has-background_orange_mid.all_partners, .has-background_orange_mid.general, .has-background_orange_mid.alumni__cover, .has-background_orange_mid.programs__cover, .has-background_orange_mid.overview, .has-background_orange_mid.program-format, .has-background_orange_mid.instructors__cover, .has-background_orange_mid.instructors, .has-background_orange_mid.speakers__cover, .has-background_orange_mid.speakers, .has-background_orange_mid.program-applicants, .has-background_orange_mid.program-fees, .has-background_orange_mid.apply-form {
   background: #e86c42;
 }
-.has-background_orange_dark.testimonial, .has-background_orange_dark.seansonal-section, .has-background_orange_dark.faq-section, .has-background_orange_dark.features__block, .partners-section .has-background_orange_dark.container, .has-background_orange_dark.all_partners, .has-background_orange_dark.alumni__cover, .has-background_orange_dark.programs__cover, .has-background_orange_dark.overview, .has-background_orange_dark.program-format, .has-background_orange_dark.instructors__cover, .has-background_orange_dark.instructors, .has-background_orange_dark.speakers__cover, .has-background_orange_dark.speakers, .has-background_orange_dark.program-applicants, .has-background_orange_dark.program-fees {
+.has-background_orange_dark.testimonial, .has-background_orange_dark.seansonal-section, .has-background_orange_dark.faq-section, .has-background_orange_dark.features__block, .partners-section .has-background_orange_dark.container, .has-background_orange_dark.all_partners, .has-background_orange_dark.general, .has-background_orange_dark.alumni__cover, .has-background_orange_dark.programs__cover, .has-background_orange_dark.overview, .has-background_orange_dark.program-format, .has-background_orange_dark.instructors__cover, .has-background_orange_dark.instructors, .has-background_orange_dark.speakers__cover, .has-background_orange_dark.speakers, .has-background_orange_dark.program-applicants, .has-background_orange_dark.program-fees, .has-background_orange_dark.apply-form {
   background: #a3653c;
 }
-.has-background_green.testimonial, .has-background_green.seansonal-section, .has-background_green.faq-section, .has-background_green.features__block, .partners-section .has-background_green.container, .has-background_green.all_partners, .has-background_green.alumni__cover, .has-background_green.programs__cover, .has-background_green.overview, .has-background_green.program-format, .has-background_green.instructors__cover, .has-background_green.instructors, .has-background_green.speakers__cover, .has-background_green.speakers, .has-background_green.program-applicants, .has-background_green.program-fees {
+.has-background_green.testimonial, .has-background_green.seansonal-section, .has-background_green.faq-section, .has-background_green.features__block, .partners-section .has-background_green.container, .has-background_green.all_partners, .has-background_green.general, .has-background_green.alumni__cover, .has-background_green.programs__cover, .has-background_green.overview, .has-background_green.program-format, .has-background_green.instructors__cover, .has-background_green.instructors, .has-background_green.speakers__cover, .has-background_green.speakers, .has-background_green.program-applicants, .has-background_green.program-fees, .has-background_green.apply-form {
   background: #008266;
 }
-.has-background_green_light.testimonial, .has-background_green_light.seansonal-section, .has-background_green_light.faq-section, .has-background_green_light.features__block, .partners-section .has-background_green_light.container, .has-background_green_light.all_partners, .has-background_green_light.alumni__cover, .has-background_green_light.programs__cover, .has-background_green_light.overview, .has-background_green_light.program-format, .has-background_green_light.instructors__cover, .has-background_green_light.instructors, .has-background_green_light.speakers__cover, .has-background_green_light.speakers, .has-background_green_light.program-applicants, .has-background_green_light.program-fees {
+.has-background_green_light.testimonial, .has-background_green_light.seansonal-section, .has-background_green_light.faq-section, .has-background_green_light.features__block, .partners-section .has-background_green_light.container, .has-background_green_light.all_partners, .has-background_green_light.general, .has-background_green_light.alumni__cover, .has-background_green_light.programs__cover, .has-background_green_light.overview, .has-background_green_light.program-format, .has-background_green_light.instructors__cover, .has-background_green_light.instructors, .has-background_green_light.speakers__cover, .has-background_green_light.speakers, .has-background_green_light.program-applicants, .has-background_green_light.program-fees, .has-background_green_light.apply-form {
   background: #d4e48f;
 }
-.has-background_green_dark.testimonial, .has-background_green_dark.seansonal-section, .has-background_green_dark.faq-section, .has-background_green_dark.features__block, .partners-section .has-background_green_dark.container, .has-background_green_dark.all_partners, .has-background_green_dark.alumni__cover, .has-background_green_dark.programs__cover, .has-background_green_dark.overview, .has-background_green_dark.program-format, .has-background_green_dark.instructors__cover, .has-background_green_dark.instructors, .has-background_green_dark.speakers__cover, .has-background_green_dark.speakers, .has-background_green_dark.program-applicants, .has-background_green_dark.program-fees {
+.has-background_green_dark.testimonial, .has-background_green_dark.seansonal-section, .has-background_green_dark.faq-section, .has-background_green_dark.features__block, .partners-section .has-background_green_dark.container, .has-background_green_dark.all_partners, .has-background_green_dark.general, .has-background_green_dark.alumni__cover, .has-background_green_dark.programs__cover, .has-background_green_dark.overview, .has-background_green_dark.program-format, .has-background_green_dark.instructors__cover, .has-background_green_dark.instructors, .has-background_green_dark.speakers__cover, .has-background_green_dark.speakers, .has-background_green_dark.program-applicants, .has-background_green_dark.program-fees, .has-background_green_dark.apply-form {
   background: #254e40;
 }
-.has-background_green_forest.testimonial, .has-background_green_forest.seansonal-section, .has-background_green_forest.faq-section, .has-background_green_forest.features__block, .partners-section .has-background_green_forest.container, .has-background_green_forest.all_partners, .has-background_green_forest.alumni__cover, .has-background_green_forest.programs__cover, .has-background_green_forest.overview, .has-background_green_forest.program-format, .has-background_green_forest.instructors__cover, .has-background_green_forest.instructors, .has-background_green_forest.speakers__cover, .has-background_green_forest.speakers, .has-background_green_forest.program-applicants, .has-background_green_forest.program-fees {
+.has-background_green_forest.testimonial, .has-background_green_forest.seansonal-section, .has-background_green_forest.faq-section, .has-background_green_forest.features__block, .partners-section .has-background_green_forest.container, .has-background_green_forest.all_partners, .has-background_green_forest.general, .has-background_green_forest.alumni__cover, .has-background_green_forest.programs__cover, .has-background_green_forest.overview, .has-background_green_forest.program-format, .has-background_green_forest.instructors__cover, .has-background_green_forest.instructors, .has-background_green_forest.speakers__cover, .has-background_green_forest.speakers, .has-background_green_forest.program-applicants, .has-background_green_forest.program-fees, .has-background_green_forest.apply-form {
   background: #032127;
 }
-.has-background_green_lime.testimonial, .has-background_green_lime.seansonal-section, .has-background_green_lime.faq-section, .has-background_green_lime.features__block, .partners-section .has-background_green_lime.container, .has-background_green_lime.all_partners, .has-background_green_lime.alumni__cover, .has-background_green_lime.programs__cover, .has-background_green_lime.overview, .has-background_green_lime.program-format, .has-background_green_lime.instructors__cover, .has-background_green_lime.instructors, .has-background_green_lime.speakers__cover, .has-background_green_lime.speakers, .has-background_green_lime.program-applicants, .has-background_green_lime.program-fees {
+.has-background_green_lime.testimonial, .has-background_green_lime.seansonal-section, .has-background_green_lime.faq-section, .has-background_green_lime.features__block, .partners-section .has-background_green_lime.container, .has-background_green_lime.all_partners, .has-background_green_lime.general, .has-background_green_lime.alumni__cover, .has-background_green_lime.programs__cover, .has-background_green_lime.overview, .has-background_green_lime.program-format, .has-background_green_lime.instructors__cover, .has-background_green_lime.instructors, .has-background_green_lime.speakers__cover, .has-background_green_lime.speakers, .has-background_green_lime.program-applicants, .has-background_green_lime.program-fees, .has-background_green_lime.apply-form {
   background: #BCD45B;
 }
-.has-background_gray.testimonial, .has-background_gray.seansonal-section, .has-background_gray.faq-section, .has-background_gray.features__block, .partners-section .has-background_gray.container, .has-background_gray.all_partners, .has-background_gray.alumni__cover, .has-background_gray.programs__cover, .has-background_gray.overview, .has-background_gray.program-format, .has-background_gray.instructors__cover, .has-background_gray.instructors, .has-background_gray.speakers__cover, .has-background_gray.speakers, .has-background_gray.program-applicants, .has-background_gray.program-fees {
+.has-background_gray.testimonial, .has-background_gray.seansonal-section, .has-background_gray.faq-section, .has-background_gray.features__block, .partners-section .has-background_gray.container, .has-background_gray.all_partners, .has-background_gray.general, .has-background_gray.alumni__cover, .has-background_gray.programs__cover, .has-background_gray.overview, .has-background_gray.program-format, .has-background_gray.instructors__cover, .has-background_gray.instructors, .has-background_gray.speakers__cover, .has-background_gray.speakers, .has-background_gray.program-applicants, .has-background_gray.program-fees, .has-background_gray.apply-form {
   background: #808284;
 }
-.has-background_gray_light.testimonial, .has-background_gray_light.seansonal-section, .has-background_gray_light.faq-section, .has-background_gray_light.features__block, .partners-section .has-background_gray_light.container, .has-background_gray_light.all_partners, .has-background_gray_light.alumni__cover, .has-background_gray_light.programs__cover, .has-background_gray_light.overview, .has-background_gray_light.program-format, .has-background_gray_light.instructors__cover, .has-background_gray_light.instructors, .has-background_gray_light.speakers__cover, .has-background_gray_light.speakers, .has-background_gray_light.program-applicants, .has-background_gray_light.program-fees {
+.has-background_gray_light.testimonial, .has-background_gray_light.seansonal-section, .has-background_gray_light.faq-section, .has-background_gray_light.features__block, .partners-section .has-background_gray_light.container, .has-background_gray_light.all_partners, .has-background_gray_light.general, .has-background_gray_light.alumni__cover, .has-background_gray_light.programs__cover, .has-background_gray_light.overview, .has-background_gray_light.program-format, .has-background_gray_light.instructors__cover, .has-background_gray_light.instructors, .has-background_gray_light.speakers__cover, .has-background_gray_light.speakers, .has-background_gray_light.program-applicants, .has-background_gray_light.program-fees, .has-background_gray_light.apply-form {
   background: #97a8ab;
 }
-.has-background_gray_dark.testimonial, .has-background_gray_dark.seansonal-section, .has-background_gray_dark.faq-section, .has-background_gray_dark.features__block, .partners-section .has-background_gray_dark.container, .has-background_gray_dark.all_partners, .has-background_gray_dark.alumni__cover, .has-background_gray_dark.programs__cover, .has-background_gray_dark.overview, .has-background_gray_dark.program-format, .has-background_gray_dark.instructors__cover, .has-background_gray_dark.instructors, .has-background_gray_dark.speakers__cover, .has-background_gray_dark.speakers, .has-background_gray_dark.program-applicants, .has-background_gray_dark.program-fees {
+.has-background_gray_dark.testimonial, .has-background_gray_dark.seansonal-section, .has-background_gray_dark.faq-section, .has-background_gray_dark.features__block, .partners-section .has-background_gray_dark.container, .has-background_gray_dark.all_partners, .has-background_gray_dark.general, .has-background_gray_dark.alumni__cover, .has-background_gray_dark.programs__cover, .has-background_gray_dark.overview, .has-background_gray_dark.program-format, .has-background_gray_dark.instructors__cover, .has-background_gray_dark.instructors, .has-background_gray_dark.speakers__cover, .has-background_gray_dark.speakers, .has-background_gray_dark.program-applicants, .has-background_gray_dark.program-fees, .has-background_gray_dark.apply-form {
   background: #6c6c6c;
 }
-.has-background_red.testimonial, .has-background_red.seansonal-section, .has-background_red.faq-section, .has-background_red.features__block, .partners-section .has-background_red.container, .has-background_red.all_partners, .has-background_red.alumni__cover, .has-background_red.programs__cover, .has-background_red.overview, .has-background_red.program-format, .has-background_red.instructors__cover, .has-background_red.instructors, .has-background_red.speakers__cover, .has-background_red.speakers, .has-background_red.program-applicants, .has-background_red.program-fees {
+.has-background_red.testimonial, .has-background_red.seansonal-section, .has-background_red.faq-section, .has-background_red.features__block, .partners-section .has-background_red.container, .has-background_red.all_partners, .has-background_red.general, .has-background_red.alumni__cover, .has-background_red.programs__cover, .has-background_red.overview, .has-background_red.program-format, .has-background_red.instructors__cover, .has-background_red.instructors, .has-background_red.speakers__cover, .has-background_red.speakers, .has-background_red.program-applicants, .has-background_red.program-fees, .has-background_red.apply-form {
   background: #f54848;
 }
-.has-background_black.testimonial, .has-background_black.seansonal-section, .has-background_black.faq-section, .has-background_black.features__block, .partners-section .has-background_black.container, .has-background_black.all_partners, .has-background_black.alumni__cover, .has-background_black.programs__cover, .has-background_black.overview, .has-background_black.program-format, .has-background_black.instructors__cover, .has-background_black.instructors, .has-background_black.speakers__cover, .has-background_black.speakers, .has-background_black.program-applicants, .has-background_black.program-fees {
+.has-background_black.testimonial, .has-background_black.seansonal-section, .has-background_black.faq-section, .has-background_black.features__block, .partners-section .has-background_black.container, .has-background_black.all_partners, .has-background_black.general, .has-background_black.alumni__cover, .has-background_black.programs__cover, .has-background_black.overview, .has-background_black.program-format, .has-background_black.instructors__cover, .has-background_black.instructors, .has-background_black.speakers__cover, .has-background_black.speakers, .has-background_black.program-applicants, .has-background_black.program-fees, .has-background_black.apply-form {
   background: #000000;
 }
-.has-background_white.testimonial, .has-background_white.seansonal-section, .has-background_white.faq-section, .has-background_white.features__block, .partners-section .has-background_white.container, .has-background_white.all_partners, .has-background_white.alumni__cover, .has-background_white.programs__cover, .has-background_white.overview, .has-background_white.program-format, .has-background_white.instructors__cover, .has-background_white.instructors, .has-background_white.speakers__cover, .has-background_white.speakers, .has-background_white.program-applicants, .has-background_white.program-fees {
+.has-background_white.testimonial, .has-background_white.seansonal-section, .has-background_white.faq-section, .has-background_white.features__block, .partners-section .has-background_white.container, .has-background_white.all_partners, .has-background_white.general, .has-background_white.alumni__cover, .has-background_white.programs__cover, .has-background_white.overview, .has-background_white.program-format, .has-background_white.instructors__cover, .has-background_white.instructors, .has-background_white.speakers__cover, .has-background_white.speakers, .has-background_white.program-applicants, .has-background_white.program-fees, .has-background_white.apply-form {
   background: #fff;
 }
 
@@ -735,11 +735,16 @@ textarea {
   text-align: left;
   color: #31555c;
   -webkit-font-smoothing: antialiased;
-  background-color: transparent;
+  background-color: #fff;
   outline: 0 none;
   padding: 0.7em 0.6em 0.5em;
   margin: 0;
+  width: 206.44px;
+  width: 15.88rem;
+  max-width: 100%;
   border: 1px solid #006d81;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -752,6 +757,13 @@ textarea:focus {
   outline: none;
 }
 
+textarea {
+  width: 428.22px;
+  width: 32.94rem;
+  height: 206.44px;
+  height: 15.88rem;
+}
+
 select {
   border-radius: 0;
   font-family: TradeGothicLTStd, sans-serif;
@@ -759,18 +771,47 @@ select {
   text-align: left;
   color: #006d81;
   -webkit-font-smoothing: antialiased;
-  font-size: 13px;
-  font-size: 1rem;
   background-color: transparent;
+  background-image: url(../images/arrows/t-arrow-bottom.png);
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
   outline: 0 none;
   padding: 0.60em 0.60em 0.22em;
   margin: 0;
   border: 0px;
+  width: 206.44px;
+  width: 15.88rem;
+  max-width: 100%;
   border-bottom: 1px solid rgba(0, 109, 129, 0.25);
-  line-height: 21.125px;
-  line-height: 1.625rem;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
+}
+@media screen and (min-width: 30em) {
+  select.medium {
+    width: 110.348px;
+    width: 7.882rem;
+    margin-right: 14px;
+    margin-right: 1rem;
+  }
+  select.small {
+    width: 65.884px;
+    width: 4.706rem;
+    margin-right: 14px;
+    margin-right: 1rem;
+  }
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: 0;
+  outline: 0;
 }
 
 input[type=submit], button {
@@ -778,6 +819,37 @@ input[type=submit], button {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
+}
+
+.radio {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  margin-right: 2.6px;
+  margin-right: 0.2rem;
+  background: url(../images/icons/radio.png) no-repeat center center;
+  position: relative;
+}
+.radio input[type=radio] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+.radio.checked {
+  background-image: url(../images/icons/radio-active.png);
+}
+
+.radio-label {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  color: #006d81;
+  margin-right: 22.945px;
+  margin-right: 1.765rem;
 }
 
 table {
@@ -980,6 +1052,125 @@ svg {
   -moz-filter: grayscale(100%) sepia(100%);
   filter: grayscale(100%) sepia(100%);
   opacity: 0.7;
+}
+
+form label:not(.radio-label) {
+  display: block;
+}
+form input[type=submit], form button, form input[type=reset] {
+  border: none;
+  padding: 0.9em 1.9em 0.7em;
+  min-height: 39px;
+  min-height: 3rem;
+  line-height: 1.375em;
+  font-size: 14.625px;
+  font-size: 1.125rem;
+  font-family: TradeGothicLTStd, sans-serif;
+  color: #fff;
+  display: inline-block;
+  background-image: none !important;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.5rem 1rem 0.5rem 0;
+  background-color: #008266;
+  outline: 0 solid rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  -webkit-transition: none !important;
+  transition: none !important;
+  border-radius: 0;
+  -webkit-font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 1;
+  -moz-font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 1;
+  font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 1;
+}
+form input[type=submit]:hover, form button:hover, form input[type=reset]:hover {
+  background-color: #008266;
+  background-color: #006d81;
+}
+.no-csstransforms form input[type=submit], .no-csstransforms form button, .no-csstransforms form input[type=reset] {
+  min-height: 0;
+}
+form input[type=submit]:hover, form button:hover, form input[type=reset]:hover {
+  background-image: none;
+  color: #fff;
+}
+form .field-section {
+  padding-bottom: 2rem;
+}
+form .field-group {
+  position: relative;
+  margin-bottom: 2rem;
+  position: relative;
+}
+form .field-group.sub-field {
+  margin-right: 0.4%;
+}
+form .field-group.sub-field.col-5 {
+  width: 41.96%;
+}
+form .field-group.sub-field.col-6 {
+  width: 49.8%;
+}
+form .field-group.sub-field.col-7 {
+  width: 58.16%;
+}
+form .field-group.sub-field:last-child {
+  float: right;
+  margin-right: 0px;
+}
+form .error-message {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: 2;
+  background: #da2637;
+  color: #fff;
+  font-size: 1em;
+  padding: 10px 12px;
+  text-align: left;
+}
+form .error-message:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20px;
+  width: 0px;
+  height: 0px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 13px solid #da2637;
+}
+form .not-valid label, form label.not-valid, form label.error {
+  color: #f54848;
+}
+form .not-valid input[type=text],
+form input[type=text].not-valid,
+form input[type=text].error,
+form .not-valid > input[type=url],
+form input[type=url].not-valid,
+form input[type=url].error,
+form .not-valid > input[type=password],
+form input[type=password].not-valid,
+form input[type=password].error,
+form .not-valid > input[type=tel],
+form input[type=tel].not-valid,
+form input[type=tel].error,
+form .not-valid > input[type=number],
+form input[type=number].not-valid,
+form input[type=number].error,
+form .not-valid > input[type=email],
+form input[type=email].not-valid,
+form input[type=email].error,
+form .not-valid > textarea,
+form textarea.not-valid,
+form textarea.error,
+form .not-valid > select,
+form select.not-valid,
+form select.error {
+  border-color: #f54848;
+}
+form .field-submit {
+  margin-bottom: 2rem;
 }
 
 .nav {
@@ -1243,16 +1434,16 @@ svg {
     margin-bottom: -0.54501rem;
   }
 }
-.header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p {
+.header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p {
   padding-top: 0;
   font-size: 13px;
   font-size: 1rem;
 }
-.header .container .header-intro.header-alumni .alumni-designation, .header .container .header-intro.header-alumni .program-schedule, .header .container .header-intro.header-program .alumni-designation, .header .container .header-intro.header-program .program-schedule {
+.header .container .header-intro.header-alumni .alumni-designation, .header .container .header-intro.header-alumni .program-schedule, .header .container .header-intro.header-alumni .news-author, .header .container .header-intro.header-program .alumni-designation, .header .container .header-intro.header-program .program-schedule, .header .container .header-intro.header-program .news-author, .header .container .header-intro.header-news .alumni-designation, .header .container .header-intro.header-news .program-schedule, .header .container .header-intro.header-news .news-author {
   display: block;
 }
 @media screen and (min-width: 30em) {
-  .header .container .header-intro.header-alumni .alumni-designation, .header .container .header-intro.header-alumni .program-schedule, .header .container .header-intro.header-program .alumni-designation, .header .container .header-intro.header-program .program-schedule {
+  .header .container .header-intro.header-alumni .alumni-designation, .header .container .header-intro.header-alumni .program-schedule, .header .container .header-intro.header-alumni .news-author, .header .container .header-intro.header-program .alumni-designation, .header .container .header-intro.header-program .program-schedule, .header .container .header-intro.header-program .news-author, .header .container .header-intro.header-news .alumni-designation, .header .container .header-intro.header-news .program-schedule, .header .container .header-intro.header-news .news-author {
     display: inline-block;
     margin-right: 28px;
     margin-right: 2rem;
@@ -1902,9 +2093,6 @@ svg {
 .features__block.seasonal-message .arrow-link.stealth-link {
   background-image: none;
 }
-.features__block.newsletter {
-  background: #e8f3f5;
-}
 @media screen and (min-width: 47.9375em) {
   .features__block.newsletter {
     width: 24.48%;
@@ -2098,10 +2286,10 @@ svg {
 }
 @media screen and (min-width: 47.9375em) {
   .news__item {
-    width: 23.44%;
+    width: 31.91%;
     margin-right: 2.08%;
   }
-  .news__item:nth-child(4n) {
+  .news__item:nth-child(3n) {
     margin-right: 0;
   }
 }
@@ -2119,22 +2307,66 @@ svg {
   right: 0;
   width: 100%;
 }
-.news h3 {
-  font-weight: bold;
-  border-bottom: none;
-}
-.news__excerpt {
+.news__content {
   margin-bottom: 13px;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 47.9375em) {
-  .news__excerpt {
+  .news__content {
     margin-bottom: 30px;
     margin-bottom: 2rem;
   }
 }
+.news h3 {
+  font-weight: bold;
+  border-bottom: none;
+}
 .news__publish {
   font-weight: 400;
+}
+@media screen and (min-width: 47.9375em) {
+  .news.latest-news .news__item {
+    width: 23.44%;
+    margin-right: 2.08%;
+  }
+  .news.latest-news .news__item:nth-child(4n) {
+    margin-right: 2.08%;
+  }
+  .news.latest-news .news__item:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.single-news__content blockquote p {
+  color: #f36f43;
+  font-size: 29.25px;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  padding-left: 0;
+}
+.single-news__content blockquote p:before {
+  color: rgba(243, 111, 67, 0.15);
+  font-size: 2em;
+}
+.single-news__content h3 {
+  font-weight: bold;
+}
+.single-news__image {
+  margin-bottom: 39px;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 47.9375em) {
+  .single-news__image {
+    width: 41.6666666667%;
+    float: left;
+    float: right;
+  }
+}
+@media screen and (min-width: 47.9375em) {
+  .single-news.has-featured_image .single-news__content {
+    width: 50%;
+    float: left;
+  }
 }
 
 .partners-section .container {
@@ -2523,15 +2755,18 @@ section .alumni-picture {
 .indexnav {
   display: none;
   float: right;
+  position: absolute;
+  margin-top: 5rem;
+  z-index: 1000;
   margin-right: 13px;
   margin-right: 1rem;
 }
 .indexnav.fixed {
   position: fixed;
   top: 10%;
+  margin-top: 0;
   right: 162.5px;
   right: 12.5rem;
-  z-index: 1000;
 }
 .indexnav__list {
   list-style: none;
@@ -3002,4 +3237,22 @@ section .alumni-picture {
 .program-fees table {
   margin-bottom: 39px;
   margin-bottom: 3rem;
+}
+
+.apply-form {
+  padding-top: 30.004px;
+  padding-top: 2.308rem;
+  padding-bottom: 30.004px;
+  padding-bottom: 2.308rem;
+}
+@media screen and (min-width: 47.9375em) {
+  .apply-form {
+    padding-top: 75px;
+    padding-top: 5rem;
+    padding-bottom: 75px;
+    padding-bottom: 5rem;
+  }
+}
+.apply-form h3 {
+  font-weight: bold;
 }

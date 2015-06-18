@@ -6,7 +6,7 @@
     );
 
 	private static $has_one = array(	
-		'Program' => 'Program'
+		'ProgramFeesDates' => 'ProgramFeesDates'
 	);		
 
 	private static $default_sort='SortOrder';

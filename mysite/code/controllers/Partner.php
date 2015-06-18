@@ -1,5 +1,5 @@
 <?php class Partner extends Page {
-  private static $description = "Container for our Alumni pages.";
+  private static $description = "Container for partners";
 
   private static $db = array(
 	'Website' => "Text",		

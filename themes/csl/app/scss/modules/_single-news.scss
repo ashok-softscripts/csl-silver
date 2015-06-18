@@ -1,0 +1,33 @@
+.single-news{
+	&__content{
+		blockquote{
+			p{
+				color: site-color(orange);
+				@include rem(font-size, 2.25rem);
+				line-height: 3rem;
+				padding-left: 0;
+				&:before{
+					color: rgba(243, 111, 67, 0.15);
+					font-size: 2em;					
+				}
+			}
+		}
+		h3{
+			font-weight: bold-of($display-type);
+		}	
+	}
+	&__image{
+		@include rem(margin-bottom, 3rem);
+		@include breakpoint-layout(break-2) {
+			@include span(5 of 12);
+			float: right;			
+		}
+	}
+	&.has-featured_image{
+		.single-news__content{
+			@include breakpoint-layout(break-2) {
+				@include span(6 of 12);		
+			}
+		}
+	}
+}

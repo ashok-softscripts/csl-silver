@@ -18,4 +18,9 @@
 </header>
 <% include HomeFeatures %>
 <% include FeaturePartners %>
+<section class="news latest-news">
+	<div class="container">
+		<% include FeatureNews %>		
+	</div>
+</section>
 

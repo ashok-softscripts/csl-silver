@@ -1,12 +1,15 @@
 .indexnav{	
 	display: none;
 	float: right;
+	position: absolute;
+	margin-top: 5rem;
+	z-index: 1000;
 	@include rem(margin-right, 1rem);
 	&.fixed{
 		position: fixed;
 		top: 10%;
-		@include rem(right, 12.5rem);
-		z-index: 1000;
+		margin-top: 0;
+		@include rem(right, 12.5rem);		
 	}
 	&__list{
 		list-style: none;

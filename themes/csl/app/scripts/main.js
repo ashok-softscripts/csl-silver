@@ -42,7 +42,7 @@ $(function() {
 	var $navToggle = $('.nav__badge');
 	var $pre_footer = $('.pre-footer > div');
 	var $features = $('.features__block');
-	var $news_excerpt = $('.news__excerpt');
+	var $news_content = $('.news__content');
 	var $partners_item = $('.partners__item');	
 	var $all_partners_item = $('.all_partners__item');	
 	var $all_partners_logo = $('.all_partners__logo');
@@ -51,6 +51,7 @@ $(function() {
 	var $programs_title = $('.programs h3');
 	var $programs_excerpt = $('.programs__excerpt');		
 	var $programs_item = $('.programs__item');
+	var $header_section = $('.header');
 	var $indexnav = $('.indexnav');
 	var $section_overview = $('#overview');
 	var $injectedSVGs = $('img.inject-me');
@@ -85,6 +86,18 @@ $(function() {
 			return false;
 		});
 	}
+	
+	// Form inputs
+	$('input[type=radio]').wrap('<div class="radio"></div>');
+	$('input[type=radio]:checked').parent('.radio').addClass('checked');
+	$('input[type=checkbox]').wrap('<div class="checkbox"></div>');
+	$('input[type=checkbox]:checked').parent('.checkbox').addClass('checked');
+	
+	$('.radio input[type=radio]').click(function(){
+		$('.radio').removeClass("checked");
+		$(this).parent().addClass( "checked" );
+	});
+	
 	function adjustHeight(){
 		// match height of feature blocks
 		if ($features.length > 0) {
@@ -113,8 +126,8 @@ $(function() {
 			$pre_footer.matchHeight(true);
 		}
 		// match height of news excerpt
-		if ($news_excerpt.length > 0) {
-			$news_excerpt.matchHeight(true);
+		if ($news_content.length > 0) {
+			$news_content.matchHeight(true);
 		}
 		// match height of alumni excerpt
 		if ($alumni_excerpt.length > 0) {
@@ -202,8 +215,8 @@ $(function() {
         pngFallback: '.'
     });
 	
-	if (($section_overview.length > 0) && ($indexnav.length > 0) ) {
-		var firstScrollTop = $section_overview.offset().top;
+	if (($header_section.length > 0) && ($indexnav.length > 0) ) {
+		var firstScrollTop = $header_section.outerHeight();
 		var lastSection = '#' + $indexnav.find('.indexnav__item:last-child').children('a').attr('data-target');
 		var lastScrollTop = $(lastSection).offset().top + ($(lastSection).height()/2); 
 		$(window).scroll(function(event){

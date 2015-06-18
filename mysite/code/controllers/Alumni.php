@@ -10,15 +10,15 @@
 	
   );
 
-  private static $defaults = array(
-  );
+	private static $defaults = array(
+	);
 
-  private static $icon = "cms/images/treeicons/user-file.gif";
+	private static $icon = "cms/images/treeicons/user-file.gif";
 
-  private static $has_one = array(	
+	private static $has_one = array(	
 	'Thumbnail' => 'Image',
 	'HeroImage' => 'Image'
-  );
+	);
 
 	private static $has_many = array(
 	);
@@ -26,9 +26,9 @@
 	private static $belongs_to = array(
 	);
 
-	private static $belongs_many_many=array(
-	 
-	);
+	private static $belongs_many_many = array(
+		 'ProgramAlumnis' => 'ProgramAlumni'
+    );
 
 	private static $allowed_children = array();
 

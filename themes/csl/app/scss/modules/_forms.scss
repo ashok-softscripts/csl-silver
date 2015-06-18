@@ -1,0 +1,89 @@
+form {    
+    label:not(.radio-label) {
+		display: block;
+		@extend %default-style;
+	}    
+	input[type=submit], button, input[type=reset]{
+		@include button;
+	}
+	.field-section{
+		padding-bottom: 2rem;
+	}
+    .field-group{
+        position: relative;
+        margin-bottom: 2rem;
+        position: relative;
+        &.sub-field{
+            margin-right: 0.4%;
+            &.col-5 {
+                width: 41.96%;
+            }
+            &.col-6{
+                width: 49.8%;
+            }
+            &.col-7{
+                width: 58.16%;
+            }
+            &:last-child{
+                float: right;
+                margin-right: 0px;
+            }            
+        }                              		
+    } 
+	.error-message{
+		display: none;
+		position: absolute;
+		left: 0px;
+		top: 100%;
+		z-index: 2;
+		background: #da2637;
+		color: site-color(white);
+		font-size: 1em;
+		padding: 10px 12px;
+		text-align: left;
+		&:before{
+			content: "";
+			position: absolute;
+			bottom: 100%;
+			left: 20px;
+			width: 0px;
+			height: 0px;
+			border-left: 12px solid transparent;
+			border-right: 12px solid transparent;
+			border-bottom: 13px solid #da2637;
+		}
+	}
+	.not-valid label, label.not-valid, label.error{
+		color: site-color(red);
+	}
+	.not-valid input[type=text], 
+	input[type=text].not-valid, 
+	input[type=text].error, 
+	.not-valid > input[type=url], 
+	input[type=url].not-valid, 
+	input[type=url].error, 
+	.not-valid > input[type=password], 
+	input[type=password].not-valid, 
+	input[type=password].error, 
+	.not-valid > input[type=tel], 
+	input[type=tel].not-valid, 
+	input[type=tel].error, 
+	.not-valid > input[type=number], 
+	input[type=number].not-valid, 
+	input[type=number].error, 
+	.not-valid > input[type=email], 
+	input[type=email].not-valid, 
+	input[type=email].error,
+	.not-valid > textarea,
+	textarea.not-valid, 
+	textarea.error, 
+	.not-valid > select, 
+	select.not-valid, 
+	select.error {
+		border-color: site-color(red);
+	}
+    .field-submit{
+        margin-bottom: 2rem;       
+    }    
+    
+}

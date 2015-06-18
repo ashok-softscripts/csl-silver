@@ -25,4 +25,23 @@ class AlumniCollection_Controller extends Page_Controller {
     parent::init();
   }
 
+
+  public function PaginatedAlumni() {
+		/**
+		 * @var Blog $dataRecord
+		 */
+		$alumniesList = Alumni::get()->filter('ParentID', $this->ID);
+
+		$alumnies = new PaginatedList($alumniesList);
+
+		$alumnies->setPageLength(12);
+
+		$start = $this->request->getVar($alumnies->getPaginationGetVar());
+
+		$alumnies->setPageStart($start);
+
+		return $alumnies;
+	}
+
+
 }

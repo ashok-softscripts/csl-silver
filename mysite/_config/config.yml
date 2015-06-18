@@ -9,3 +9,5 @@ After:
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
   theme: 'simple'
+BlogPost:
+  show_in_sitetree: true

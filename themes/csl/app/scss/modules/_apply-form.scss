@@ -1,4 +1,4 @@
-.general{
+.apply-form{
 	@include rem(padding-top, 2.308rem);
 	@include rem(padding-bottom, 2.308rem);
 	@include breakpoint-layout(break-2) {
@@ -7,4 +7,8 @@
 	}
 	// theming colors
 	@extend %has-background-color;
+	
+	h3{
+		font-weight: bold-of($display-type);
+	}
 }

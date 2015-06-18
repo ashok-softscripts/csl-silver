@@ -1,12 +1,12 @@
 <?php class ProgramFAQ extends DataObject {
-    private static $db = array(
+	private static $db = array(
         'Name' => 'Varchar',
 		'Answer' => 'HTMLText',
         'SortOrder'=>'Int'
     );
 
 	private static $has_one = array(	
-		'Program' => 'Program'
+		'ProgramFAQSection' => 'ProgramFAQSection'
 	);		
 
 	private static $default_sort='SortOrder';

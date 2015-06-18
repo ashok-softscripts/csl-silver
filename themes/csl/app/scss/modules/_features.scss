@@ -63,7 +63,6 @@
 			}
 		}
 		&.newsletter{
-			background: site-color(blue_mid_light);
 			@include breakpoint-layout(break-2) {
 				width: 24.48%;
 			}
