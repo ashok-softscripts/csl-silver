@@ -25,4 +25,4 @@
 		$CommentsForm
 	</div>
 </section>
-
+<% include Features %>

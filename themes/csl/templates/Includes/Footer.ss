@@ -6,7 +6,7 @@
 	</div>
 	<div class="thick-logo">
 		<div class="container">
-			<img src="$ThemeDir/images/thick-logo.png" alt="Thick logo" />
+			<a href="http://studiothick.com/" target="_blank"><img src="$ThemeDir/images/thick-logo.png" alt="Thick logo" /></a>
 		</div>
 	</div>	
 </footer>

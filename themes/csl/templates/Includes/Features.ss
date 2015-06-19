@@ -1,13 +1,17 @@
 <section class="features">        
 	<div class="container is-full">
 		<div class="features__row">
-			<div class="features__block span_9 seasonal-message has-background_green" >							
+			<% if SiteConfig.SeasonalText %>
+			<div class="features__block span_$SiteConfig.SeasonalCol seasonal-message has-background_$SiteConfig.SeasonalBGC">							
 				<div class="block-container">
-					<h2><strong>Personal and professional leadership for sustainability</strong></h2>
-					<a href="#" class="h2-style arrow-link arrow-white">What we do</a>
+					$SiteConfig.SeasonalText
+					<% if SiteConfig.SeasonalLinkTarget && SiteConfig.SeasonalLinkText %>
+					<a href="$SiteConfig.SeasonalLinkTarget" class="h2-style arrow-link arrow-white">$SiteConfig.SeasonalLinkText</a>
+					<% end_if %>
 				</div>
 			</div>
-			<div class="features__block span_3 newsletter has-background_green_light">
+			<% end_if %>
+			<div class="features__block span_$SiteConfig.NewsletterCol newsletter has-background_$SiteConfig.NewsletterBGC">
 				<div class="block-container">
 					<% include Newsletter %>
 				</div>

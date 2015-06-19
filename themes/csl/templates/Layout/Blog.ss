@@ -47,3 +47,4 @@
 </section>
 
 <% include BlogSideBar %>
+<% include Features %>   

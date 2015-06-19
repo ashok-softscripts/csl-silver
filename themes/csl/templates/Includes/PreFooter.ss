@@ -31,24 +31,30 @@
 		<div class="pre-footer__container">
 			<h3>Get in touch</h3>
 			<div class="get-in-touch">							
-				<div class="contact-email"><a href="mailto:info@csl.org.au">info@csl.org.au</a></div>
+				<% if SiteConfig.Email %>
+				<div class="contact-email"><a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a></div>
+				<% end_if %>
 				<div class="locations">
+					<% if SiteConfig.Location1 %>
 					<div class="locations__item">
-						<strong>Melbourne</strong>
-						<p><span>Level 13, 190 Queen St,<br /> Melbourne, VIC 3000</span></p>
-						<p><span>03 9078 7378</span></p>
+						<strong>$SiteConfig.Location1</strong>
+						<p><span>$SiteConfig.Location1Address</span></p>
+						<p><span>$SiteConfig.Location1Phone</span></p>
 					</div>
+					<% end_if %>
+					<% if SiteConfig.Location2 %>
 					<div class="locations__item">
-						<strong>Sydney</strong>
-						<p><span>7 Blackfriars Street,<br /> Chippendale NSW 2008</span></p>
-						<p><span>04 2381 1219</span></p>
-					</div>				
+						<strong>$SiteConfig.Location2</strong>
+						<p><span>$SiteConfig.Location2Address</span></p>
+						<p><span>$SiteConfig.Location2Phone</span></p>
+					</div>	
+					<% end_if %>			
 				</div>
 			</div>
 			<div class="social-networks">
-				<a href="#" target="_blank"><img src="$ThemeDir/images/icons/twitter.png" alt="Twitter" /></a>
-				<a href="#" target="_blank"><img src="$ThemeDir/images/icons/facebook.svg" alt="Facebook" /></a>
-				<a href="#" target="_blank"><img src="$ThemeDir/images/icons/linkedin.svg" alt="Linkedin" /></a>
+				<% if SiteConfig.Twitter %><a href="$SiteConfig.Twitter" target="_blank"><img src="$ThemeDir/images/icons/twitter.png" alt="Twitter" /></a><% end_if %>
+				<% if SiteConfig.Facebook %><a href="$SiteConfig.Facebook" target="_blank"><img src="$ThemeDir/images/icons/facebook.svg" alt="Facebook" /></a><% end_if %>
+				<% if SiteConfig.Linkedin %><a href="$SiteConfig.Linkedin" target="_blank"><img src="$ThemeDir/images/icons/linkedin.svg" alt="Linkedin" /></a><% end_if %>
 			</div>			
 		</div>
 	</div>
