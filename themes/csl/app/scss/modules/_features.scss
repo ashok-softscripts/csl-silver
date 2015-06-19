@@ -10,12 +10,10 @@
 	}
 	&__block{
 		position: relative;
-		float: left;
-		width: 100%;
-		@include breakpoint-layout(break-2) {	
-			margin-right: 2.08%;
-			&:last-child{
-				margin-right: 0;
+		@include breakpoint-layout(break-2) {
+			float: left;
+			&:first-child{
+				@include grid_first;
 			}
 		}
 		.image-overlay{
@@ -29,28 +27,29 @@
 			@include filter_elements(grayscale(100%) sepia(100%));
 			opacity: 0.7;
 		}
-		.text{
+		.block-container{
 			filter: none;
 			position: relative;	
-			@include rem(margin, 2.308rem);
-			@include rem(margin-top, 2.648rem);
-			@include rem(margin-bottom, 4.615rem);
+			-webkit-box-sizing: border-box;	
+			-moz-box-sizing: border-box;	
+			box-sizing: border-box;	
+			@include rem(padding, 2.308rem);
+			@include rem(padding-top, 2.648rem);
+			@include rem(padding-bottom, 4.615rem);
 			@include breakpoint-layout(break-2) {
-				@include rem(margin, 3rem);			
+				@include rem(padding, 3rem 3rem 4rem);
+				&.is-long{
+					@include rem(padding-top, 5rem);
+					@include rem(padding-bottom, 4.5rem);
+				}
 			}
+			
 		}
 		
 		&.seasonal-message{			
-			@include breakpoint-layout(break-2) {
-				width: 73.44%;
-			}
-			.text{				
+			.block-container{				
 				@include breakpoint-layout(break-2) {
-					max-width: 60%;
-					&.is-long{
-						@include rem(margin-top, 7rem);
-						@include rem(margin-bottom, 5.5rem);
-					}
+					max-width: 40rem;				
 				}
 			}
 			h2, .h2-style{
@@ -63,17 +62,10 @@
 			}
 		}
 		&.newsletter{
-			@include breakpoint-layout(break-2) {
-				width: 24.48%;
-			}
-			.text{
-				@include rem(margin-top, 3.648rem);
+			.block-container{
 				@include breakpoint-layout(break-2) {
-					@include rem(margin-left, 2.1em);
-					@include rem(margin-right, 2.1em);
-					&.is-long{
-						@include rem(margin-top, 6em);
-					}
+					@include rem(padding-left, 2rem);
+					@include rem(padding-right, 2rem);
 				}
 			}
 			h3{
@@ -95,6 +87,7 @@
 				font-weight: bold-of($display-type);
 				background: transparent;				
 				border: none;
+				min-height: 0px;
 				border-bottom: 1px solid transparentize(site-color(blue), 0.75);
 				padding: 0;
 				cursor: pointer;
@@ -109,10 +102,7 @@
 			}
 		}
 		&.testimonial{
-			padding: 0;
-			@include breakpoint-layout(break-2) {
-				width: 48.96%;
-			}
+			padding: 0;			
 			.alumni-image{
 				display: none;
 				float: right;
@@ -126,18 +116,10 @@
 					display: block;
 				}
 			}
-			.text{
-				float: left;
-				margin: 0;
-				box-sizing: border-box;				
-				@include rem(padding, 2.308rem);
-				@include rem(padding-top, 3.648rem);
-				@include rem(padding-bottom, 4.615rem);				
+			.block-container{
 				@include breakpoint-layout(break-2) {
+					float: left;
 					width: 66%;				
-					@include rem(padding, 3rem);
-					@include rem(padding-top, 3.647rem);
-					@include rem(padding-bottom, 4.471rem);					
 				}
 			}
 			h3{
@@ -146,8 +128,8 @@
 				padding: 0;
 			}
 			blockquote{	
-				@include rem(padding-bottom, 4.471rem);
-				p{
+				@include rem(padding-bottom, 3.2rem);
+					p{
 						&:before{
 						left: -0.38em;
 						font-size: 3.4em;
@@ -158,23 +140,21 @@
 				@include text-link(site-color(blue));					
 			}
 		}
-		&.org-promo{
-			@include breakpoint-layout(break-2) {
-				width: 48.96%;
-			}
-			.text{
+		&.partners-section{	
+			h2{
+				border-top: 0;
+				@include rem(padding-bottom, 4rem);
+				text-align: center;
+				font-weight: regular-of($display-type);
 				@include breakpoint-layout(break-2) {
-					@include rem(margin-top, 3.647rem);
-					@include rem(margin-bottom, 4.471rem);
-				}
-				h2{
-					color: site-color(white);
-					font-weight: regular-of($display-type);
-					@include rem(margin-bottom, 0.8rem);
+					@include rem(padding-bottom, 1.8rem);
 				}
 			}
-			.arrow-link{
-				@include text-link(site-color(white));			
+			.view-more{
+				text-align: center;
+				.arrow-link{
+					@extend %intro-style;
+				}
 			}
 		}
 		@extend %has-background-color;

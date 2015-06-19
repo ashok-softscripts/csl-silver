@@ -1,0 +1,61 @@
+.col {
+   @include grid_col;
+}
+
+@include breakpoint-layout(break-2) {
+
+	.col {
+		margin-left:2.08%;
+		padding:0 0%;
+	}
+
+	/* --- Gridpak variables ---*/ 
+	$max_columns: 12;
+	$padding: 0 0%;
+	$gutter_px: 0;
+	$gutter_pc: 2.08%;
+
+
+	.row .col:first-child {
+		@include grid_first;
+	}
+
+
+	.span_1 {
+		@include grid(1, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_2 {
+		@include grid(2, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_3 {
+		@include grid(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_4 {
+		@include grid(4, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_5 {
+		@include grid(5, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_6 {
+		@include grid(6, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_7 {
+		@include grid(7, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_8 {
+		@include grid(8, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_9 {
+		@include grid(9, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_10 {
+		@include grid(10, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_11 {
+		@include grid(11, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	.span_12 {
+		@include grid_first;
+		width:100%;
+	}
+}

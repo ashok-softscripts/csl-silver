@@ -25,9 +25,11 @@
   	public function getCMSFields() {
     	$fields = parent::getCMSFields();
 
+		/* Reset Defaults */
+		$fields->removeByName("Metadata");
+		
 		$fields->addFieldToTab('Root.Main', new CheckboxField('EnableNav','Show In Navigation'),'Content'); 
 
-		
 		$config = GridFieldConfig_RelationEditor::create(10);
 		$config->addComponent(new GridFieldSortableRows('SortAlumni'));
        	$config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(

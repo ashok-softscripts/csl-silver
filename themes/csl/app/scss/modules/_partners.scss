@@ -1,30 +1,3 @@
-.partners-section{	
-	.container{
-		background: site-color(blue_ver_light);
-		@include rem(padding-top, 2.308rem);
-		@include rem(padding-bottom, 4.615rem);
-		@include breakpoint-layout(break-2) {
-			@include rem(padding-top, 3rem);
-			@include rem(padding-bottom, 3rem);
-		}
-		// theming colors
-		@extend %has-background-color;
-	}
-	h2{
-		@include rem(padding-bottom, 4rem);
-		text-align: center;
-		font-weight: regular-of($display-type);
-		@include breakpoint-layout(break-2) {
-			@include rem(padding-bottom, 1.8rem);
-		}
-	}
-	.view-more{
-		text-align: center;
-		.arrow-link{
-			@extend %intro-style;
-		}
-	}
-}
 .partners{
 	@include clearfix;	
 	margin: 0px;

@@ -24,14 +24,14 @@
 	</div>
 </section>
 <!-- Alumni grisd -->
-<% if $AlumniByYear($Year) %>
+<% if AlumniByYear($Year) %>
 	<section class="more-alumnies">
 		<div class="container">
 			<h2>More alumni from <a href="#">$Year</a></h2>
 			<div class="alumni">	
-					<% control $AlumniByYear($Year) %>
+					<% loop AlumniByYear($Year) %>
 						<% include AlumniTeaser %>
-					<% end_control %>
+					<% end_loop %>
 			</div>
 		</div>
 	</section>
