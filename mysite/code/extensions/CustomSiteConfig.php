@@ -18,8 +18,12 @@
 		'SeasonalBGC' => "Varchar(100)",
 		'NewsletterTitle' => 'Varchar(100)',
 		'NewsletterText' => 'Text',
+		'NewsletterURL' => 'Varchar(200)',
+		'NewsletterMessage' => 'Text',
 		'NewsletterCol' => "Varchar(100)",
-		'NewsletterBGC' => "Varchar(100)"
+		'NewsletterBGC' => "Varchar(100)",
+		'EventOAuthtoken' => 'Varchar(200)',
+		'EventCache' => "Int"
 
     );
 
@@ -95,6 +99,11 @@
 
 		$fields->addFieldToTab('Root.Newsletter', new TextAreaField('NewsletterText', 'Description'));
 
+		$fields->addFieldToTab('Root.Newsletter', new TextField('NewsletterURL', 'Mailchimp Campaign URL'));
+
+		$fields->addFieldToTab('Root.Newsletter', new TextAreaField('NewsletterMessage', 'Success Message'));
+
+
 		$fields->addFieldToTab('Root.Newsletter', new DropdownField('NewsletterCol','Select Column',array(
 						'12' => '100%',	
 						'11' => '91%',
@@ -131,7 +140,16 @@
 			'white' => 'White'
 		)));
 
+		$event_field = new TextField('EventOAuthtoken', 'Attentication token');
+		$event_field->setDescription('Insert Your personal <strong>OAuth token</strong> of <a href="http://www.eventbrite.com/myaccount/apps/" target="_blank">EventBrite</a>');
+		$fields->addFieldToTab('Root.Events', $event_field);
+
+		$event_cache = new TextField('EventCache', 'Event Cache');
+		$event_cache->setDescription('Inter event max cache time in seconds (eg: 3600 equals to 1 hour)');
+		$fields->addFieldToTab('Root.Events', $event_cache);
+
 		
+
 
     }
 }

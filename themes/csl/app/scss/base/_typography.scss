@@ -321,6 +321,12 @@ textarea {
     }
 }
 
+input[type=search]{
+	background-image: url(../images/icons/search.png);
+	background-position: 96% center;
+	background-repeat: no-repeat;
+}
+
 textarea{
 	@include rem(width,32.94rem);
 	@include rem(height, 15.88rem); 

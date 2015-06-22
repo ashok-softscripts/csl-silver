@@ -1,5 +1,5 @@
-<?php class HomePage extends Page {
-  private static $description = "Home page";
+<?php class EventCollection extends Page {
+  private static $description = "Events list page";
 
   private static $db = array(	
   );
@@ -18,10 +18,10 @@ private static $many_many_extraFields=array(
 );	
 
   private static $allowed_children = array(
-	  'FeaturesRow','Event'
+	  'Event'
   );
 
-  private static $icon = "cms/images/treeicons/home-file.png";
+  private static $icon = "cms/images/treeicons/book-openfolder.gif";
 
   public function getCMSFields() {
 
@@ -53,18 +53,13 @@ private static $many_many_extraFields=array(
 
 }
 
-class HomePage_Controller extends Page_Controller {
+class EventCollection_Controller extends Page_Controller {
 
   private static $allowed_actions = array (
   );
 
   public function init() {
     parent::init();
-  }
-		
-  function LatestNews($num=2){
-	$holder = Blog::get()->First();
-    return ($holder) ? BlogPost::get()->filter('ParentID', $holder->ID)->limit($num) : false;
   }
 		
 }

@@ -4,6 +4,9 @@
 	@include breakpoint-layout(break-2) {
 		background: site-color(blue_ver_light);	
 	}
+	a{
+		background: none;
+	}
 	.thick-logo{
 		@include rem(padding-top, 0.4rem);
 		@include breakpoint-layout(break-2) {

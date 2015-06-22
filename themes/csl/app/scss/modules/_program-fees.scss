@@ -17,6 +17,6 @@
 	table{
 		@include rem(margin-bottom, 3rem);
 	}
-	// theming colors
+
 	@extend %has-background-color;
 }

@@ -24,5 +24,22 @@ class ProgramCollection_Controller extends Page_Controller {
   public function init() {
     parent::init();
   }
+	
+	public function PaginatedPrograms() {
+		/**
+		 * @var Blog $dataRecord
+		 */
+		$programsList = Program::get()->filter('ParentID', $this->ID);
+
+		$programs = new PaginatedList($programsList);
+
+		$programs->setPageLength(12);
+
+		$start = $this->request->getVar($programs->getPaginationGetVar());
+
+		$programs->setPageStart($start);
+
+		return $programs;
+	}
 
 }

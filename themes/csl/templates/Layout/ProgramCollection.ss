@@ -9,11 +9,14 @@
 <!-- Program grid -->
 <section class="programs">
 	<div class="container">
-		<% if Children %>
-			<% loop Children %>
+		<% if PaginatedPrograms.Exists %>
+			<% loop PaginatedPrograms %>
 				<% include ProgramTeaser %>
 			<% end_loop %>
 		<% end_if %>
+		<% with $PaginatedPrograms %>
+			<% include Pagination %>
+		<% end_with %>
 	</div>
 </section>
 

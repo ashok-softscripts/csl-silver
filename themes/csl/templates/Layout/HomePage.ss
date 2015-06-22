@@ -12,7 +12,7 @@
 				<% end_loop %>
 				</ul>
 			</div>
-			<% end_if %>					
+			<% end_if %>			
 		</div>
 	</div>        	
 </header>
@@ -21,6 +21,7 @@
 <section class="news latest-news">
 	<div class="container">
 		<% include FeatureNews %>		
+		<% include FeatureEvents %>
 	</div>
 </section>
 

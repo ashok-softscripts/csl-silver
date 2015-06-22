@@ -1,8 +1,6 @@
-// button module
 .button {
     @include button;
 
-    // small variant
     &_small {
         @include rem(font-size, 13rem / 16);
         font-weight: regular-of($display-type);

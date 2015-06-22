@@ -1,3 +1,35 @@
+.alumni-filters{
+	@include clearfix;
+	@include rem(padding-top, 1.176rem);
+	@include rem(padding-bottom, 1.176rem);	
+	label{
+		float: left;
+		@include rem(margin-right, 0.8235rem);
+	}
+	.drop-down{
+		float: left;
+		width: 100%;
+		@include rem(margin-right, 0.8235rem);		
+		@include breakpoint-layout(break-1) {	
+			&.filter-by-programs{
+			@include rem(width, 11.18rem);
+		}
+		&.filter-by-role{
+			@include rem(width, 11.18rem);
+		}
+		}
+	}
+	.filter-alumni-form{
+		float: right;		
+		@media screen and (max-width: 41.875em) {			
+			@include rem(margin-top, 1rem);		
+			width: 100%;
+			input[type=search]{
+				width: 100%;
+			}
+		}
+	}
+}
 .alumni{
 	@include clearfix;		
 	&__item{

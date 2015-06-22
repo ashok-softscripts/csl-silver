@@ -5,6 +5,6 @@
 		@include rem(padding-top, 5rem);
 		@include rem(padding-bottom, 5rem);	
 	}
-	// theming colors
+	
 	@extend %has-background-color;
 }

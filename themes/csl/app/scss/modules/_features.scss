@@ -30,8 +30,6 @@
 		.block-container{
 			filter: none;
 			position: relative;	
-			-webkit-box-sizing: border-box;	
-			-moz-box-sizing: border-box;	
 			box-sizing: border-box;	
 			@include rem(padding, 2.308rem);
 			@include rem(padding-top, 2.648rem);
@@ -92,8 +90,15 @@
 				padding: 0;
 				cursor: pointer;
 			}
+			.message_error{
+				background: site-color(red);
+				color: site-color(white);
+				padding: 0.5em;			
+				border: 0;
+				line-height: 1.5;
+			}
 			@include breakpoint-layout(break-2) {
-				input[type="email"]{
+				input[type="email"], .message_error{
 					margin-left: -0.5rem;
 				}
 				input[type="submit"], button{

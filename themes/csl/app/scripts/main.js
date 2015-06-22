@@ -87,6 +87,54 @@ $(function() {
 		});
 	}
 	
+	// Custom Drop downs
+	$('.drop-down').each(function(){
+		var $drop = $(this);
+		var label = $drop.find('.label span');
+		if($drop.find('.filter').hasClass('active')){
+			label.text($drop.find('.filter.active').text());
+		}
+	});
+	
+	$('.drop-down').on('click',function(data, e){
+		var $drop = $(this);
+		var label;
+		if(!$drop.hasClass('expanded')){
+		  $drop.addClass('expanded');
+		  label = $drop.find('.label span');
+		  label.text(label.attr('data-label'));
+		} else {
+		  $drop.removeClass('expanded');
+		  label = $('.drop-down').not(this).find('.label span');
+		  label.text(label.attr('data-label'));
+		  $drop.find('.label span').text($(data.target).text());
+		}
+	});
+
+	$('.drop-down').mouseleave(function(){
+		$(this).removeClass('expanded');
+	});
+	
+	//Alumni Fiters 
+	$('.filter-by-programs .filter').on('click',function(){
+		if (!window.location.origin){
+		  // For IE
+		  window.location.origin = window.location.protocol + "//" + (window.location.port ? ':' + window.location.port : ''); 			}
+		var link = window.location.origin + window.location.pathname;
+		var filter = $(this).data('filter');
+		location.href = link + '?filter_program=' + filter;
+	});
+	
+	$('.filter-by-role .filter').on('click',function(){
+		if (!window.location.origin){
+		  // For IE
+		  window.location.origin = window.location.protocol + "//" + (window.location.port ? ':' + window.location.port : ''); 			}
+		var link = window.location.origin + window.location.pathname;
+		var filter = $(this).data('filter');
+		location.href = link + '?filter_role=' + filter;
+	});
+	
+	
 	// Form inputs
 	$('input[type=radio]').wrap('<div class="radio"></div>');
 	$('input[type=radio]:checked').parent('.radio').addClass('checked');
@@ -229,5 +277,32 @@ $(function() {
 			
 		});       
 	}
+	
+	var errorDisplayed = false;
+
+    function signedUp (resp) {
+        if (resp.result === 'success') {
+            $("#mc-form").empty();
+            $("#mc-form").html("<p>"+ Newsletter.success_msg + "</p>");
+        } else {
+            if (errorDisplayed === false) {
+                errorDisplayed = true;
+                $("<p class='message_error'></p>").appendTo("#mc-form");
+            }
+            if (resp.msg.indexOf("0 - ") >= 0) {
+                var message = resp.msg.replace("0 - ", ""); // remove this string
+                console.log(message);
+                $('.message_error').text(message); // never contains link, can safely use .text
+            } else {
+                $('.message_error').html(resp.msg); // sometimes contains link, use .html
+            }
+        }
+		$features.matchHeight(true);
+    }
+    //mailchimp signup
+    $('#mc-form').ajaxChimp({
+        url: Newsletter.campaign_url,
+        callback: signedUp
+    });
 	
 });

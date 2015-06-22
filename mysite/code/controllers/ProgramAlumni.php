@@ -20,7 +20,7 @@
 			'SortAlumni'=>'Int'
 		)		
 	);
-	private static $allowed_children = array();
+	private static $allowed_children = array('Alumni');
 
   	public function getCMSFields() {
     	$fields = parent::getCMSFields();
@@ -61,5 +61,6 @@ class ProgramAlumni_Controller extends Page_Controller {
 	public function init() {
 		parent::init();
 	}
+		
 }
 ?>

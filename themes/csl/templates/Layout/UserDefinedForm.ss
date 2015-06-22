@@ -3,7 +3,7 @@
 		<% include Logo %>
 		<div class="header-intro">
 			<h1>$Title</h1>	
-ssssddss		
+
 		</div>
 	</div>        	
 </header>

@@ -3,13 +3,9 @@
 <div class="news__item">
 	<a href="$Link" class="news__cover filter-gray">$FeaturedImage.setWidth(368)</a>
 	<div class="news__content">
-		<h3>$Title</h3>
+		<h3>News</h3>
 		<div class="news__excerpt">
-			<% if $Summary %>
-				$Summary
-			<% else %>
-				$Excerpt
-			<% end_if %>
+			<p><a href="$Link">$Title</a></p>
 		</div>
 	</div>
 	<div class="news__publish">Published $PublishDate.Format(d M Y)</div>

@@ -18,11 +18,12 @@
 
 class PartnerCollection_Controller extends Page_Controller {
 
-  private static $allowed_actions = array (
-  );
+	private static $allowed_actions = array (
+	);
 
-  public function init() {
-    parent::init();
-  }
+	public function init() {
+		parent::init();
+	}
+	
 
 }
