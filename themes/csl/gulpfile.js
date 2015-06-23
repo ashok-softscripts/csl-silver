@@ -63,11 +63,8 @@ gulp.task('vendor', ['modernizr', 'sourcemaps'], function () {
     return gulp.src([
             'bower_components/jquery/dist/jquery.js',
             'bower_components/enquire/dist/enquire.js',
-            'bower_components/velocity/velocity.min.js',
-            'bower_components/velocity/velocity.ui.min.js',
             'bower_components/ajaxchimp/jquery.ajaxchimp.min.js',
             'bower_components/svg-injector/dist/svg-injector.min.js',
-            'bower_components/scrollr/src/skrollr.js',
             'bower_components/svgeezy/svgeezy.js',
             'bower_components/matchHeight/jquery.matchHeight.js',
             'app/scripts/vendor/*.js'
@@ -124,8 +121,17 @@ gulp.task('html', ['styles', 'scripts'], function () {
 
 // minify svg & generate png fallbacks
 gulp.task('svg', function () {
-    gulp.src('app/images/**/*.svg')
-        .pipe($.svg2png())
+    gulp.src('app/images/**/*.{png,jpg,jpeg,gif}')
+        .pipe($.imagemin({
+            optimizationLevel: 3,
+            progressive: true,
+            interlaced: true,
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('images'))
+        .pipe($.size());
+
+	gulp.src('app/images/**/*.svg')
         .pipe(gulp.dest('images'))
         .pipe($.size());
 });

@@ -5,6 +5,8 @@
 	margin-top: 5rem;
 	z-index: 1000;
 	@include rem(margin-right, 1rem);
+	@include rem(padding, 1rem 2rem);
+	background: transparentize(site-color(white), 0.20);
 	&.fixed{
 		position: fixed;
 		top: 10%;

@@ -24,10 +24,7 @@
 		$response = $service->request();
 		$event = array();
 		if($response && $response->getStatusCode() == 200 ) {		
-			$returnEvent = Convert::json2array($response->getBody());	
-			//echo '<pre>';
-			//print_r($returnEvent);
-			//echo '</pre>';
+			$returnEvent = Convert::json2array($response->getBody());				
 			$startDate = new Date();
 			$startDate->setValue($returnEvent['start']['local']);
 			$startDate = $startDate->Format('d F, Y');
@@ -44,9 +41,38 @@
 			$endTime = new Time();
 			$endTime->setValue($returnEvent['end']['local']);
 			$endTime = $endTime->Format('ga');
+
+			$event_type = $returnEvent['online_event'];
+
+			$venue_id = $returnEvent['venue_id'];
+
+			$venue			= '';
+			$address		= '';
+			$city			= '';
+			$region			= '';
+			$postal_code 	= '';
+			$country 		= '';
+			$latitude		= '';
+			$longitude		= '';	
+
+			if($event_type === false && !empty($venue_id)){
+				
+				$serviceURL = 'https://www.eventbriteapi.com/v3/venues/'.$venue_id.'/?token='.$oAuthToken;
+				$service = new RestfulService($serviceURL, $EventCache);
+				$venue_response = $service->request();
+				if($venue_response && $venue_response->getStatusCode() == 200 ) {		
+					$returnVenue = Convert::json2array($venue_response->getBody());
+					$venue			= $returnVenue['name'];
+					$address		= $returnVenue['address']['address_1'];
+					$city			= $returnVenue['address']['city'];
+					$region			= $returnVenue['address']['region'];
+					$postal_code 	= $returnVenue['address']['postal_code'];
+					$country 		= $returnVenue['address']['country'];
+					$latitude 		= $returnVenue['address']['latitude'];
+					$longitude 		= $returnVenue['address']['longitude'];
+				}
+			}
 			
-			
-			$location = $returnEvent['venue']['address'];
 			
 			$event[] = new ArrayData(array(
 						'Title' => $returnEvent['name']['text'],
@@ -58,11 +84,14 @@
 						'EndTime' => $endTime,
 						'Status' => $returnEvent['status'],
 						'Image' => $returnEvent['logo']['url'],
-						'Address' => $location['address_1'],
-						'City' => $location['city'],
-						'Region' => $location['region'],
-						'Zip' => $location['postal_code'],
-						'Country' => $location['country']
+						'Venue' => $venue,
+						'Address' => $address,
+						'City' => $city,
+						'Region' => $region,
+						'Zip' => $postal_code,
+						'Country' => $country,
+						'Latitude' => $latitude,
+						'Longitude' => $longitude
 					));
 		}
 		return new ArrayList($event);			

@@ -1,5 +1,6 @@
 .breadcrumb{
 	display: none;
+	background: site-color(blue_ver_light);
 	@include rem(padding, 1.353rem);
 	@include rem(padding-top, 0.8824rem);
 	@include rem(padding-bottom, 0.5882rem);

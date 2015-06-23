@@ -53,8 +53,8 @@
 			</div>
 			<div class="social-networks">
 				<% if SiteConfig.Twitter %><a href="$SiteConfig.Twitter" target="_blank"><img src="$ThemeDir/images/icons/twitter.png" alt="Twitter" /></a><% end_if %>
-				<% if SiteConfig.Facebook %><a href="$SiteConfig.Facebook" target="_blank"><img src="$ThemeDir/images/icons/facebook.svg" alt="Facebook" /></a><% end_if %>
-				<% if SiteConfig.Linkedin %><a href="$SiteConfig.Linkedin" target="_blank"><img src="$ThemeDir/images/icons/linkedin.svg" alt="Linkedin" /></a><% end_if %>
+				<% if SiteConfig.Facebook %><a href="$SiteConfig.Facebook" target="_blank"><img src="$ThemeDir/images/icons/facebook.png" alt="Facebook" /></a><% end_if %>
+				<% if SiteConfig.Linkedin %><a href="$SiteConfig.Linkedin" target="_blank"><img src="$ThemeDir/images/icons/linkedin.png" alt="Linkedin" /></a><% end_if %>
 			</div>			
 		</div>
 	</div>

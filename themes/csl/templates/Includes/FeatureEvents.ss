@@ -5,7 +5,7 @@
 				<% loop EventData($EventID) %>
 					<% if Status == 'live' || Status == 'started' %>
 						<div class="news__item">
-							<a href="$Link" target="_blank" class="news__cover filter-sepia"><img src="https://maps.googleapis.com/maps/api/staticmap?center=$Address,$City,$Region,$Country&zoom=13&size=270x203&maptype=roadmap" title="$Title" /></a>
+							<a href="$Link" target="_blank" class="news__cover filter-sepia"><img src="https://maps.googleapis.com/maps/api/staticmap?center=$Address,$City,$Region,$Country&zoom=13&size=270x203&maptype=roadmap&markers=color:blue|label:A|$Latitude,$Longitude" title="$Title" /></a>
 							<div class="news__content">
 								<h3>Event</h3>
 								<div class="news__excerpt"><p><a href="$Link" target="_blank">$Title</a></p></div>

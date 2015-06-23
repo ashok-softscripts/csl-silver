@@ -1,5 +1,5 @@
 form {    
-    label:not(.radio-label) {
+    .field-group > label, fieldset > .field > label{
 		display: block;
 		@extend %default-style;
 	}    
@@ -9,7 +9,7 @@ form {
 	.field-section{
 		padding-bottom: 2rem;
 	}
-    .field-group{
+    .field-group, fieldset > .field {
         position: relative;
         margin-bottom: 2rem;
         position: relative;
@@ -30,6 +30,48 @@ form {
             }            
         }                              		
     } 
+	.optionset{
+		list-style: none;
+		padding: 0;
+		@include clearfix;
+		li{
+			padding: 0;
+			float: left;	
+			@include rem(margin-right,1.765rem);
+			&.even{
+				
+			}
+			label{
+				cursor: pointer;
+				display: inline-block;
+				font-weight: bold-of($body-type);
+				color: site-color(blue);				
+			}
+		}
+		&_2col{
+			@include rem(max-width, 32rem);
+			li{
+				width: 48%;
+				margin-right: 4%;
+				&.even{
+					margin-right: 0;
+				}
+			}
+		}
+		&_3col{
+			@include rem(max-width, 32rem);
+			li{
+				width: 32%;
+				margin-right: 4%;
+				&.even{
+					margin-right: 4%;
+				}
+				&:nth-child(3n){
+					margin-right: 0;
+				}
+			}
+		}
+	}
 	.error-message{
 		display: none;
 		position: absolute;
@@ -81,6 +123,10 @@ form {
 	select.not-valid, 
 	select.error {
 		border-color: site-color(red);
+	}
+	.required.message{
+		color: site-color(red);
+		@include rem(margin-left, 1rem);
 	}
     .field-submit{
         margin-bottom: 2rem;       

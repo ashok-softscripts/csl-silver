@@ -1,8 +1,7 @@
 <nav id="primary-nav" class="nav">
 	<div class="nav__badge">
 		<a href="#"><span></span>Menu</a>
-	</div>
-	<% include BreadCrumbs %>
+	</div><% include BreadCrumbs %>
     <% if $CustomMenu(main-menu) %>
     <ul class="nav__list">
 		<% loop $CustomMenu(main-menu) %>

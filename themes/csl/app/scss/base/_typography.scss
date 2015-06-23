@@ -385,15 +385,16 @@ input[type=submit], button {
     appearance: none;
 }
 
-.radio{
+.radio-wrapper, .checkbox-wrapper{
 	display: inline-block;
 	vertical-align: middle;
 	width: 18px;
 	height: 18px;
 	@include rem(margin-right,0.2rem);
-	background: url(../images/icons/radio.png) no-repeat center center;
+	background-repeat: no-repeat;
+	background-position: center center;
 	position: relative;
-	input[type=radio]{
+	input[type=radio], input[type=checkbox]{
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -401,18 +402,32 @@ input[type=submit], button {
 		margin: 0;
 		opacity: 0;
 	}
+	
+}
+.radio-wrapper{
+	background-image: url(../images/icons/radio.png);
 	&.checked{
 		background-image: url(../images/icons/radio-active.png);
 	}
 }
 
-.radio-label{
+.checkbox-wrapper{
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/icons/checkbox.png);
+	&.checked{
+		background-image: url(../images/icons/checkbox-active.png);
+	}
+}
+
+.radio-label, .checkbox-label{
 	cursor: pointer;
 	display: inline-block;
 	font-weight: bold-of($body-type);
 	color: site-color(blue);
 	@include rem(margin-right,1.765rem);
 }
+
 
 table{
 	width: 100%;

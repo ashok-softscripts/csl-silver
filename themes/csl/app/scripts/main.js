@@ -136,15 +136,20 @@ $(function() {
 	
 	
 	// Form inputs
-	$('input[type=radio]').wrap('<div class="radio"></div>');
-	$('input[type=radio]:checked').parent('.radio').addClass('checked');
-	$('input[type=checkbox]').wrap('<div class="checkbox"></div>');
+	$('input[type=radio]').wrap('<div class="radio-wrapper"></div>');
+	$('input[type=radio]:checked').parent('.radio-wrapper').addClass('checked');
+	$('input[type=checkbox]').wrap('<div class="checkbox-wrapper"></div>');
 	$('input[type=checkbox]:checked').parent('.checkbox').addClass('checked');
 	
-	$('.radio input[type=radio]').click(function(){
-		$('.radio').removeClass("checked");
+	$('.radio-wrapper input[type=radio]').click(function(){
+		$('.radio-wrapper').removeClass("checked");
 		$(this).parent().addClass( "checked" );
 	});
+	
+	$('.checkbox-wrapper input[type=checkbox]').click(function(){
+		$(this).parent('.checkbox-wrapper').toggleClass( "checked" );
+	});
+	
 	
 	function adjustHeight(){
 		// match height of feature blocks

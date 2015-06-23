@@ -7,5 +7,3 @@
 		<a href="{$BaseHref}">Home</a>
 	<% end_if %>
 <% end_if %>
-
-

@@ -21,14 +21,9 @@ class AlumniCollection_Controller extends Page_Controller {
   private static $allowed_actions = array (
   );
 
-  public function init() {
-    parent::init();
-  }
-	
-	/*public function AlumniPrograms() {
-		$YearsData = DataObject::get('AlumniYear');
-		if ($YearsData) $YearSource = $YearsData->map('Name', 'Name');	
-	}*/
+   public function init() {
+	   parent::init();
+   }
 
 	public function FilterProgram(){
         return $this->getRequest()->getVar('filter_program');

@@ -9,7 +9,8 @@
 		"i-lateral/silverstripe-custommenus": "*@stable",
 		"undefinedoffset/sortablegridfield": "dev-master",
 		"silverstripe/blog": "2.0.x-dev",
-		"silverstripe/userforms": "*"
+		"silverstripe/userforms": "*",
+		"hubertusanton/silverstripe-seo": "*"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"
