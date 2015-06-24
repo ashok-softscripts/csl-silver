@@ -11,7 +11,7 @@
 	<ul class="indexnav__list">
 		<li class="indexnav__item"><a href="#" data-target="introduction" class="indexnav__link is-active">Introduction</a></li>
 		<li class="indexnav__item"><a href="#" data-target="personal-info" class="indexnav__link">Personal information</a></li>
-		<li class="indexnav__item"><a href="#" data-target="employment-education" class="indexnav__link">Employment, education,fee typ</a></li>
+		<li class="indexnav__item"><a href="#" data-target="employment-education" class="indexnav__link">Employment, education, fee type</a></li>
 	</ul>						
 </div>
 <section class="general overview" id="introduction">        
