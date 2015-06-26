@@ -15,7 +15,7 @@ html {
 
 // Site-wide base styles.
 body {
-    @include rem(line-height, 2rem);
+    @include rem(line-height, 1.4rem);
     font-family: font-family-of($body-type);
     font-style: normal;
     font-weight: regular-of($body-type);
@@ -48,10 +48,30 @@ body {
     @include text-link(site-color(blue), site-color(blue_dark));
 }
 
- // Default
+ // Small
+%small-style {
+	@include type($body-type, 1.231rem, 2, 0, 1);
+	@include breakpoint-layout(break-1) {
+		@include type($body-type, 1.142rem, 2, 0, 1);
+	}
+	@include breakpoint-layout(break-2) {
+		@include type($body-type, 1.06rem, 2, 0, 1);
+	}
+	@include breakpoint-layout(break-3) {
+		@include type($body-type, 0.9412rem, 2, 0, 1);
+	}
+}
+
+// Default
 %default-style {
 	@include type($body-type, 1.385rem, 2, 0, 1);
+	@include breakpoint-layout(break-1) {
+		@include type($body-type, 1.285rem, 2, 0, 1);
+	}
 	@include breakpoint-layout(break-2) {
+		@include type($body-type, 1.2rem, 2, 0, 1);
+	}
+	@include breakpoint-layout(break-3) {
 		@include type($body-type, 1.059rem, 2, 0, 1);
 	}
 }
@@ -59,7 +79,13 @@ body {
 // Intro.
 %intro-style {
     @include type($body-type, 1.846rem, 3, 0, 1);      			
+	@include breakpoint-layout(break-1) {
+		@include type($body-type, 1.714rem, 3, 0, 1);					
+	}
 	@include breakpoint-layout(break-2) {
+		@include type($body-type, 1.6rem, 2, 0, 1);					
+	}
+	@include breakpoint-layout(break-3) {
 		@include type($body-type, 1.4rem, 2, 0, 1);					
 	}
 }
@@ -135,7 +161,10 @@ h3, .h3-style {
 // Heading level 4.
 h4, .h4-style {
     // scales up to 1.125rem
-    @include type($display-type, 1.125rem, 2, 1, 1);        
+    @include type($display-type, 1.23rem, 2, 1, 1);  
+	@include breakpoint-layout(break-2) {
+		@include type($display-type, 1.058rem, 2, 1, 1);	
+	}
 }
 
 // Heading level 5.
@@ -221,11 +250,16 @@ blockquote {
         &:before {
             content: '\201C';
             position: absolute;
-            top: 0.46em;
-            left: -0.5em;
+            top: 0.52em;
+            left: -0.6em;
             color: rgba(49, 85, 92, 0.15);
-            font-size: 3em;
-			font-weight: bold-of($body-type);			
+            font-size: 2.5em;
+			font-weight: bold-of($body-type);
+			@include breakpoint-layout(break-2) {
+				font-size: 3em;
+				top: 0.46em;
+            	left: -0.5em;
+			}
         }
     }
 }
@@ -296,7 +330,7 @@ input[type=search],
 input[type=number],
 textarea {
     border-radius: 0;
-    font-family: font-family-of($body-type);
+    font-family: font-family-of($body-type);	
     text-align: left;
     color: site-color(blue_dark);    
     -webkit-font-smoothing: antialiased;
@@ -304,21 +338,41 @@ textarea {
     outline: 0 none;
     padding: 0.7em 0.6em 0.5em;
     margin: 0;
-	@include rem(width, 15.88rem);
+	width: 100%;
 	max-width: 100%;
-    border: 1px solid site-color(blue);    
+	@include rem(min-height, 3.077rem);
+	font-size: 1.231rem;
+	@include rem(width, 17.08rem);
+	@include breakpoint-layout(break-1) {
+		font-size: 1.143rem;
+		@include rem(min-height, 2.857rem);
+		@include rem(width, 15.88rem);
+	}
+	@include breakpoint-layout(break-2) {
+		font-size: 1.067rem;
+		@include rem(min-height, 2.667rem);
+	}
+	@include breakpoint-layout(break-3) {
+		font-size: 0.9412rem;
+		@include rem(min-height, 2.353rem);
+	}	
+    border: 1px solid site-color(blue); 	
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
     -webkit-appearance: none;
     appearance: none;
+	border-radius: 0;
     &:hover {
         
     }
-
     &:focus {
         outline: none;
     }
+	&[aria-invalid="true"]{
+		border-width: 2px;
+		border-color: site-color(red);		
+	}	
 }
 
 input[type=search]{
@@ -328,8 +382,12 @@ input[type=search]{
 }
 
 textarea{
-	@include rem(width,32.94rem);
-	@include rem(height, 15.88rem); 
+	width: 100%;
+	@include rem(height, 10rem);
+	@include breakpoint-layout(break-1) {
+		@include rem(width,32.94rem);
+		@include rem(height, 15.88rem); 		
+	}
 }
 
 select{
@@ -349,6 +407,20 @@ select{
     border: 0px;
 	@include rem(width, 15.88rem);
 	max-width: 100%;
+	@include rem(min-height, 3.077rem);
+	font-size: 1.231rem;
+	@include breakpoint-layout(break-1) {
+		font-size: 1.143rem;
+		@include rem(min-height, 2.857rem);
+	}
+	@include breakpoint-layout(break-2) {
+		font-size: 1.067rem;
+		@include rem(min-height, 2.667rem);
+	}
+	@include breakpoint-layout(break-3) {
+		font-size: 0.9412rem;
+		@include rem(min-height, 2.353rem);
+	}
     border-bottom: 1px solid rgba(0, 109, 129, 0.25); 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -432,7 +504,7 @@ input[type=submit], button {
 table{
 	width: 100%;
 	border: 0px;
-	@include type($body-type, 1.125rem, 2, 0, 1);  
+	@extend %default-style;
 	tr{
 		&:nth-child(even){
 			background-color: site-color(blue_mid_light);

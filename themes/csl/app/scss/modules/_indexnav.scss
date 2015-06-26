@@ -4,9 +4,8 @@
 	position: absolute;
 	margin-top: 5rem;
 	z-index: 1000;
-	@include rem(margin-right, 1rem);
-	@include rem(padding, 1rem 2rem);
-	background: transparentize(site-color(white), 0.20);
+	@include rem(padding, 1.5rem);
+	background: site-color(white);
 	&.fixed{
 		position: fixed;
 		top: 10%;
@@ -37,6 +36,9 @@
 				@include rem(top, 0.125rem);
 			}
 		}
+	}
+	.button{
+		margin-bottom: 0;
 	}
 	@include breakpoint-layout(break-2) {
 		display: block;

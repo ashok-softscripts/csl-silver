@@ -6,15 +6,14 @@
 		@include rem(padding-right, 2.308rem);
 		@include breakpoint-layout(break-2) {
 			padding: 0;
-			@include rem(max-width, 30.59rem);
+			@include rem(max-width, 29.4rem);
 			margin-left: auto;		
 		}
 	}
 	&__left{
 		background: site-color(blue_ver_light);	
 		@include rem(padding-top, 5rem);		
-		@include rem(padding-bottom, 5.385rem);	
-		
+		@include rem(padding-bottom, 5.385rem);			
 		@include breakpoint-layout(break-2) {
 			background: transparent;
 			@include span(5 of 12);
@@ -38,8 +37,16 @@
 			float: left;		
 			@include rem(padding-top, 7.3rem);		
 			@include rem(padding-bottom, 4.375rem);
-			.pre-footer__container{
-				margin-right: auto;
+			.pre-footer__container{				
+				@include rem(max-width, 30.59rem);
+				@include breakpoint-layout(break-2) {
+					@include rem(margin-left, 1rem);		
+					@include rem(margin-right, 1rem);		
+				}
+				@include breakpoint-layout(break-3) {
+					margin-right: auto;
+					margin-left: auto;
+				}
 			}
 		
 		}
@@ -52,13 +59,25 @@
 		list-style: none;
 		padding: 0px;
 		float: left;
-		@include span(6 of 12);
+		&:last-child{
+			float: right;			
+		}
+		@include breakpoint-layout(break-1) {
+			@include span(6 of 12);
+			&:last-child{
+				float: left;			
+			}
+		}
+		
 		li{
 			padding: 0px;
 			border-bottom: 0px;
 			margin: 0px;
 			@include rem(margin-bottom, 0.5882rem);
-		}
+			@media screen and (max-width: 30em) {
+				font-size: 1.3rem;
+			}
+		}		
 	}
 	
 	.get-in-touch{
@@ -76,19 +95,33 @@
 			@include clearfix;
 			&__item{
 				@include rem(margin-bottom, 2.94rem);
+				strong{
+					font-size: 1.231rem;
+					@include breakpoint-layout(break-1) {
+						font-size: 1.142rem;
+					}
+					@include breakpoint-layout(break-2) {
+						font-size: 1.06rem;
+					}
+					@include breakpoint-layout(break-3) {
+						font-size: 0.9412rem;
+					}
+				}
 				p{
 					margin-bottom: 0px;
 					span{
 						@include text-link(site-color(blue));					
 					}
 				}				
-				@include breakpoint-layout(break-2) {
+				@include breakpoint-layout(break-1) {
 					float: left;
-					width: 48%;
-					margin-bottom: 0;
+					width: 48%;					
 					&:nth-child(2n){
 						float: right;
 					}
+				}
+				@include breakpoint-layout(break-2) {
+					margin-bottom: 0;
 				}
 			}
 		}
@@ -106,10 +139,14 @@
 			width: 20%;
 			a{
 				margin-right: 0;
-				@include rem(margin-left, 0.2941rem);
 				img, svg{
 					@include rem(max-width, 1.412rem);
 				}
+			}
+		}
+		@include breakpoint-layout(break-3) {
+			a{
+				@include rem(margin-left, 0.2941rem);				
 			}
 		}
 	}

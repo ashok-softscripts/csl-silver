@@ -17,15 +17,22 @@
 			}
 		}
 		.image-overlay{
+			display: none;
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			left: 0;
 			top: 0;			
 			background-repeat: no-repeat;
-			background-size: cover;
-			@include filter_elements(grayscale(100%) sepia(100%));
-			opacity: 0.7;
+			background-size: cover;			
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+			filter: gray; /* IE6-9 */
+			-moz-filter: grayscale(100%) sepia(100%); /* Moz */
+			-webkit-filter: grayscale(100%) sepia(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */			
+			@include breakpoint-layout(break-2) {
+				display: block;
+				opacity: 0.7;
+			}
 		}
 		.block-container{
 			filter: none;
@@ -57,6 +64,9 @@
 			}
 			.arrow-link{
 				@include text-link(site-color(white));
+				@media screen and (max-width: 20em) {
+					font-size: 1.6rem;
+				}
 			}
 		}
 		&.newsletter{
@@ -77,8 +87,7 @@
 				max-width: 100%;
 				background-color: site-color(white);
 				border: none;
-				margin-bottom: 1.4rem;	
-				@include rem(font-size, 1rem);
+				@include rem(margin-bottom, 1.4rem);
 			}
 			input[type="submit"], button{
 				display: block;
@@ -90,7 +99,16 @@
 				border-bottom: 1px solid transparentize(site-color(blue), 0.75);
 				padding: 0;
 				cursor: pointer;
-				@include rem(font-size, 1rem);
+				font-size: 1.231rem;
+				@include breakpoint-layout(break-1) {
+					font-size: 1.142rem;
+				}
+				@include breakpoint-layout(break-2) {
+					font-size: 1.06rem;
+				}
+				@include breakpoint-layout(break-3) {
+					font-size: 0.9412rem;
+				}
 			}
 			.message_error{
 				background: site-color(red);
@@ -102,8 +120,7 @@
 			@include breakpoint-layout(break-2) {
 				input[type="email"], .message_error{
 					margin-left: -0.5rem;
-				}
-				
+				}				
 			}
 		}
 		&.testimonial{
@@ -111,18 +128,21 @@
 			.alumni-image{
 				display: none;
 				float: right;
-				width: 34%;		
-				@include filter_elements(grayscale(100%));
+				width: 34%;						
+				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+			filter: gray; /* IE6-9 */
+			-moz-filter: grayscale(100%); /* Moz */
+			-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 				opacity: 0.5;
 				img{
 					width: 100%;
 				}
-				@include breakpoint-layout(break-2) {
+				@include breakpoint-layout(break-3) {
 					display: block;
 				}
 			}
 			.block-container{
-				@include breakpoint-layout(break-2) {
+				@include breakpoint-layout(break-3) {
 					float: left;
 					width: 66%;				
 				}
@@ -137,8 +157,10 @@
 				@include rem(padding-bottom, 3rem);
 					p{
 						&:before{
-						left: -0.38em;
-						font-size: 3.4em;
+							@include breakpoint-layout(break-2) {
+								left: -0.38em;
+								font-size: 3.4em;
+							}
 					}
 				}
 			}
@@ -162,8 +184,46 @@
 					@extend %intro-style;
 				}
 			}
-		}
+		}		
 		@extend %has-background-color;
 		
+		@each $color in $site-color-names {
+			&.has-mobile-background_#{'' + $color} {
+				background: site-color($color);
+			}
+		}
+		@include breakpoint-layout(break-2) {
+			@each $color in $site-color-names {
+				&.has-background_#{'' + $color} {
+					background: site-color($color);
+				}
+			}
+		}
+	}
+	&.general-features{
+		.features__block{
+			.block-container{
+				@include rem(padding-bottom, 2.6rem);
+				@include breakpoint-layout(break-2) {
+					@include rem(padding-bottom, 2.5rem);			
+				}			
+			}
+			&.seasonal-message{
+				.block-container{
+					h2{
+						border-top: 0;
+						margin-bottom: 2.6rem;
+					}
+				}
+			}
+			&.newsletter{
+				.block-container{
+					h3{
+						border-top: 0;
+						padding-top: 0;
+					}
+				}
+			}
+		}
 	}
 }

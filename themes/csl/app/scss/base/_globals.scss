@@ -66,19 +66,11 @@ svg {
 
 .content{
 	background-color: site-color(white);
-	transition: all 0.2s ease;
-	@include breakpoint-layout(break-2) {
-		transition: none;	
-	}
+	transition: all 0.2s ease;	
 	&--has-nav{
 		transform: translate3d(19.06rem, 0px, 0px);
-		@include breakpoint-layout(break-2) {
-			transform: none;
+		.no-csstransforms & {
 			@include rem(margin-left, 19.06rem);
-			
-			.container, .footer__left__container, .pre-footer__container{
-				@include rem(margin-left, 3rem);
-			}
-		}		
+		}
 	}	
 }

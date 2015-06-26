@@ -2,60 +2,85 @@
    @include grid_col;
 }
 
-@include breakpoint-layout(break-2) {
 
-	.col {
-		margin-left:2.08%;
-		padding:0 0%;
-	}
+.col {
+	margin-left:2.08%;
+	padding:0 0%;
+}
 
-
-	$max_columns: 12;
-	$padding: 0 0%;
-	$gutter_px: 0;
-	$gutter_pc: 2.08%;
+$max_columns: 12;
+$padding: 0 0%;
+$gutter_px: 0;
+$gutter_pc: 2.08%;
 
 
-	.row .col:first-child {
-		@include grid_first;
-	}
+.row .col:first-child {
+	@include grid_first;
+}
 
 
-	.span_1 {
+.span_1 {
+	@include breakpoint-layout(break-2) {
 		@include grid(1, $gutter_pc, $gutter_px, $padding, $max_columns);
 	}
-	.span_2 {
+}
+.span_2 {
+	@include breakpoint-layout(break-2) {
 		@include grid(2, $gutter_pc, $gutter_px, $padding, $max_columns);
 	}
-	.span_3 {
-		@include grid(3, $gutter_pc, $gutter_px, $padding, $max_columns);
-	}
-	.span_4 {
+}
+.span_3 {
+	@include breakpoint-layout(break-2) {
 		@include grid(4, $gutter_pc, $gutter_px, $padding, $max_columns);
 	}
-	.span_5 {
+	@include breakpoint-layout(break-3) {
+		@include grid(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+}
+.span_4 {
+	@include breakpoint-layout(break-2) {
+		@include grid(4, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+}
+.span_5 {
+	@include breakpoint-layout(break-2) {
 		@include grid(5, $gutter_pc, $gutter_px, $padding, $max_columns);
 	}
-	.span_6 {
+}
+.span_6 {
+	@include breakpoint-layout(break-2) {
 		@include grid(6, $gutter_pc, $gutter_px, $padding, $max_columns);
 	}
-	.span_7 {
+}
+.span_7 {
+	@include breakpoint-layout(break-2) {
 		@include grid(7, $gutter_pc, $gutter_px, $padding, $max_columns);
 	}
-	.span_8 {
+}
+.span_8 {
+	@include breakpoint-layout(break-2) {
 		@include grid(8, $gutter_pc, $gutter_px, $padding, $max_columns);
 	}
-	.span_9 {
+}
+.span_9 {
+	@include breakpoint-layout(break-2) {
+		@include grid(8, $gutter_pc, $gutter_px, $padding, $max_columns);
+	}
+	@include breakpoint-layout(break-3) {
 		@include grid(9, $gutter_pc, $gutter_px, $padding, $max_columns);
 	}
-	.span_10 {
+}
+.span_10 {
+	@include breakpoint-layout(break-2) {
 		@include grid(10, $gutter_pc, $gutter_px, $padding, $max_columns);
 	}
-	.span_11 {
+}
+.span_11 {
+	@include breakpoint-layout(break-2) {
 		@include grid(11, $gutter_pc, $gutter_px, $padding, $max_columns);
 	}
-	.span_12 {
-		@include grid_first;
-		width:100%;
-	}
+}
+.span_12 {
+	@include grid_first;
+	width:100%;
 }

@@ -7,25 +7,38 @@
 	}
 	&__item{		
 		@include rem(margin-bottom, 4.75rem);		
-		@include breakpoint-layout(break-2) {
+		@include breakpoint-layout(break-1) {
 			margin-right: 2.08%;
 			float: left;
-			width: 31.91%;		
-			&:nth-child(3n){
+			width: 48.96%;		
+			&:nth-child(2n){
 				margin-right: 0px;
 			}
 		}
+		@include breakpoint-layout(break-2) {			
+			float: left;
+			width: 31.91%;	
+			&:nth-child(2n){
+				margin-right: 2.08%;
+			}
+			&:nth-child(3n){
+				margin-right: 0px;
+			}
+		}		
 		&.is-open{
 			.programs__status{
 				color: site-color(green);
+				@include rem(padding-left, 1.1765rem);
 				&:before{
 					content: "";
-					display: inline-block;
+					display: block;
 					@include rem(width, 0.7059rem);
 					@include rem(height, 0.7059rem);
 					background-color: site-color(green);
 					border-radius: 50%;
-					@include rem(margin-right, 0.4706rem);
+					position: absolute;
+					left: 0;
+					@include rem(top, 0.2941rem);
 				}
 			}
 		}
@@ -34,14 +47,17 @@
 			.programs__cover{				
 				opacity: 0.5;				
 			}
-			.programs__status{				
+			.programs__status{	
+				@include rem(padding-left, 1.0588rem);
 				&:before{
 					content: "";
-					display: inline-block;
+					display: block;
 					@include rem(width, 0.5882rem);
 					@include rem(height, 0.5882rem);
-					background-color: site-color(orange);
-					@include rem(margin-right, 0.4706rem);
+					background-color: site-color(orange);					
+					position: absolute;
+					left: 0;
+					@include rem(top, 0.2941rem);
 				}
 			}
 		}
@@ -75,6 +91,17 @@
 	&__status{
 		@include rem(margin-top, 2.5rem);
 		font-weight: regular-of($display-type);
+		position: relative;
+		font-size: 1.231rem;
+		@include breakpoint-layout(break-1) {
+			font-size: 1.142rem;
+		}
+		@include breakpoint-layout(break-2) {
+			font-size: 1.06rem;
+		}
+		@include breakpoint-layout(break-3) {
+			font-size: 0.9412rem;
+		}
 	}
 		
 

@@ -17,6 +17,9 @@
 	}
 	.arrow-link{
 		@include text-link(site-color(white));
+		@media screen and (max-width: 20em) {
+			font-size: 1.6rem;
+		}
 	}
 	
 

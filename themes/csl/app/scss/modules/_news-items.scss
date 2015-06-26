@@ -9,9 +9,19 @@
 		float: left;
 		width: 100%;
 		@include rem(margin-bottom, 4.75rem);
+		@include breakpoint-layout(break-1) {
+			float: left;
+			width: 48.96%;
+			margin-right: 2.08%;		
+			&:nth-child(2n){
+				margin-right: 0;
+			}
+		}
 		@include breakpoint-layout(break-2) {
 			width: 31.91%;
-			margin-right: 2.08%;		
+			&:nth-child(2n){
+				margin-right: 2.08%;		
+			}
 			&:nth-child(3n){
 				margin-right: 0;
 			}			
@@ -50,14 +60,25 @@
 		@include text-link(site-color(blue_dark), site-color(blue_dark));
 	}
 	&__publish{
-		font-weight: regular-of($display-type);		
+		font-weight: regular-of($display-type);	
+		@extend %small-style;
 	}
 	&.latest-news{
 		.news__item{
+			@include breakpoint-layout(break-1) {
+				width: 48.96%;
+				margin-right: 2.08%;	
+				&:nth-child(3n){
+					margin-right: 2.08%;
+				}
+				&:nth-child(2n){
+					margin-right: 0;
+				}
+			}
 			@include breakpoint-layout(break-2) {
 				width: 23.44%;
 				margin-right: 2.08%;	
-				&:nth-child(4n){
+				&:nth-child(3n), &:nth-child(2n){
 					margin-right: 2.08%;
 				}
 				&:nth-child(4n){

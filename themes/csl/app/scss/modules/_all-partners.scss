@@ -10,11 +10,31 @@
 	}
 	&__item{
 		@include rem(margin-bottom, 4.75rem);			
+		@include breakpoint-layout(break-1) {
+			float: left;
+			width: 48.96%;
+			margin-right: 2.08%;
+			&:nth-child(2n){
+				margin-right: 0px;
+			}
+		}
 		@include breakpoint-layout(break-2) {
 			float: left;
-			width: 23.44%;
-			margin-right: 2.08%;
+			width: 31.94%;
+			&:nth-child(2n){
+				margin-right: 2.08%;
+			}
 			&:nth-child(3n){
+				margin-right: 0px;
+			}
+		}
+		@include breakpoint-layout(break-3) {
+			float: left;
+			width: 23.44%;
+			&:nth-child(3n){
+				margin-right: 2.08%;
+			}
+			&:nth-child(4n){
 				margin-right: 0px;
 			}
 		}

@@ -1,4 +1,4 @@
-<section class="features">        
+<section class="features general-features">        
 	<div class="container is-full">
 		<div class="features__row">
 			<% if SiteConfig.SeasonalText %>

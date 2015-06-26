@@ -51,23 +51,36 @@ form {
 		&_2col{
 			@include rem(max-width, 32rem);
 			li{
-				width: 48%;
-				margin-right: 4%;
-				&.even{
-					margin-right: 0;
+				width: 100%;
+				@include breakpoint-layout(break-1) {
+					width: 48%;
+					margin-right: 4%;
+					&.even{
+						margin-right: 0;
+					}
 				}
 			}
 		}
 		&_3col{
 			@include rem(max-width, 32rem);
 			li{
-				width: 32%;
-				margin-right: 4%;
-				&.even{
+				width: 100%;
+				@include breakpoint-layout(break-1) {
+					width: 48%;
 					margin-right: 4%;
+					&.even{
+						margin-right: 0;
+					}
 				}
-				&:nth-child(3n){
-					margin-right: 0;
+				@include breakpoint-layout(break-2) {
+					width: 32%;
+					margin-right: 4%;
+					&.even{
+						margin-right: 4%;
+					}
+					&:nth-child(3n){
+						margin-right: 0;
+					}
 				}
 			}
 		}
@@ -78,7 +91,7 @@ form {
 		left: 0px;
 		top: 100%;
 		z-index: 2;
-		background: #da2637;
+		background: site-color(red);
 		color: site-color(white);
 		font-size: 1em;
 		padding: 10px 12px;
@@ -123,10 +136,18 @@ form {
 	select.not-valid, 
 	select.error {
 		border-color: site-color(red);
+		border-width: 2px;
 	}
 	.required.message{
 		color: site-color(red);
-		@include rem(margin-left, 1rem);
+		@include rem(margin-top, 0.8rem);
+		display: block;
+		@include breakpoint-layout(break-1) {
+			display: inline;
+			margin-top: 0;
+			@include rem(margin-left, 1rem);
+		}
+		
 	}
     .field-submit{
         margin-bottom: 2rem;       
@@ -135,9 +156,18 @@ form {
 }
 
 .drop-down {
-	position: relative;	
-	@include rem(height, 2.353rem);
+	position: relative;		
 	@include rem(width, 15.88rem);	
+	@include rem(height, 3.077rem);
+	@include breakpoint-layout(break-1) {			
+		@include rem(height, 2.857rem);
+	}
+	@include breakpoint-layout(break-2) {		
+		@include rem(height, 2.667rem);
+	}
+	@include breakpoint-layout(break-3) {		
+		@include rem(height, 2.353rem);
+	}
 	ul {
 		position: absolute;
 		text-align: left;
@@ -154,16 +184,34 @@ form {
 		box-sizing: border-box;
 		overflow: hidden;
 		transition: all 0.3s ease-in-out, z-index 0s 0.3s;
-		max-height: 2.118rem;
-		z-index: 1;
+		@include rem(max-height, 2.769rem);
+		@include breakpoint-layout(break-1) {			
+			@include rem(max-height, 2.571rem);
+		}
+		@include breakpoint-layout(break-2) {		
+			@include rem(max-height, 2.4rem);
+		}
+		@include breakpoint-layout(break-3) {		
+			@include rem(max-height, 2.118rem);
+		}	
+		z-index: 1;		
 		li{
 			display: block;
-			padding: 0.1765rem 0.7647rem;
+			@include rem(padding, 0.1765rem 0.7647rem);
 			margin: 0;
 			border: 0;
 			cursor: pointer;
 			color: site-color(blue);
-			font-size: 1rem;
+			font-size: 1.231rem;
+			@include breakpoint-layout(break-1) {
+				font-size: 1.143rem;
+			}
+			@include breakpoint-layout(break-2) {
+				font-size: 1.067rem;
+			}
+			@include breakpoint-layout(break-3) {
+				font-size: 0.9412rem;
+			}	
 			position: relative;			
 			&.active{
 				color: #00644c;
@@ -174,12 +222,13 @@ form {
 					background-image: url(../images/arrows/t-arrow-bottom.png);
 					background-repeat: no-repeat;
 					background-position: 96% 50%;
+					background-size: cover;
 					content: "";
 					width: 0.4118rem;
 					height: 0.2353rem;
 					position: absolute;
 					top: 50%;
-					right: 0.1765rem;
+					right: 0.7647rem;
 					margin-top: -0.1176rem;
 				}
 				span{

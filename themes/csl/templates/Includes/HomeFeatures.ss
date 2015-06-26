@@ -4,7 +4,7 @@
 			<div class="features__row">
 				<% if Features %>
 					<% loop Features %>
-						<div class="features__block span_$FeatureCol $FeatureType has-background_$BackgroundColor">
+						<div class="features__block span_$FeatureCol $FeatureType <% if $MobileBackgroundColor %>has-mobile-background_$MobileBackgroundColor<% end_if %> has-background_$BackgroundColor">
 							<% if Image %>								
 								<% if FeatureType == 'testimonial' %>
 									<div class="alumni-image">$Image.SetWidth(210)</div>

@@ -8,6 +8,7 @@
 		'LinkURL' => 'Varchar',
 		'LinkStyle' => "Varchar(100)",
 		'BackgroundColor' => "Enum('blue,blue_dark,blue_light,blue_mid_light,blue_ver_light,orange,orange_mid,orange_dark,green,green_light,green_dark,green_forest,green_lime,gray,gray_light,gray_dark,black,white,none','none')",
+		'MobileBackgroundColor' => "Enum('blue,blue_dark,blue_light,blue_mid_light,blue_ver_light,orange,orange_mid,orange_dark,green,green_light,green_dark,green_forest,green_lime,gray,gray_light,gray_dark,black,white,none','none')",
     );
 
 	private static $has_one = array(	
@@ -67,12 +68,13 @@
 		$fields->addFieldToTab('Root.Main', new TextField('LinkURL', 'Link URL'));
 		
 		$fields->addFieldToTab('Root.Main', new DropdownField('LinkStyle','Link Style',array(
-		'h1' => 'H1',
 		'h2' => 'H2',	
 		'h3' => 'H3'		
   	)));
 		
 		$fields->addFieldToTab('Root.Main', new DropdownField('BackgroundColor','Background Colour',$this->dbObject('BackgroundColor')->enumValues()));
+
+		$fields->addFieldToTab('Root.Main', new DropdownField('MobileBackgroundColor','Mobile Background Colour',$this->dbObject('MobileBackgroundColor')->enumValues()));
 				
 		$fields->addFieldToTab("Root.Main",  $image = new UploadField('Image', 'Image'));
 		$image->allowedExtensions = array('jpg', 'png', 'svg');

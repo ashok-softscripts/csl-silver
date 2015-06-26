@@ -1,9 +1,14 @@
 .breadcrumb{
 	display: none;
 	background: site-color(blue_ver_light);
-	@include rem(padding, 1.353rem);
-	@include rem(padding-top, 0.8824rem);
-	@include rem(padding-bottom, 0.5882rem);
+	@include rem(padding, 1.69rem);
+	@include rem(padding-bottom, 1.307rem);
+	@include rem(padding-left, 0.923rem);
+	@include breakpoint-layout(break-2) {
+		@include rem(padding, 1.294rem);
+		@include rem(padding-top, 1.176rem);
+		@include rem(padding-bottom, 0.882rem);
+	}
 	a{
 		font-weight: regular-of($display-type);
 		&:before{
