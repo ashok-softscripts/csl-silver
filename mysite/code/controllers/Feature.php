@@ -37,7 +37,7 @@
 		'newsletter' => 'Newsletter',
 		'testimonial' => 'Testimonial',
 		'partners-section' => 'Feature Partners'
-  		)));
+  	)));
 		
 		$fields->addFieldToTab('Root.Main', new DropdownField('FeatureCol','Select Column',array(
 		'12' => '100%',	

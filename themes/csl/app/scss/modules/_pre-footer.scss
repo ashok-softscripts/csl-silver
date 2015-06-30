@@ -12,13 +12,13 @@
 	}
 	&__left{
 		background: site-color(blue_ver_light);	
-		@include rem(padding-top, 5rem);		
+		@include rem(padding-top, 2.77rem);		
 		@include rem(padding-bottom, 5.385rem);			
 		@include breakpoint-layout(break-2) {
 			background: transparent;
 			@include span(5 of 12);
 			float: left;
-			@include rem(padding-top, 7.3rem);		
+			@include rem(padding-top, 5.9rem);		
 			@include rem(padding-bottom, 4.375rem);
 			.pre-footer__container{
 				@include rem(padding-left, 3rem);
@@ -29,13 +29,13 @@
 	
 	&__right{
 		background: site-color(blue_mid_light);	
-		@include rem(padding-top, 5rem);		
+		@include rem(padding-top, 2.77rem);		
 		@include rem(padding-bottom, 5.385rem);	
 		@include breakpoint-layout(break-2) {
 			background: site-color(blue_ver_light);	
 			@include span(7 of 12);
 			float: left;		
-			@include rem(padding-top, 7.3rem);		
+			@include rem(padding-top, 5.9rem);		
 			@include rem(padding-bottom, 4.375rem);
 			.pre-footer__container{				
 				@include rem(max-width, 30.59rem);

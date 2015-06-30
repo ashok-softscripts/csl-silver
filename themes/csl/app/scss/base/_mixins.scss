@@ -420,7 +420,7 @@
     padding: 0.9em 1.9em 0.7em;
     @include rem(min-height, 3rem);
     line-height: 1.375em;
-    @include rem(font-size, 18rem / 14);
+    @include rem(font-size, 18rem / 17);
     font-family: font-family-of($display-type);
 	color: site-color(white);
     display: inline-block;

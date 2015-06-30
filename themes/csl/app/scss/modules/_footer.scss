@@ -9,7 +9,7 @@
 		background: none;
 	}
 	.thick-logo{
-		@include rem(padding-top, 0.4rem);
+		@include rem(padding-top, 2rem);
 		@include breakpoint-layout(break-1) {
 			@include span(5 of 12);
 			float: left;
@@ -25,17 +25,30 @@
 		}
 	}
 	.csl-footer-logo{
-		background: site-color(blue_ver_light);
-		@include rem(padding-top, 1.765rem);
+		background: site-color(blue_ver_light);		
 		.container{			
 			padding: 0px;
+			overflow: hidden;
+			img{
+				width: 150%;
+				max-width: none;
+				margin-left: -20%;
+				margin-bottom: -10%;
+			}
 		}
 		@include breakpoint-layout(break-1) {
+			@include rem(padding-top, 1.765rem);
 			@include span(7 of 12);
 			float: right;	
-			.container{			
+			.container{
+				@include rem(height, 14.71rem);
+				position: relative;
 				img{
-					@include rem(max-width, 17rem);
+					margin: 0;
+					position: absolute;
+					@include rem(width, 31.18rem);
+					@include rem(left, -5.824rem);
+					//@include rem(max-width, 17rem);
 				}
 			}
 		}

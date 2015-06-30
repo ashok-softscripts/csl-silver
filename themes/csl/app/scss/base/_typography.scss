@@ -438,6 +438,9 @@ select{
 			@include rem(margin-right, 1rem);
 		}
 	}
+	&[aria-invalid="true"]{		
+		border-color: site-color(red);		
+	}
 }
 
 button::-moz-focus-inner,
@@ -458,8 +461,7 @@ input[type=submit], button {
 }
 
 .radio-wrapper, .checkbox-wrapper{
-	display: inline-block;
-	vertical-align: middle;
+	display: inline-block;	
 	width: 18px;
 	height: 18px;
 	@include rem(margin-right,0.2rem);

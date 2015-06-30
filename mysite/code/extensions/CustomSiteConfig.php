@@ -7,15 +7,12 @@
 		'Linkedin' => 'Varchar(100)',
 		'Location1' => 'Varchar(100)',
 		'Location1Address' => 'Text',
+		'Location1AddressLink' => 'Text',
 		'Location1Phone' => 'Varchar(100)',
 		'Location2' => 'Varchar(100)',
 		'Location2Address' => 'Text',
+		'Location2AddressLink' => 'Text',
 		'Location2Phone' => 'Varchar(100)',
-		'SeasonalText' => 'HTMLText',
-		'SeasonalLinkText' => 'Varchar(100)',
-		'SeasonalLinkTarget' => 'Varchar(100)',
-		'SeasonalCol' => "Varchar(100)",
-		'SeasonalBGC' => "Varchar(100)",
 		'NewsletterTitle' => 'Varchar(100)',
 		'NewsletterText' => 'Text',
 		'NewsletterURL' => 'Varchar(200)',
@@ -42,58 +39,17 @@
 
 		$fields->addFieldToTab('Root.Locations', new TextAreaField('Location1Address', 'Address'));
 
+		$fields->addFieldToTab('Root.Locations', new TextField('Location1AddressLink', 'Location Link'));
+
 		$fields->addFieldToTab('Root.Locations', new TextField('Location1Phone', 'Phone No'));
 
 		$fields->addFieldToTab('Root.Locations', new TextField('Location2', 'Location 2'));
 
 		$fields->addFieldToTab('Root.Locations', new TextAreaField('Location2Address', 'Address'));
 
-		$fields->addFieldToTab('Root.Locations', new TextField('Location2Phone', 'Phone No'));
+		$fields->addFieldToTab('Root.Locations', new TextField('Location2AddressLink', 'Location Link'));
 
-		$Content = new HTMLEditorField('SeasonalText', 'Content');
-		$Content->setRows(15);
-		$fields->addFieldToTab('Root.Seasonal Block', $Content);
-
-		$fields->addFieldToTab('Root.Seasonal Block', new TextField('SeasonalLinkText', 'Link Text'));
-
-		$fields->addFieldToTab('Root.Seasonal Block', new TextField('SeasonalLinkTarget', 'Link URL'));
-
-		$fields->addFieldToTab('Root.Seasonal Block', new DropdownField('SeasonalCol','Select Column',array(
-						'12' => '100%',	
-						'11' => '91%',
-						'10' => '84%',
-						'9' => '75%',
-						'8' => '66%',
-						'7' => '58%',
-						'6' => '50%',
-						'5' => '41%',
-						'4' => '33%',
-						'3' => '25%',
-						'2' => '16%',
-						'1' => '9%'	
-				  	)));
-
-		$fields->addFieldToTab('Root.Seasonal Block', new DropdownField('SeasonalBGC','Background Colour',array(
-			'green' => 'Green',
-			'blue' => 'Blue',
-			'blue_dark' => 'Blue Dark',
-			'blue_light' => 'Blue Light',
-			'blue_mid_light' => 'Blue Medium Blue',
-			'blue_ver_light' => 'Blue Very Light',
-			'orange' => 'Orange',
-			'orange_mid' => 'Orange Medium',
-			'orange_dark' => 'Orange Dark',
-			'green_light' => 'Green Light',
-			'green_dark' => 'Green Dark',
-			'green_forest' => 'Green Forest',
-			'green_lime' => 'Green Lime',
-			'gray' => 'Gray',
-			'gray_light' => 'Gray Light',
-			'gray_dark' => 'Gray Dark',
-			'black' => 'Black',
-			'white' => 'White'
-		)));
-
+		$fields->addFieldToTab('Root.Locations', new TextField('Location2Phone', 'Phone No'));		
 
 		$fields->addFieldToTab('Root.Newsletter', new TextField('NewsletterTitle', 'Title'));
 
@@ -147,9 +103,6 @@
 		$event_cache = new TextField('EventCache', 'Event Cache');
 		$event_cache->setDescription('Inter event max cache time in seconds (eg: 3600 equals to 1 hour)');
 		$fields->addFieldToTab('Root.Events', $event_cache);
-
-		
-
 
     }
 }

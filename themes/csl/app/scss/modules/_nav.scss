@@ -29,6 +29,14 @@
 			line-height: normal;
 			span{ 
 				@include rem(width, 1rem);
+				@include rem(height, 1rem);
+				@include rem(margin-right, 0.4118rem);
+				display: inline-block;
+				background: url(../images/icons/menu-icon.png) no-repeat center center;
+				background-size: cover;
+				transition: all 0.2s ease;				
+				/*
+				@include rem(width, 1rem);
 				@include rem(height, 0.1765rem);
 				background: site-color(blue);
 				display: inline-block;
@@ -49,7 +57,7 @@
 				}
 				&:after{
 					@include rem(top, 0.4118rem);					
-				}
+				}*/
 			}			
 		}
 		@include breakpoint-layout(break-3) {
@@ -108,7 +116,8 @@
 		.nav__badge{
 			a {
 				span{
-					background: transparent;
+					background-image: url(../images/icons/menu-icon-close.png);
+					/*background: transparent;
 					&:before{
 						transform: rotate(-45deg);
 						top: 0 !important;
@@ -116,7 +125,7 @@
 					&:after{
 						transform: rotate(45deg);
 						top: 0 !important;
-					}
+					}*/
 				}
 			}
 		}

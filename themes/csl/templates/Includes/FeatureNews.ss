@@ -2,11 +2,9 @@
 <% loop LatestNews %>
 <div class="news__item">
 	<a href="$Link" class="news__cover filter-gray">$FeaturedImage.setWidth(368)</a>
-	<div class="news__content">
-		<h3>News</h3>
-		<div class="news__excerpt">
-			<p><a href="$Link">$Title</a></p>
-		</div>
+	<h3>News</h3>
+	<div class="news__excerpt">
+		<p><a href="$Link">$Title</a></p>
 	</div>
 	<div class="news__publish">Published $PublishDate.Format(d M Y)</div>
 </div>

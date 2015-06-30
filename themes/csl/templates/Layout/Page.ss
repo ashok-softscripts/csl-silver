@@ -7,9 +7,11 @@
 	</div>        	
 </header>
 <section class="general" id="overview">        
-	<div class="container">
+	<div class="container row">
+		<div class="col span_9">
 		$Content
 		$Form
+		</div>
 	</div>
 </section>
 <% include Features %>   

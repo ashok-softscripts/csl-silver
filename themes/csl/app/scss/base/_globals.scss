@@ -28,8 +28,8 @@ svg {
 }
 
 ::placeholder {
-    color: site-color(gray_dark);
-    transition: color 0.25s ease;    
+    color: site-color(gray_light);
+    transition: color 0.25s ease;    	
 }
 
 :focus::placeholder {

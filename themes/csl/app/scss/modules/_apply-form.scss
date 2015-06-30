@@ -2,7 +2,7 @@
 	@include rem(padding-top, 2.308rem);
 	@include rem(padding-bottom, 2.308rem);
 	@include breakpoint-layout(break-2) {
-		@include rem(padding-top, 5rem);
+		@include rem(padding-top, 2rem);
 		@include rem(padding-bottom, 5rem);	
 	}
 	
@@ -10,5 +10,7 @@
 	
 	h3{
 		font-weight: bold-of($display-type);
+		border-bottom: 0;
+		@include rem(padding-top, 2rem);	
 	}
 }

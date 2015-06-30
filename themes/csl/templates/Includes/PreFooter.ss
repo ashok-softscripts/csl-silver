@@ -38,15 +38,15 @@
 					<% if SiteConfig.Location1 %>
 					<div class="locations__item">
 						<strong>$SiteConfig.Location1</strong>
-						<p><span>$SiteConfig.Location1Address</span></p>
-						<p><span>$SiteConfig.Location1Phone</span></p>
+						<p><a href="$SiteConfig.Location1AddressLink" target="_blank">$SiteConfig.Location1Address</a></p>
+						<p><a href="tel:$SiteConfig.Location1Phone">$SiteConfig.Location1Phone</a></p>
 					</div>
 					<% end_if %>
 					<% if SiteConfig.Location2 %>
 					<div class="locations__item">
 						<strong>$SiteConfig.Location2</strong>
-						<p><span>$SiteConfig.Location2Address</span></p>
-						<p><span>$SiteConfig.Location2Phone</span></p>
+						<p><a href="$SiteConfig.Location1AddressLink" target="_blank">$SiteConfig.Location2Address</a></p>
+						<p><a href="tel:$SiteConfig.Location2Phone">$SiteConfig.Location2Phone</a></p>
 					</div>	
 					<% end_if %>			
 				</div>

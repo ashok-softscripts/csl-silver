@@ -42,8 +42,16 @@
 					@include rem(max-width, 32rem);
 				}
 			}
-			p{
-				
+			&.header-home{
+				p, p.intro{					
+					@extend %default-style;
+					@include breakpoint-layout(break-2) {
+						@include type($body-type, 1.6rem, 2, 0, 1);					
+					}
+					@include breakpoint-layout(break-3) {
+						@include type($body-type, 1.4rem, 2, 0, 1);					
+					}					
+				}
 			}
 			&.header-alumni, &.header-program, &.header-news { // Content Alumni template
 				p{

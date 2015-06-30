@@ -11,8 +11,11 @@ form {
 	}
     .field-group, fieldset > .field {
         position: relative;
-        margin-bottom: 2rem;
+        @include rem(margin-bottom, 2rem);
         position: relative;
+		&.text.nolabel{
+			@include rem(margin-bottom, 1.4rem);
+		}
         &.sub-field{
             margin-right: 0.4%;
             &.col-5 {
@@ -44,6 +47,7 @@ form {
 			label{
 				cursor: pointer;
 				display: inline-block;
+				vertical-align: middle;
 				font-weight: bold-of($body-type);
 				color: site-color(blue);				
 			}
@@ -152,7 +156,20 @@ form {
     .field-submit{
         margin-bottom: 2rem;       
     }    
-    
+ 
+	.dob-month, .dob-day, .dob-year{
+		display: inline-block;
+		label{
+			display: none !important;
+		}
+		.required.message{
+			display: none !important;
+		}
+	}
+	
+	#EditableLiteralField35{
+		margin-bottom: 0;
+	}
 }
 
 .drop-down {
@@ -224,14 +241,21 @@ form {
 					background-position: 96% 50%;
 					background-size: cover;
 					content: "";
-					width: 0.4118rem;
-					height: 0.2353rem;
 					position: absolute;
 					top: 50%;
-					right: 0.7647rem;
-					margin-top: -0.1176rem;
+					@include rem(width, 0.5385rem);
+					@include rem(height, 0.3077rem);
+					@include rem(right, 1rem);
+					@include rem(margin-top, -0.1538rem);
+					@include breakpoint-layout(break-1) {
+						@include rem(width, 0.4118rem);
+						@include rem(height, 0.2353rem);
+						@include rem(right, 0.7647rem);
+						@include rem(margin-top, -0.1176rem);
+					}
 				}
 				span{
+					@include rem(padding-right,0.2941rem);
 					overflow: hidden;
 					display: block;
 					white-space: nowrap;

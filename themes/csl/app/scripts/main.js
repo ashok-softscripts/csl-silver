@@ -43,7 +43,8 @@
 	var $navToggle = $('.nav__badge');
 	var $pre_footer = $('.pre-footer > div');
 	var $features = $('.features__block');
-	var $news_content = $('.news__content');
+	var $news_excerpt = $('.news__excerpt');		
+	var $news_item = $('.news__item');		
 	var $partners_item = $('.partners__item');	
 	var $all_partners_item = $('.all_partners__item');	
 	var $all_partners_logo = $('.all_partners__logo');
@@ -59,8 +60,10 @@
 	var $instructors_item = $('.instructors__item');
 	var $speakers_item = $('.speakers__item');
 	var $programs_applicants = $('.program-applicants__item');
-	var $programs_applicants_quote = $('.program-applicants__item blockquote');
-	
+	var $programs_applicants_quote = $('.program-applicants__item blockquote');	
+	var $dob_month = $('select.dob-month');
+	var $dob_year = $('select.dob-year');
+	var $dob_day = $('select.dob-day');
 	
 	// Nav togggle
 	if($navToggle.length > 0) {
@@ -151,6 +154,15 @@
 		$(this).parent('.checkbox-wrapper').toggleClass( "checked" );
 	});
 	
+	if($dob_year.length > 0) {
+		$dob_year.prepend('<option value="" selected="selected">Year</option>');
+	}
+	if($dob_month.length > 0) {
+		$dob_month.prepend('<option value="" selected="selected">Month</option>');
+	}
+	if($dob_day.length > 0) {
+		$dob_day.prepend('<option value="" selected="selected">Day</option>');
+	}						   
 	
 	function adjustHeight(){
 		// match height of feature blocks
@@ -180,9 +192,13 @@
 			$pre_footer.matchHeight(true);
 		}
 		// match height of news excerpt
-		if ($news_content.length > 0) {
-			$news_content.matchHeight(true);
+		if ($news_excerpt.length > 0) {
+			$news_excerpt.matchHeight(true);
 		}
+		// match height of news item
+		if ($news_item.length > 0) {
+			$news_item.matchHeight(true);
+		}		
 		// match height of alumni excerpt
 		if ($alumni_excerpt.length > 0) {
 			$alumni_excerpt.matchHeight(true);
