@@ -4,6 +4,10 @@
 	@include breakpoint-layout(break-2) {
 		@include rem(padding-top, 1.41rem);
 		padding-bottom: 0;
+		.url-home & {
+			@include rem(padding-bottom, 1.41rem);
+			padding-top: 0;
+		}
 	}
 	&__item{
 		float: left;
@@ -88,8 +92,13 @@
 		}
 		h3{
 			border-bottom: none;
+			padding-top: 0;
+			border-top-width: 0.8rem;
 		}
-		.news__excerpt{			
+		.news__excerpt{		
+			@include breakpoint-layout(break-2) {
+				@include rem(margin-bottom, 1rem);
+			}
 			p{
 				@extend %intro-style;
 			}

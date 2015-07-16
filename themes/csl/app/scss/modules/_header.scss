@@ -4,10 +4,13 @@
 	@include rem(padding-bottom, 2.353rem);
 	
 	@include breakpoint-layout(break-1) {
-		@include rem(padding-top, 3.125rem);
-		@include rem(padding-bottom, 4.648rem);	
+		@include rem(padding-top, 3.118rem);
+		@include rem(padding-bottom, 5.46rem);	
 	}
 	.container{
+		@include breakpoint-layout(break-3) {
+			@include rem(padding-right, 0.6rem);
+		}
 		.logo{
 			float: right;
 			width: span(2.16);
@@ -38,11 +41,17 @@
 				padding-top: 10rem;
 				@include rem(max-width, 52rem);			
 				&.header-home{
-					padding-top: 7.5rem;	
+					padding-top: 6.176rem;	
 					@include rem(max-width, 32rem);
 				}
 			}
 			&.header-home{
+				h1{
+					@include breakpoint-layout(break-3) {
+						@include rem(border-bottom-width, 1.4rem);
+						@include rem(line-height, 4.235rem);						
+					}	
+				}
 				p, p.intro{					
 					@extend %default-style;
 					@include breakpoint-layout(break-2) {

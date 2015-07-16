@@ -42,7 +42,7 @@
 			@include rem(padding-top, 2.648rem);
 			@include rem(padding-bottom, 4.615rem);
 			@include breakpoint-layout(break-2) {
-				@include rem(padding, 3rem 3rem 4rem);
+				@include rem(padding, 3rem 3rem 4.3rem);
 				&.is-long{
 					@include rem(padding-top, 5rem);
 					@include rem(padding-bottom, 4.5rem);
@@ -56,11 +56,18 @@
 				@include breakpoint-layout(break-2) {
 					max-width: 40rem;				
 				}
+				&.is-long{
+					h2, .h2-style{
+						@include rem(margin-bottom, 1.6rem);
+						@include rem(padding-top, 0.8rem);
+					}
+				}
 			}
 			h2, .h2-style{
-				color: site-color(white);
-				margin-bottom: 1rem;
+				color: site-color(white);				
 				font-weight: regular-of($display-type);
+				@include rem(margin-bottom, 2.1rem);
+				@include rem(padding-top, 0.3rem);
 			}
 			.arrow-link{
 				@include text-link(site-color(white));
@@ -72,22 +79,23 @@
 		&.newsletter{
 			.block-container{
 				@include breakpoint-layout(break-2) {
-					@include rem(padding-left, 2rem);
-					@include rem(padding-right, 2rem);
+					@include rem(padding-left, 1.7rem);
+					@include rem(padding-right, 1.7rem);
 				}
 			}
 			h3{
 				font-weight: bold-of($display-type);
 				border-bottom: 0px;
+				@include rem(margin-top, 0.7rem);
 			}
 			p.intro{
-				margin-bottom: 0.5em;
+				margin-bottom: 0.8em;
 			}
 			input[type="email"]{
 				max-width: 100%;
 				background-color: site-color(white);
 				border: none;
-				@include rem(margin-bottom, 1.4rem);
+				@include rem(margin-bottom, 0.8rem);
 			}
 			input[type="submit"], button{
 				display: block;
@@ -152,9 +160,10 @@
 				border-bottom: 0;
 				padding: 0;
 				@include rem(padding-bottom, 0.4rem);
+				border-top-width: 0.7rem;
 			}
 			blockquote{	
-				@include rem(padding-bottom, 3rem);
+				@include rem(padding-bottom, 3.8rem);
 					p{
 						&:before{
 							@include breakpoint-layout(break-2) {
@@ -176,6 +185,11 @@
 				font-weight: regular-of($display-type);
 				@include breakpoint-layout(break-2) {
 					@include rem(padding-bottom, 1.8rem);
+				}
+			}
+			.block-container{
+				@include breakpoint-layout(break-2) {
+					@include rem(padding, 3rem 3rem 3.6rem);
 				}
 			}
 			.view-more{

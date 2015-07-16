@@ -18,7 +18,7 @@
 			background: transparent;
 			@include span(5 of 12);
 			float: left;
-			@include rem(padding-top, 5.9rem);		
+			@include rem(padding-top, 5.6rem);		
 			@include rem(padding-bottom, 4.375rem);
 			.pre-footer__container{
 				@include rem(padding-left, 3rem);
@@ -35,7 +35,7 @@
 			background: site-color(blue_ver_light);	
 			@include span(7 of 12);
 			float: left;		
-			@include rem(padding-top, 5.9rem);		
+			@include rem(padding-top, 5.6rem);		
 			@include rem(padding-bottom, 4.375rem);
 			.pre-footer__container{				
 				@include rem(max-width, 30.59rem);
@@ -53,7 +53,8 @@
 		
 	}
 	h3{
-		font-weight: bold-of($display-type);		
+		font-weight: bold-of($display-type);
+		border-bottom-width: 0.7rem;
 	}
 	.footer-menu{
 		list-style: none;
@@ -63,7 +64,7 @@
 			float: right;			
 		}
 		@include breakpoint-layout(break-1) {
-			@include span(6 of 12);
+			width: 43%;
 			&:last-child{
 				float: left;			
 			}
@@ -90,7 +91,7 @@
 			@extend %intro-style;
 			padding-top: 0px;
 			border: 0px;
-			@include rem(margin-bottom, 2.94rem);
+			@include rem(margin-bottom, 2.6rem);
 		}		
 		.locations{
 			@include clearfix;
@@ -107,9 +108,14 @@
 					@include breakpoint-layout(break-3) {
 						font-size: 0.9412rem;
 					}
+					display: block;
+					@include rem(margin-bottom, 0.4rem); 
 				}
-				p{
-					margin-bottom: 0px;
+				p{										
+					@extend %small-style;					
+					margin-bottom: 0;
+					padding-top: 0;
+					@include rem(line-height, 1.66rem); 
 					span{
 						@include text-link(site-color(blue));					
 					}

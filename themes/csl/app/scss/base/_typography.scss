@@ -137,9 +137,9 @@ h1, h2, h3, h4, h5, h6 {
 
 // Heading level 1.
 h1, .h1-style {
-    // scales up to 4.1rem (2.72rem * 25/16)
-    @include type($font: $display-type, $fontsize: 2.72rem, $lineheight: 3, $leader: 1, $trailer: 1, $scale-ratio: 25/16);    
-	font-weight: regular-of($body-type);
+    // scales up to 4.235rem (2.72rem * 1.5294)
+    @include type($font: $display-type, $fontsize: 2.769rem, $lineheight: 3, $leader: 1, $trailer: 1, $scale-ratio: 1.5294);  
+	font-weight: regular-of($body-type);			
 }
 
 // Heading level 2.
