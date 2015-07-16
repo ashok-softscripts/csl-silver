@@ -41,13 +41,16 @@
 	var $container = $('.container');
 	var $offsetContainer = $('.is-offset');
 	var $navToggle = $('.nav__badge');
+	var $contentNav = $('.content');
 	var $pre_footer = $('.pre-footer > div');
 	var $features = $('.features__block');
+	var $news_title = $('.news__item h3');		
 	var $news_excerpt = $('.news__excerpt');		
 	var $news_item = $('.news__item');		
 	var $partners_item = $('.partners__item');	
 	var $all_partners_item = $('.all_partners__item');	
 	var $all_partners_logo = $('.all_partners__logo');
+	var $all_partners_title = $('.all_partners__item h3');
 	var $alumni_excerpt = $('.alumni__excerpt');		
 	var $alumni_item = $('.alumni__item');
 	var $programs_title = $('.programs h3');
@@ -75,6 +78,14 @@
 			offsetContainer();
 			return false;	
 		});
+		$contentNav.click(function(){
+			$('#primary-nav').removeClass('nav--open');
+			$('.content').removeClass('content--has-nav');			
+			adjustHeight();
+			setIndexnav();
+			offsetContainer();			
+		});
+				
 	}
 	
 	// Anchor spots
@@ -171,25 +182,22 @@
 		}
 		// match height of partners blocks
 		if ($partners_item.length > 0) {
-			$partners_item.matchHeight(true);
-			$partners_item.each(function(){
-				var $partner_height = $(this).height();
-				$(this).children('a').css('line-height',$partner_height + 'px');
-			});
+			$partners_item.matchHeight(true);			
 		}
 		// match height of partners blocks
 		if ($all_partners_item.length > 0) {
-			$all_partners_logo.matchHeight(true);
-			$all_partners_logo.each(function(){
-				var $partner_logo_height = $(this).height();
-				$(this).css('line-height',$partner_logo_height + 'px');
-			});
+			$all_partners_logo.matchHeight(true);			
+			$all_partners_title.matchHeight(true);
 			$all_partners_item.matchHeight(true);			
 		}
 			
 		// match height of footer blocks
 		if ($pre_footer.length > 0) {
 			$pre_footer.matchHeight(true);
+		}
+		// match height of news title
+		if ($news_title.length > 0) {
+			$news_title.matchHeight(true);
 		}
 		// match height of news excerpt
 		if ($news_excerpt.length > 0) {

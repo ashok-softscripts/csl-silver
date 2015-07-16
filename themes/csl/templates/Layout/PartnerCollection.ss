@@ -15,7 +15,7 @@
 		<div class="all_partners__item">
 			<a href="$Website" target="_blank" class="all_partners__logo">$Logo</a>
 			<h3>$Title</h3>
-			$Content
+			<div class="all_partners__excerpt"><p>$Description</p></div>
 		</div>
 		<% end_loop %>
 		<% end_if %>

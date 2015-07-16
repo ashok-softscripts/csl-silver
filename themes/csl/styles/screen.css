@@ -59,6 +59,12 @@ caption, th, td {
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: 'TradeGothicLTStd';
+  src: url("../webfonts/TradeGothicLTStd-Bold.eot?#iefix") format("embedded-opentype"), url("../webfonts/TradeGothicLTStd-Bold.otf") format("opentype"), url("../webfonts/TradeGothicLTStd-Bold.woff") format("woff"), url("../webfonts/TradeGothicLTStd-Bold.ttf") format("truetype"), url("../webfonts/TradeGothicLTStd-Bold.svg#TradeGothicLTStd-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
 .container {
   max-width: 100%;
   margin-left: auto;
@@ -196,7 +202,7 @@ a.stealth-link {
   background-image: none;
 }
 
-.nav__badge a, .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .news__publish {
+.nav__badge a, .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .pre-footer .footer-menu li, .pre-footer .get-in-touch .locations__item p, .news__publish {
   line-height: 26px;
   line-height: 2rem;
   border-top: 0 none;
@@ -210,7 +216,7 @@ a.stealth-link {
   margin-bottom: -0.599935rem;
 }
 @media screen and (min-width: 30em) {
-  .nav__badge a, .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .news__publish {
+  .nav__badge a, .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .pre-footer .footer-menu li, .pre-footer .get-in-touch .locations__item p, .news__publish {
     line-height: 28px;
     line-height: 2rem;
     border-top: 0 none;
@@ -225,7 +231,7 @@ a.stealth-link {
   }
 }
 @media screen and (min-width: 47.9375em) {
-  .nav__badge a, .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .news__publish {
+  .nav__badge a, .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .pre-footer .footer-menu li, .pre-footer .get-in-touch .locations__item p, .news__publish {
     line-height: 30px;
     line-height: 2rem;
     border-top: 0 none;
@@ -240,7 +246,7 @@ a.stealth-link {
   }
 }
 @media screen and (min-width: 67.5em) {
-  .nav__badge a, .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .news__publish {
+  .nav__badge a, .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .pre-footer .footer-menu li, .pre-footer .get-in-touch .locations__item p, .news__publish {
     line-height: 34px;
     line-height: 2rem;
     border-top: 0 none;
@@ -255,7 +261,7 @@ a.stealth-link {
   }
 }
 
-p, li, table, form .field-group > label, form fieldset > .field > label, .header .container .header-intro.header-home p, .header .container .header-intro.header-home p.intro, .news__excerpt p {
+p, li, table, form .field-group > label, form fieldset > .field > label, .header .container .header-intro.header-home p, .header .container .header-intro.header-home p.intro {
   line-height: 26px;
   line-height: 2rem;
   border-top: 0 none;
@@ -269,7 +275,7 @@ p, li, table, form .field-group > label, form fieldset > .field > label, .header
   margin-bottom: -0.549885rem;
 }
 @media screen and (min-width: 30em) {
-  p, li, table, form .field-group > label, form fieldset > .field > label, .header .container .header-intro.header-home p, .header .container .header-intro.header-home p.intro, .news__excerpt p {
+  p, li, table, form .field-group > label, form fieldset > .field > label, .header .container .header-intro.header-home p, .header .container .header-intro.header-home p.intro {
     line-height: 28px;
     line-height: 2rem;
     border-top: 0 none;
@@ -284,7 +290,7 @@ p, li, table, form .field-group > label, form fieldset > .field > label, .header
   }
 }
 @media screen and (min-width: 47.9375em) {
-  p, li, table, form .field-group > label, form fieldset > .field > label, .header .container .header-intro.header-home p, .header .container .header-intro.header-home p.intro, .news__excerpt p {
+  p, li, table, form .field-group > label, form fieldset > .field > label, .header .container .header-intro.header-home p, .header .container .header-intro.header-home p.intro {
     line-height: 30px;
     line-height: 2rem;
     border-top: 0 none;
@@ -299,7 +305,7 @@ p, li, table, form .field-group > label, form fieldset > .field > label, .header
   }
 }
 @media screen and (min-width: 67.5em) {
-  p, li, table, form .field-group > label, form fieldset > .field > label, .header .container .header-intro.header-home p, .header .container .header-intro.header-home p.intro, .news__excerpt p {
+  p, li, table, form .field-group > label, form fieldset > .field > label, .header .container .header-intro.header-home p, .header .container .header-intro.header-home p.intro {
     line-height: 34px;
     line-height: 2rem;
     border-top: 0 none;
@@ -478,48 +484,48 @@ h1, .h1-style {
   border-top: 1rem solid transparent;
   border-bottom: 13px solid transparent;
   border-bottom: 1rem solid transparent;
-  font-size: 35.36px;
-  font-size: 2.72rem;
-  padding-top: 7.83133px;
-  padding-top: 0.60241rem;
-  margin-bottom: -7.83133px;
-  margin-bottom: -0.60241rem;
+  font-size: 35.997px;
+  font-size: 2.769rem;
+  padding-top: 7.62112px;
+  padding-top: 0.58624rem;
+  margin-bottom: -7.62112px;
+  margin-bottom: -0.58624rem;
   font-weight: 300;
 }
 @media screen and (min-width: 30em) {
   h1, .h1-style {
     line-height: 56px;
     line-height: 4rem;
-    font-size: 45.22px;
-    font-size: 3.23rem;
-    padding-top: 6.07754px;
-    padding-top: 0.43411rem;
-    margin-bottom: -6.07754px;
-    margin-bottom: -0.43411rem;
+    font-size: 45.6069068px;
+    font-size: 3.2576362rem;
+    padding-top: 5.949860756px;
+    padding-top: 0.424990054rem;
+    margin-bottom: -5.949860756px;
+    margin-bottom: -0.424990054rem;
   }
 }
 @media screen and (min-width: 47.9375em) {
   h1, .h1-style {
     line-height: 60px;
     line-height: 4rem;
-    font-size: 56.1px;
-    font-size: 3.74rem;
-    padding-top: 3.98715px;
-    padding-top: 0.26581rem;
-    margin-bottom: -3.98715px;
-    margin-bottom: -0.26581rem;
+    font-size: 56.194086px;
+    font-size: 3.7462724rem;
+    padding-top: 3.95610162px;
+    padding-top: 0.263740108rem;
+    margin-bottom: -3.95610162px;
+    margin-bottom: -0.263740108rem;
   }
 }
 @media screen and (min-width: 67.5em) {
   h1, .h1-style {
     line-height: 85px;
     line-height: 5rem;
-    font-size: 72.25px;
-    font-size: 4.25rem;
-    padding-top: 1.65767px;
-    padding-top: 0.09751rem;
-    margin-bottom: -1.65767px;
-    margin-bottom: -0.09751rem;
+    font-size: 71.9934462px;
+    font-size: 4.2349086rem;
+    padding-top: 1.742332754px;
+    padding-top: 0.102490162rem;
+    margin-bottom: -1.742332754px;
+    margin-bottom: -0.102490162rem;
   }
 }
 
@@ -1295,6 +1301,7 @@ svg {
 
 form .field-group > label, form fieldset > .field > label {
   display: block;
+  border-bottom-width: 0.8rem;
 }
 form input[type=submit], form button, form input[type=reset] {
   border: none;
@@ -1337,8 +1344,8 @@ form .field-section {
 }
 form .field-group, form fieldset > .field {
   position: relative;
-  margin-bottom: 26px;
-  margin-bottom: 2rem;
+  margin-bottom: 12.74px;
+  margin-bottom: 0.98rem;
   position: relative;
 }
 form .field-group.text.nolabel, form fieldset > .field.text.nolabel {
@@ -1361,6 +1368,10 @@ form .field-group.sub-field:last-child, form fieldset > .field.sub-field:last-ch
   float: right;
   margin-right: 0px;
 }
+form .Actions {
+  margin-top: 31.2px;
+  margin-top: 2.4rem;
+}
 form .optionset {
   list-style: none;
   padding: 0;
@@ -1380,7 +1391,7 @@ form .optionset li {
 }
 form .optionset li label {
   cursor: pointer;
-  display: inline-block;
+  display: inline;
   vertical-align: middle;
   font-weight: bold;
   color: #006d81;
@@ -1580,8 +1591,8 @@ form #EditableLiteralField35 {
 }
 .drop-down ul li {
   display: block;
-  padding: 2.2945px 9.9411px;
-  padding: 0.1765rem 0.7647rem;
+  padding: 4.5877px 9.9411px;
+  padding: 0.3529rem 0.7647rem;
   margin: 0;
   border: 0;
   cursor: pointer;
@@ -1592,6 +1603,7 @@ form #EditableLiteralField35 {
 @media screen and (min-width: 30em) {
   .drop-down ul li {
     font-size: 1.143rem;
+    line-height: 1.6rem;
   }
 }
 @media screen and (min-width: 47.9375em) {
@@ -1884,18 +1896,18 @@ form #EditableLiteralField35 {
   padding-left: 35.945px;
   padding-left: 2.765rem;
   list-style: none;
-  padding-top: 16.822px;
-  padding-top: 1.294rem;
-  padding-bottom: 16.822px;
-  padding-bottom: 1.294rem;
+  padding-top: 13px;
+  padding-top: 1rem;
+  padding-bottom: 13px;
+  padding-bottom: 1rem;
   display: none;
 }
 .nav__item {
   display: block;
   padding: 0;
   margin: 0;
-  margin-bottom: 12.22px;
-  margin-bottom: 0.94rem;
+  margin-bottom: 9.62px;
+  margin-bottom: 0.74rem;
   border: 0;
   text-align: left;
 }
@@ -1924,8 +1936,8 @@ form #EditableLiteralField35 {
   background-image: none;
 }
 .nav--smaller .nav__item {
-  margin-bottom: 5.2px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 2.6px;
+  margin-bottom: 0.2rem;
 }
 .nav--smaller .nav__link {
   font-size: 1.231rem;
@@ -1984,8 +1996,8 @@ form #EditableLiteralField35 {
   .breadcrumb {
     padding: 19.41px;
     padding: 1.294rem;
-    padding-top: 17.64px;
-    padding-top: 1.176rem;
+    padding-top: 18.9px;
+    padding-top: 1.26rem;
     padding-bottom: 13.23px;
     padding-bottom: 0.882rem;
   }
@@ -2017,10 +2029,16 @@ form #EditableLiteralField35 {
 }
 @media screen and (min-width: 30em) {
   .header {
-    padding-top: 43.75px;
-    padding-top: 3.125rem;
-    padding-bottom: 96.25px;
-    padding-bottom: 6.875rem;
+    padding-top: 43.652px;
+    padding-top: 3.118rem;
+    padding-bottom: 76.44px;
+    padding-bottom: 5.46rem;
+  }
+}
+@media screen and (min-width: 67.5em) {
+  .header .container {
+    padding-right: 10.2px;
+    padding-right: 0.6rem;
   }
 }
 .header .container .logo {
@@ -2075,9 +2093,17 @@ form #EditableLiteralField35 {
     max-width: 52rem;
   }
   .header .container .header-intro.header-home {
-    padding-top: 7.5rem;
+    padding-top: 6.176rem;
     max-width: 480px;
     max-width: 32rem;
+  }
+}
+@media screen and (min-width: 67.5em) {
+  .header .container .header-intro.header-home h1 {
+    border-bottom-width: 23.8px;
+    border-bottom-width: 1.4rem;
+    line-height: 71.995px;
+    line-height: 4.235rem;
   }
 }
 @media screen and (min-width: 47.9375em) {
@@ -2167,8 +2193,8 @@ form #EditableLiteralField35 {
     width: 41.6666666667%;
     float: left;
     float: left;
-    padding-top: 88.5px;
-    padding-top: 5.9rem;
+    padding-top: 84px;
+    padding-top: 5.6rem;
     padding-bottom: 65.625px;
     padding-bottom: 4.375rem;
   }
@@ -2192,8 +2218,8 @@ form #EditableLiteralField35 {
     width: 58.3333333333%;
     float: left;
     float: left;
-    padding-top: 88.5px;
-    padding-top: 5.9rem;
+    padding-top: 84px;
+    padding-top: 5.6rem;
     padding-bottom: 65.625px;
     padding-bottom: 4.375rem;
   }
@@ -2219,6 +2245,7 @@ form #EditableLiteralField35 {
 
 .pre-footer h3 {
   font-weight: bold;
+  border-bottom-width: 0.7rem;
 }
 .pre-footer .footer-menu {
   list-style: none;
@@ -2230,8 +2257,7 @@ form #EditableLiteralField35 {
 }
 @media screen and (min-width: 30em) {
   .pre-footer .footer-menu {
-    width: 50%;
-    float: left;
+    width: 43%;
   }
   .pre-footer .footer-menu:last-child {
     float: left;
@@ -2244,9 +2270,9 @@ form #EditableLiteralField35 {
   margin-bottom: 7.6466px;
   margin-bottom: 0.5882rem;
 }
-@media screen and (max-width: 30em) {
+@media screen and (min-width: 47.9375em) {
   .pre-footer .footer-menu li {
-    font-size: 1.3rem;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 47.9375em) {
@@ -2258,8 +2284,8 @@ form #EditableLiteralField35 {
 .pre-footer .get-in-touch .contact-email {
   padding-top: 0px;
   border: 0px;
-  margin-bottom: 38.22px;
-  margin-bottom: 2.94rem;
+  margin-bottom: 33.8px;
+  margin-bottom: 2.6rem;
 }
 .pre-footer .get-in-touch .locations:before, .pre-footer .get-in-touch .locations:after {
   display: table;
@@ -2274,6 +2300,9 @@ form #EditableLiteralField35 {
 }
 .pre-footer .get-in-touch .locations__item strong {
   font-size: 1.231rem;
+  display: block;
+  margin-bottom: 5.2px;
+  margin-bottom: 0.4rem;
 }
 @media screen and (min-width: 30em) {
   .pre-footer .get-in-touch .locations__item strong {
@@ -2291,7 +2320,10 @@ form #EditableLiteralField35 {
   }
 }
 .pre-footer .get-in-touch .locations__item p {
-  margin-bottom: 0px;
+  margin-bottom: 0;
+  padding-top: 0;
+  line-height: 21.58px;
+  line-height: 1.66rem;
 }
 .pre-footer .get-in-touch .locations__item p span {
   font-family: TradeGothicLTStd, sans-serif;
@@ -2451,6 +2483,8 @@ form #EditableLiteralField35 {
   .arrows-nav {
     margin-top: 21.882px;
     margin-top: 1.563rem;
+    margin-bottom: 21.882px;
+    margin-bottom: 1.563rem;
   }
 }
 .arrows-nav__list {
@@ -2462,17 +2496,20 @@ form #EditableLiteralField35 {
   .arrows-nav__list {
     display: inline-block;
     vertical-align: top;
-    margin-right: 43.75px;
-    margin-right: 3.125rem;
+    margin-right: 41.44px;
+    margin-right: 2.96rem;
   }
 }
 .arrows-nav__item {
   padding: 0;
-  border-bottom-width: 2.2rem;
+  border-bottom: 0px;
+  margin-bottom: 28.6px;
+  margin-bottom: 2.2rem;
 }
 @media screen and (min-width: 30em) {
   .arrows-nav__item {
-    border-bottom-width: 1.538rem;
+    margin-bottom: 12.04px;
+    margin-bottom: 0.86rem;
   }
 }
 .arrows-nav__item:before {
@@ -2651,6 +2688,27 @@ form #EditableLiteralField35 {
 .testimonial__item blockquote p:before {
   color: rgba(255, 255, 255, 0.15);
 }
+.testimonial__item .arrow-link {
+  font-family: TradeGothicLTStd, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(255, 255, 255, 0.25) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.25) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 98%;
+  -webkit-transition: color .1s ease, background .5s ease, outline 0.25s ease;
+  transition: color .1s ease, background .5s ease, outline 0.25s ease;
+}
+.testimonial__item .arrow-link:hover {
+  color: #fff;
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(255, 255, 255, 0.25) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.25) 50%);
+}
+.testimonial__item .arrow-link.stealth-link {
+  background-image: none;
+}
 @media screen and (min-width: 47.9375em) {
   .testimonial__item {
     float: left;
@@ -2827,8 +2885,8 @@ form #EditableLiteralField35 {
 }
 @media screen and (min-width: 47.9375em) {
   .features__block .block-container {
-    padding: 45px 45px 60px;
-    padding: 3rem 3rem 4rem;
+    padding: 45px 45px 64.5px;
+    padding: 3rem 3rem 4.3rem;
   }
   .features__block .block-container.is-long {
     padding-top: 75px;
@@ -2842,10 +2900,19 @@ form #EditableLiteralField35 {
     max-width: 40rem;
   }
 }
+.features__block.seasonal-message .block-container.is-long h2, .features__block.seasonal-message .block-container.is-long .h2-style {
+  margin-bottom: 20.8px;
+  margin-bottom: 1.6rem;
+  padding-top: 10.4px;
+  padding-top: 0.8rem;
+}
 .features__block.seasonal-message h2, .features__block.seasonal-message .h2-style {
   color: #fff;
-  margin-bottom: 1rem;
   font-weight: 400;
+  margin-bottom: 27.3px;
+  margin-bottom: 2.1rem;
+  padding-top: 3.9px;
+  padding-top: 0.3rem;
 }
 .features__block.seasonal-message .arrow-link {
   font-family: TradeGothicLTStd, sans-serif;
@@ -2875,25 +2942,27 @@ form #EditableLiteralField35 {
 }
 @media screen and (min-width: 47.9375em) {
   .features__block.newsletter .block-container {
-    padding-left: 30px;
-    padding-left: 2rem;
-    padding-right: 30px;
-    padding-right: 2rem;
+    padding-left: 25.5px;
+    padding-left: 1.7rem;
+    padding-right: 25.5px;
+    padding-right: 1.7rem;
   }
 }
 .features__block.newsletter h3 {
   font-weight: bold;
   border-bottom: 0px;
+  margin-top: 9.1px;
+  margin-top: 0.7rem;
 }
 .features__block.newsletter p.intro {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
 }
 .features__block.newsletter input[type="email"] {
   max-width: 100%;
   background-color: #fff;
   border: none;
-  margin-bottom: 18.2px;
-  margin-bottom: 1.4rem;
+  margin-bottom: 10.4px;
+  margin-bottom: 0.8rem;
 }
 .features__block.newsletter input[type="submit"], .features__block.newsletter button {
   display: block;
@@ -2972,10 +3041,11 @@ form #EditableLiteralField35 {
   padding: 0;
   padding-bottom: 5.2px;
   padding-bottom: 0.4rem;
+  border-top-width: 0.7rem;
 }
 .features__block.testimonial blockquote {
-  padding-bottom: 39px;
-  padding-bottom: 3rem;
+  padding-bottom: 49.4px;
+  padding-bottom: 3.8rem;
 }
 @media screen and (min-width: 47.9375em) {
   .features__block.testimonial blockquote p:before {
@@ -3015,6 +3085,12 @@ form #EditableLiteralField35 {
   .features__block.partners-section h2 {
     padding-bottom: 27px;
     padding-bottom: 1.8rem;
+  }
+}
+@media screen and (min-width: 47.9375em) {
+  .features__block.partners-section .block-container {
+    padding: 45px 45px 54px;
+    padding: 3rem 3rem 3.6rem;
   }
 }
 .features__block.partners-section .view-more {
@@ -3167,6 +3243,11 @@ form #EditableLiteralField35 {
     padding-top: 1.41rem;
     padding-bottom: 0;
   }
+  .url-home .news {
+    padding-bottom: 21.15px;
+    padding-bottom: 1.41rem;
+    padding-top: 0;
+  }
 }
 .news__item {
   float: left;
@@ -3211,7 +3292,22 @@ form #EditableLiteralField35 {
 }
 .news h3 {
   font-weight: bold;
-  border-bottom: none;
+}
+.news__excerpt {
+  margin-bottom: 13px;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 47.9375em) {
+  .news__excerpt {
+    margin-bottom: 30px;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 47.9375em) {
+  .news__excerpt p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 .news a {
   font-family: TradeGothicLTStd, sans-serif;
@@ -3261,14 +3357,15 @@ form #EditableLiteralField35 {
     margin-right: 0;
   }
 }
-.news.latest-news .news__excerpt {
-  margin-bottom: 13px;
-  margin-bottom: 1rem;
+.news.latest-news h3 {
+  border-bottom: none;
+  padding-top: 0;
+  border-top-width: 0.8rem;
 }
 @media screen and (min-width: 47.9375em) {
   .news.latest-news .news__excerpt {
-    margin-bottom: 30px;
-    margin-bottom: 2rem;
+    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -3321,8 +3418,8 @@ form #EditableLiteralField35 {
   width: 44.795%;
   padding: 0px;
   border: 0px;
-  margin-bottom: 61.75px;
-  margin-bottom: 4.75rem;
+  margin-bottom: 63.05px;
+  margin-bottom: 4.85rem;
   margin-right: 10.41%;
 }
 .partners__item:nth-child(2n) {
@@ -3346,18 +3443,15 @@ form #EditableLiteralField35 {
   height: 100%;
   vertical-align: middle;
   text-align: center;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .partners__item a img {
-  -webkit-filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-  /* Firefox 10+, Firefox on Android */
-  filter: gray;
-  /* IE6-9 */
-  -moz-filter: grayscale(100%);
-  /* Moz */
-  -webkit-filter: grayscale(100%);
-  /* Chrome 19+, Safari 6+, Safari 6+ iOS */
-  opacity: 0.6;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .all_partners {
@@ -3407,33 +3501,29 @@ form #EditableLiteralField35 {
     margin-right: 0px;
   }
 }
-@media screen and (min-width: 67.5em) {
-  .all_partners__item {
-    float: left;
-    width: 23.44%;
-  }
-  .all_partners__item:nth-child(3n) {
-    margin-right: 2.08%;
-  }
-  .all_partners__item:nth-child(4n) {
-    margin-right: 0px;
-  }
-}
 .all_partners__logo {
   background: none !important;
   display: block;
-  margin-bottom: 13px;
-  margin-bottom: 1rem;
-  vertical-align: middle;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
-.all_partners__logo img {
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  filter: grayscale(100%);
-  opacity: 0.6;
+@media screen and (min-width: 30em) {
+  .all_partners__logo img {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
 .all_partners h3 {
   font-weight: bold;
+}
+@media screen and (min-width: 47.9375em) {
+  .all_partners__excerpt p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .general {
@@ -3449,6 +3539,10 @@ form #EditableLiteralField35 {
     padding-bottom: 75px;
     padding-bottom: 5rem;
   }
+}
+.general h2:first-child, .general h3:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
 
 .pagination {
@@ -3541,14 +3635,14 @@ form #EditableLiteralField35 {
     width: 11.18rem;
   }
   .alumni-filters .drop-down.filter-by-role {
-    width: 156.52px;
-    width: 11.18rem;
+    width: 210px;
+    width: 15rem;
   }
 }
 .alumni-filters .filter-alumni-form {
   float: right;
 }
-@media screen and (max-width: 41.875em) {
+@media screen and (max-width: 42.5em) {
   .alumni-filters .filter-alumni-form {
     margin-top: 13px;
     margin-top: 1rem;
@@ -3881,6 +3975,10 @@ section .alumni-picture {
   }
 }
 
+.overview .program-content h2:first-child, .overview .program-content h3:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
 .overview .program-content p {
   padding-bottom: 1rem;
 }

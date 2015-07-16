@@ -1,5 +1,9 @@
 .overview{
 	.program-content{
+		h2:first-child, h3:first-child{
+			border-top: 0;
+			padding-top: 0;
+		}
 		p{
 			padding-bottom: 1rem;
 		}

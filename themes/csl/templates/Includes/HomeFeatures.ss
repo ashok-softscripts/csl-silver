@@ -7,7 +7,7 @@
 						<div class="features__block span_$FeatureCol $FeatureType <% if $MobileBackgroundColor %>has-mobile-background_$MobileBackgroundColor<% end_if %> has-background_$BackgroundColor">
 							<% if Image %>								
 								<% if FeatureType == 'testimonial' %>
-									<div class="alumni-image">$Image.SetWidth(210)</div>
+									<div class="alumni-image">$Image.SetSize(225,225)</div>
 								<% else %>
 									<div class="image-overlay" style="background-image:url($Image.URL)"></div>
 								<% end_if %>

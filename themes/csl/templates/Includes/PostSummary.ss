@@ -9,11 +9,11 @@
 		</a>
 	</h3>
 	<div class="news__excerpt">
-		<% if $Summary %>
+		<p><% if $Summary %>
 			$Summary
 		<% else %>
 			$Excerpt
-		<% end_if %>		
+		<% end_if %></p>		
 	</div>
 	<div class="news__publish">
 		Published $PublishDate.Format(d M Y)

@@ -27,31 +27,35 @@
 			&:nth-child(3n){
 				margin-right: 0px;
 			}
-		}
-		@include breakpoint-layout(break-3) {
-			float: left;
-			width: 23.44%;
-			&:nth-child(3n){
-				margin-right: 2.08%;
-			}
-			&:nth-child(4n){
-				margin-right: 0px;
-			}
-		}
+		}		
 	}
 	&__logo {
 		background: none !important;
         display: block;
-		@include rem(margin-bottom, 1rem);  
-		vertical-align: middle;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		transform-style: preserve-3d;
 		img{
-			@include filter_elements(grayscale(100%));
-			opacity: 0.6;				
+			@include breakpoint-layout(break-1) {
+				position: relative;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
 		}
     }
 	h3{
-		font-weight: bold-of($display-type);			
+		font-weight: bold-of($display-type);
 	}
 	
+	&__excerpt{	
+		p{			
+			@include breakpoint-layout(break-2) {
+				font-size: 1rem;
+				line-height: 1.5rem;
+			}
+		}
+	}
 	@extend %has-background-color;
 }

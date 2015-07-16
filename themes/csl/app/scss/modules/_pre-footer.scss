@@ -74,8 +74,9 @@
 			border-bottom: 0px;
 			margin: 0px;
 			@include rem(margin-bottom, 0.5882rem);
-			@media screen and (max-width: 30em) {
-				font-size: 1.3rem;
+			@extend %small-style;
+			@include breakpoint-layout(break-2) {
+				margin-bottom: 0;
 			}
 		}		
 	}

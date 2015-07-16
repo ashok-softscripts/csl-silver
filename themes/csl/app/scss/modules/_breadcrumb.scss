@@ -6,7 +6,7 @@
 	@include rem(padding-left, 0.923rem);
 	@include breakpoint-layout(break-2) {
 		@include rem(padding, 1.294rem);
-		@include rem(padding-top, 1.176rem);
+		@include rem(padding-top, 1.26rem);
 		@include rem(padding-bottom, 0.882rem);
 	}
 	a{

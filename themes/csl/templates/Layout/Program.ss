@@ -23,11 +23,12 @@
 	<% end_if %>
 
 	<% if ClassName = 'ProgramTestimonial' %>
-		<section class="testimonial has-background_$BackgroundColour" id="$URLSegment">
+		<section class="testimonial has-background_green" id="$URLSegment">
 			<div class="container">					
 				<div class="testimonial__item">
 					<h3>$Title</h3>
-					<blockquote>$Content</blockquote>
+					<blockquote><p>$Description</p></blockquote>
+					<a href="&LinkURL" class="$LinkStyle-style arrow-link arrow-white">$Name</a>
 				</div>
 				<div class="testimonial__cover">$TestimonialImage.SetWidth(240)</div>
 			</div>

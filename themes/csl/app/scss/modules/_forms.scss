@@ -2,6 +2,7 @@ form {
     .field-group > label, fieldset > .field > label{
 		display: block;
 		@extend %default-style;
+		border-bottom-width: 0.8rem;
 	}    
 	input[type=submit], button, input[type=reset]{
 		@include button;
@@ -11,7 +12,7 @@ form {
 	}
     .field-group, fieldset > .field {
         position: relative;
-        @include rem(margin-bottom, 2rem);
+        @include rem(margin-bottom, 0.98rem);
         position: relative;
 		&.text.nolabel{
 			@include rem(margin-bottom, 1.4rem);
@@ -32,7 +33,10 @@ form {
                 margin-right: 0px;
             }            
         }                              		
-    } 
+    }
+	.Actions{
+		@include rem(margin-top, 2.4rem);
+	}
 	.optionset{
 		list-style: none;
 		padding: 0;
@@ -46,7 +50,7 @@ form {
 			}
 			label{
 				cursor: pointer;
-				display: inline-block;
+				display: inline;
 				vertical-align: middle;
 				font-weight: bold-of($body-type);
 				color: site-color(blue);				
@@ -214,7 +218,7 @@ form {
 		z-index: 1;		
 		li{
 			display: block;
-			@include rem(padding, 0.1765rem 0.7647rem);
+			@include rem(padding, 0.3529rem 0.7647rem);
 			margin: 0;
 			border: 0;
 			cursor: pointer;
@@ -222,6 +226,7 @@ form {
 			font-size: 1.231rem;
 			@include breakpoint-layout(break-1) {
 				font-size: 1.143rem;
+				line-height: 1.6rem;
 			}
 			@include breakpoint-layout(break-2) {
 				font-size: 1.067rem;

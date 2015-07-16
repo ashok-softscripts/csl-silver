@@ -33,6 +33,10 @@ class AlumniCollection_Controller extends Page_Controller {
         return $this->getRequest()->getVar('filter_role');
     }
 	
+	public function FilterYear(){
+        return $this->getRequest()->getVar('filter_year');
+    }
+	
 	public function FilterSearch(){
         return $this->getRequest()->getVar('filter_search');
     }
@@ -67,6 +71,9 @@ class AlumniCollection_Controller extends Page_Controller {
 		}
 		else if(!empty($this->FilterRole())) {						
 			$alumniesList = Alumni::get()->filter(array('ParentID'=> $this->ID, 'Role' => $this->FilterRole()));
+		}
+		else if(!empty($this->FilterYear())) {						
+			$alumniesList = Alumni::get()->filter(array('ParentID'=> $this->ID, 'Year' => $this->FilterYear()));
 		}
 		else if(!empty($this->FilterSearch())) {						
 			$alumniesList = Alumni::get()->filter(array('ParentID'=> $this->ID, 'Title:PartialMatch' => $this->FilterSearch()));

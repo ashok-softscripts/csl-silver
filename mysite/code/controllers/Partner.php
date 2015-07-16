@@ -2,7 +2,8 @@
   private static $description = "Container for partners";
 
   private static $db = array(
-	'Website' => "Text",		
+	'Website' => "Text",
+	'Description' => "Text"
   );
 
   private static $defaults = array(
@@ -39,8 +40,10 @@
 		$thumbnail->allowedExtensions = array('jpg', 'png', 'svg');
 		$thumbnail->setFolderName('partners');
 
-		$fields->renameField("Content", "Summary");
+		$fields->addFieldToTab('Root.Main', new TextAreaField('Description', 'Description'));
 
+	  	/* Reset Defaults */
+		$fields->removeByName("Content");
 	
 		return $fields;
   }

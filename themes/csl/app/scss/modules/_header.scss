@@ -5,7 +5,7 @@
 	
 	@include breakpoint-layout(break-1) {
 		@include rem(padding-top, 3.125rem);
-		@include rem(padding-bottom, 6.875rem);	
+		@include rem(padding-bottom, 4.648rem);	
 	}
 	.container{
 		.logo{

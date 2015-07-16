@@ -15,6 +15,9 @@
 				}
 			}
 		}
+		.arrow-link{
+			@include text-link(site-color(white));
+		}
 		@include breakpoint-layout(break-2) {
 			float: left;
 			@include rem(max-width, 28.75rem);

@@ -3,7 +3,7 @@
 		<% include Logo %>
 		<div class="header-intro header-alumni">
 			<h1>$Title</h1>
-			<p><strong class="alumni-designation">$Role</strong><a href="#">$Year</a></p>
+			<p><strong class="alumni-designation">$Role</strong><a href="$Parent.Link?filter_year=$Year">$Year</a></p>
 		</div>
 	</div>        	
 </header>
@@ -27,7 +27,7 @@
 <% if AlumniByYear($Year) %>
 	<section class="more-alumnies">
 		<div class="container">
-			<h2>More alumni from <a href="#">$Year</a></h2>
+			<h2>More alumni from <a href="$Parent.Link?filter_year=$Year">$Year</a></h2>
 			<div class="alumni">	
 					<% loop AlumniByYear($Year) %>
 						<% include AlumniTeaser %>

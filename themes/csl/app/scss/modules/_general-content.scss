@@ -5,6 +5,9 @@
 		@include rem(padding-top, 5rem);
 		@include rem(padding-bottom, 5rem);	
 	}
-	
+	h2:first-child, h3:first-child{
+		padding-top: 0;
+		border-top: 0;
+	}
 	@extend %has-background-color;
 }
