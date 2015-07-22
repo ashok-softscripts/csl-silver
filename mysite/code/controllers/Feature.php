@@ -5,7 +5,7 @@
 		'FeatureSize' => "Varchar(100)",
 		'Description' => 'HTMLText',
 		'Name' => 'Varchar',
-		'LinkURL' => 'Varchar',
+		'LinkURL' => 'Varchar(200)',
 		'LinkStyle' => "Varchar(100)",
 		'BackgroundColor' => "Enum('blue,blue_dark,blue_light,blue_mid_light,blue_ver_light,orange,orange_mid,orange_dark,green,green_light,green_dark,green_forest,green_lime,gray,gray_light,gray_dark,black,white,none','none')",
 		'MobileBackgroundColor' => "Enum('blue,blue_dark,blue_light,blue_mid_light,blue_ver_light,orange,orange_mid,orange_dark,green,green_light,green_dark,green_forest,green_lime,gray,gray_light,gray_dark,black,white,none','none')",

@@ -15,7 +15,7 @@ html {
 
 // Site-wide base styles.
 body {
-    @include rem(line-height, 1.4rem);
+    @include rem(line-height, 2rem);
     font-family: font-family-of($body-type);
     font-style: normal;
     font-weight: regular-of($body-type);
@@ -50,44 +50,18 @@ body {
 
  // Small
 %small-style {
-	@include type($body-type, 1.231rem, 2, 0, 1);
-	@include breakpoint-layout(break-1) {
-		@include type($body-type, 1.142rem, 2, 0, 1);
-	}
-	@include breakpoint-layout(break-2) {
-		@include type($body-type, 1.06rem, 2, 0, 1);
-	}
-	@include breakpoint-layout(break-3) {
-		@include type($body-type, 0.9412rem, 2, 0, 1);
-	}
+	@include type($body-type, 1.333rem, 2, 1, 1);	
 }
 
 // Default
 %default-style {
-	@include type($body-type, 1.385rem, 2, 0, 1);
-	@include breakpoint-layout(break-1) {
-		@include type($body-type, 1.285rem, 2, 0, 1);
-	}
-	@include breakpoint-layout(break-2) {
-		@include type($body-type, 1.2rem, 2, 0, 1);
-	}
-	@include breakpoint-layout(break-3) {
-		@include type($body-type, 1.059rem, 2, 0, 1);
-	}
+	@include type($body-type, 1.5rem, 3, 1, 1);
+	line-height: 2.5rem;
 }
 
 // Intro.
 %intro-style {
-    @include type($body-type, 1.846rem, 3, 0, 1);      			
-	@include breakpoint-layout(break-1) {
-		@include type($body-type, 1.714rem, 3, 0, 1);					
-	}
-	@include breakpoint-layout(break-2) {
-		@include type($body-type, 1.6rem, 2, 0, 1);					
-	}
-	@include breakpoint-layout(break-3) {
-		@include type($body-type, 1.4rem, 2, 0, 1);					
-	}
+	@include type($body-type, 2rem, 3, 1, 1);		
 }
 
 // Background colors
@@ -128,7 +102,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: regular-of($display-type);
     margin-left: auto;
     margin-right: auto;
-
     a {
         @include text-link(site-color(blue_dark));
         @include type-match;
@@ -137,46 +110,57 @@ h1, h2, h3, h4, h5, h6 {
 
 // Heading level 1.
 h1, .h1-style {
-    // scales up to 4.235rem (2.72rem * 1.5294)
-    @include type($font: $display-type, $fontsize: 2.769rem, $lineheight: 3, $leader: 1, $trailer: 1, $scale-ratio: 1.5294);  
+    // use px-to-rems mixin for precise control of font size at different breakpoints
+    // for example, if you want 36px at mobile,
+    // with 4 line-height (=48px; 12 * 4)...
+    @include type($display-type, px-to-rems(36px), 4, 1, 1);
+
+    @include breakpoint-layout(break-1) {
+        // ...and 54px at the next breakpoint,
+        //    with 5 line-height (=60px; 12 * 5)...
+        @include type($display-type, px-to-rems(54px), 5, 1, 1);
+    }
+
+    @include breakpoint-layout(break-2) {
+        // ...and 72px at the next breakpoint,
+        //    with 6 line-height (=72px; 12 * 6)...
+        @include type($display-type, px-to-rems(72px), 6, 1, 1);
+    }
+	
+	// scales up to 4.235rem (2.72rem * 1.5294)
+    //@include type($font: $display-type, $fontsize: 2.769rem, $lineheight: 3, $leader: 1, $trailer: 1, $scale-ratio: 1.5294);  
 	font-weight: regular-of($body-type);			
 }
 
 // Heading level 2.
 h2, .h2-style {
-    // scales up to ~2.1rem (1.846rem * 1.147)
-    @include type($display-type, 1.846rem, 3, 2, 1, 1.147);
-    font-weight: bold-of($display-type);	
+	@include type($display-type, 2rem, 3, 1, 1);  
+	font-weight: bold-of($display-type);	
+    @include breakpoint-layout(break-2) {
+        @include type($display-type, 3rem, 4, 1, 1);
+    }	
 }
 
 // Heading level 3.
 h3, .h3-style {
-    // scales up to 1.4rem
-    @include type($display-type, 1.846rem, 3, 1, 1);	
-	@include breakpoint-layout(break-2) {
-		@include type($display-type, 1.4rem, 2, 1, 1);	
-	}
+	@include type($display-type, 2rem, 3, 1, 1);  	
 }
 
 // Heading level 4.
 h4, .h4-style {
-    // scales up to 1.125rem
-    @include type($display-type, 1.23rem, 2, 1, 1);  
-	@include breakpoint-layout(break-2) {
-		@include type($display-type, 1.058rem, 2, 1, 1);	
-	}
+	@include type($display-type, 1.5rem, 2, 1, 1); 
 }
 
 // Heading level 5.
 h5, .h5-style {
     // scales up to 1.125rem
-    @include type($display-type, 1.125rem, 2, 1, 1);    
+    @include type($display-type, 1.5rem, 2, 1, 1);    
 }
 
 // Heading level 6.
 h6, .h6-style {
     // scales up to 1.125rem (1.375rem * 12/11)    
-    @include type($display-type, 1.125rem, 2, 1, 1);
+    @include type($display-type, 1.333rem, 2, 1, 1);
 }
 
 // Lists.
@@ -340,22 +324,12 @@ textarea {
     margin: 0;
 	width: 100%;
 	max-width: 100%;
-	@include rem(min-height, 3.077rem);
-	font-size: 1.231rem;
-	@include rem(width, 17.08rem);
+	@include rem(min-height, 3.333rem);
+	font-size: 1.333rem;
+	@include rem(width, 18.5rem);		
 	@include breakpoint-layout(break-1) {
-		font-size: 1.143rem;
-		@include rem(min-height, 2.857rem);
-		@include rem(width, 15.88rem);
+		@include rem(width, 22.5rem);
 	}
-	@include breakpoint-layout(break-2) {
-		font-size: 1.067rem;
-		@include rem(min-height, 2.667rem);
-	}
-	@include breakpoint-layout(break-3) {
-		font-size: 0.9412rem;
-		@include rem(min-height, 2.353rem);
-	}	
     border: 1px solid site-color(blue); 	
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -405,22 +379,13 @@ select{
     padding: 0.60em 0.60em 0.22em;
     margin: 0;
     border: 0px;
-	@include rem(width, 15.88rem);
-	max-width: 100%;
-	@include rem(min-height, 3.077rem);
-	font-size: 1.231rem;
+	@include rem(width, 18.5rem);		
 	@include breakpoint-layout(break-1) {
-		font-size: 1.143rem;
-		@include rem(min-height, 2.857rem);
+		@include rem(width, 22.5rem);
 	}
-	@include breakpoint-layout(break-2) {
-		font-size: 1.067rem;
-		@include rem(min-height, 2.667rem);
-	}
-	@include breakpoint-layout(break-3) {
-		font-size: 0.9412rem;
-		@include rem(min-height, 2.353rem);
-	}
+	max-width: 100%;
+	@include rem(min-height, 3.333rem);
+	font-size: 1.333rem;	
     border-bottom: 1px solid rgba(0, 109, 129, 0.25); 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -430,12 +395,12 @@ select{
     appearance: none;
 	@include breakpoint-layout(break-1) {
 		&.medium{
-			@include rem(width, 7.882rem);
-			@include rem(margin-right, 1rem);
+			@include rem(width, 11.17rem);
+			@include rem(margin-right, 1.333rem);
 		}
 		&.small{
-			@include rem(width, 4.706rem);
-			@include rem(margin-right, 1rem);
+			@include rem(width, 6.667rem);
+			@include rem(margin-right, 1.333rem);
 		}
 	}
 	&[aria-invalid="true"]{		
@@ -462,9 +427,9 @@ input[type=submit], button {
 
 .radio-wrapper, .checkbox-wrapper{
 	display: inline-block;	
-	width: 18px;
-	height: 18px;
-	@include rem(margin-right,0.2rem);
+	@include rem(width, 1.5rem);
+	@include rem(height, 1.5rem);
+	@include rem(margin-right, 0.2rem);
 	background-repeat: no-repeat;
 	background-position: center center;
 	position: relative;
@@ -486,8 +451,8 @@ input[type=submit], button {
 }
 
 .checkbox-wrapper{
-	width: 20px;
-	height: 20px;
+	@include rem(width, 1.667rem);
+	@include rem(height, 1.667rem);
 	background-image: url(../images/icons/checkbox.png);
 	&.checked{
 		background-image: url(../images/icons/checkbox-active.png);

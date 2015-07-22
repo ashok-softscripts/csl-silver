@@ -11,26 +11,22 @@
 		@include breakpoint-layout(break-1) {	
 			display: inline-block;
 			vertical-align: top;
-			@include rem(margin-right, 2.96rem);
+			@include rem(margin-right, 7.4rem);
 		}
 	}
 	&__item{				
 		padding: 0;
-		border-bottom: 0px;
-		@include rem(margin-bottom, 2.2rem);
-		@include breakpoint-layout(break-1) {	
-			@include rem(margin-bottom, 0.86rem);
-		}
+		@include rem(margin-bottom, -0.2rem);
 		&:before{
 			content: "";
 			display: inline-block;
-			width: 5px;
-			height: 10px;
+			width: 0.4167rem;
+			height: 0.8333rem;
 			background: url(#{$image-path}/arrows/t-arrow.png) no-repeat left center;
 			@include rem(margin-right, 1rem);
 			@include breakpoint-layout(break-1) {	
-				@include rem(margin-left, -0.8125rem);
-				@include rem(margin-right, 0.8125rem);
+				@include rem(margin-left, -1.417rem);
+				@include rem(margin-right, 1rem);				
 			}
 		}
 	}
@@ -44,8 +40,8 @@
 	transition: all 2s ease;
 	&:after{
 		content: "";
-		width: 20px;
-		height: 17px;
+		width: 1.667rem;
+		height: 1.417rem;
 		display: inline-block;
 		@include rem(margin-left, 0.5rem);
 		background: url(#{$image-path}/arrows/arrow-blue.png) no-repeat right center;

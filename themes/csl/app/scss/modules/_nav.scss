@@ -7,14 +7,14 @@
 		position: fixed;
 	}
 	&__badge {
-    	display: inline-block;
-		@include rem(padding, 1.69rem);
-		@include rem(padding-bottom, 1.307rem);
-		@include rem(padding-left, 0.923rem);
+    	display: inline-block;	
+		vertical-align: top;
+		@include rem(padding-top, px-to-rems(19px));
+		@include rem(padding-right, px-to-rems(22px));
+		@include rem(padding-bottom, px-to-rems(14px));
+		@include rem(padding-left, px-to-rems(12px));
 		@include breakpoint-layout(break-2) {
-			@include rem(padding, 1.294rem);
-			@include rem(padding-top, 1.176rem);
-			@include rem(padding-bottom, 0.882rem);
+			@include rem(padding-left, px-to-rems(22px));
 		}
 		background: site-color(blue_mid_light);
 		cursor: pointer;
@@ -22,15 +22,12 @@
 		a {	
 			font-weight: regular-of($display-type);
 			outline: none;
-			@extend %small-style;
-			border: 0;
-			padding: 0;
-			margin: 0;
-			line-height: normal;
+			@extend %small-style;						
 			span{ 
-				@include rem(width, 1rem);
-				@include rem(height, 1rem);
-				@include rem(margin-right, 0.4118rem);
+				@include rem(width, 1.333rem);
+				@include rem(height, 1.333rem);
+				@include rem(margin-right, 0.75rem);
+				@include rem(margin-left, 0.1667rem);
 				display: inline-block;
 				background: url(../images/icons/menu-icon.png) no-repeat center center;
 				background-size: cover;
@@ -68,24 +65,27 @@
     }
 
 	&__list {
-		@include rem(padding-left, 2.765rem);
+		@include rem(padding-left, 3rem);
 		list-style: none;
-		@include rem(padding-top, 1rem);
-		@include rem(padding-bottom, 1rem);
+		@include rem(padding-top, 0.5rem);
+		@include rem(padding-bottom, 3.083rem);
 		display: none;
+		@include breakpoint-layout(break-2) {
+			@include rem(padding-left, 4rem);
+		}
 	}
 
-    &__item {
+    &__item {		
+		@extend %intro-style;		
+		line-height: 4rem;
 		display: block;
 		padding: 0;
 		margin: 0;
-		@include rem(margin-bottom, 0.74rem);
 		border: 0;
-		text-align: left;		
+		text-align: left;			
     }
 
-    &__link{		       
-		font-size: 1.4rem;		
+    &__link{		       			
 		&.is-current{
 			@include text-link(site-color(blue_dark));			
 		}
@@ -93,26 +93,21 @@
 	
 	&--smaller{
 		.nav__item{
-			@include rem(margin-bottom, 0.2rem);
-		}
-		.nav__link{
-			font-size: 1.231rem;
-			@include breakpoint-layout(break-1) {
-				font-size: 1.142rem;
-			}
-			@include breakpoint-layout(break-2) {
-				font-size: 1.06rem;
-			}
-			@include breakpoint-layout(break-3) {
-				font-size: 0.9412rem;
-			}						
-		}
+			@extend %small-style;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			line-height: 3rem;			
+		}		
 	}    
 	
 	&--open{
-		@include rem(width, 19.06rem);	
+		@include rem(width, px-to-rems(290px));	
 		height: 100%;
-		background: site-color(blue_mid_light);		
+		background: site-color(blue_mid_light);
+		@include breakpoint-layout(break-1) {
+			@include rem(width, px-to-rems(305px));	
+		}
 		.nav__badge{
 			a {
 				span{

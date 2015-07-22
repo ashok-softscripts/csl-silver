@@ -30,7 +30,7 @@
 										$Description
 										<ul class="partners">
 											<% loop FeaturedPartners %>
-												<li class="partners__item"><a href="$Website">$Logo</a></li>
+												<li class="partners__item"><a href="$Link">$Logo</a></li>
 											<% end_loop %>
 										</ul>
 										<% if Name && LinkURL %>

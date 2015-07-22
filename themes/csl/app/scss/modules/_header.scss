@@ -1,15 +1,16 @@
 .header{
 	background: site-color(blue_ver_light);
-	@include rem(padding-top, 0.6471rem);
-	@include rem(padding-bottom, 2.353rem);
+	@include rem(padding-top, 0.9167rem);
+	@include rem(padding-bottom, 4.417rem);
 	
 	@include breakpoint-layout(break-1) {
-		@include rem(padding-top, 3.118rem);
-		@include rem(padding-bottom, 5.46rem);	
+		@include rem(padding-top, 4.417rem);
+		@include rem(padding-bottom, 9rem);	
 	}
+	
 	.container{
 		@include breakpoint-layout(break-3) {
-			@include rem(padding-right, 0.6rem);
+			@include rem(padding-right, 1.417rem);
 		}
 		.logo{
 			float: right;
@@ -28,41 +29,38 @@
 			position: relative;
 			@include breakpoint-layout(break-1) {
 				width: span(2.91);
-				@include rem(max-width, 180/14 * 1rem);				
+				@include rem(max-width, 180/12 * 1rem);				
 			}
 			@include breakpoint-layout(break-2) {
 				width: span(1.888);
-				@include rem(max-width, 271/17 * 1rem);				
+				@include rem(max-width, 271/12 * 1rem);				
 			}			
 		}
-		.header-intro{			
-			padding-top: 10.46rem;			
+		.header-intro{		
+			@include rem(padding-top, 12.83rem);			
 			@include breakpoint-layout(break-2) {
-				padding-top: 10rem;
-				@include rem(max-width, 52rem);			
-				&.header-home{
-					padding-top: 6.176rem;	
-					@include rem(max-width, 32rem);
-				}
+				@include rem(padding-top, 13.14rem);
+				@include rem(max-width, 73.33rem);				
 			}
 			&.header-home{
+				@include breakpoint-layout(break-2) {
+					@include rem(padding-top, 8.05999rem);	
+					@include rem(max-width, 45rem);
+				}
 				h1{
 					@include breakpoint-layout(break-3) {
-						@include rem(border-bottom-width, 1.4rem);
-						@include rem(line-height, 4.235rem);						
+						@include rem(margin-bottom, -0.3333rem);					
 					}	
 				}
-				p, p.intro{					
-					@extend %default-style;
-					@include breakpoint-layout(break-2) {
-						@include type($body-type, 1.6rem, 2, 0, 1);					
-					}
-					@include breakpoint-layout(break-3) {
-						@include type($body-type, 1.4rem, 2, 0, 1);					
-					}					
-				}
+				
+				
 			}
 			&.header-alumni, &.header-program, &.header-news { // Content Alumni template
+				h1{
+					@include breakpoint-layout(break-3) {
+						border-bottom: 0;
+					}
+				}
 				p{
 					
 					@extend %small-style;
@@ -77,6 +75,13 @@
 						@include rem(margin-right, 2rem);	
 					}					
 				}				
+			}
+			&.header-program-collection{
+				h1{
+					@include breakpoint-layout(break-3) {
+						font-size: 3.294rem;
+					}
+				}
 			}
 		}
 	}

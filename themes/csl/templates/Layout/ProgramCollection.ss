@@ -1,7 +1,7 @@
 <header class="header">
 	<div class="container">
 		<% include Logo %>
-		<div class="header-intro">
+		<div class="header-intro header-program-collection">
 			<h1>$Title</h1>			
 		</div>
 	</div>        	

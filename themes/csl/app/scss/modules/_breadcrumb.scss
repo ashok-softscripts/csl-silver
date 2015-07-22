@@ -1,26 +1,28 @@
 .breadcrumb{
 	display: none;
 	background: site-color(blue_ver_light);
-	@include rem(padding, 1.69rem);
-	@include rem(padding-bottom, 1.307rem);
-	@include rem(padding-left, 0.923rem);
+	@include rem(padding, 1.833rem);
+	@include rem(padding-bottom, 1.4166rem);
+	@include rem(padding-left, 1rem);
 	@include breakpoint-layout(break-2) {
-		@include rem(padding, 1.294rem);
-		@include rem(padding-top, 1.26rem);
-		@include rem(padding-bottom, 0.882rem);
+		@include rem(padding, 1.833rem);
+		@include rem(padding-top, 1.5rem);
+		@include rem(padding-bottom, 1.2495rem);
 	}
-	a{
+	a{		
 		font-weight: regular-of($display-type);
+		font-size: 1.33rem;
 		&:before{
 			display: inline-block;
 			content: "";
-			width: 5px;
-			height: 10px;
-			@include rem(margin-right, 0.4118rem);
+			width: 0.416rem;
+			height: 0.833rem;
+			@include rem(margin-right, 0.5833rem);
 			background: url(#{$image-path}/arrows/t-arrow-flip.png) no-repeat left center;
 		}
 	}
 	@include breakpoint-layout(break-1) {
 		display: inline-block;
+		vertical-align: top;
 	}
 }

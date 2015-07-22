@@ -36,14 +36,14 @@
 
 		$fields->addFieldToTab('Root.Main', new TextField('Website', 'Website'),'Content');
 
-		$fields->addFieldToTab('Root.Main', $thumbnail = new UploadField('Logo', 'Logo'));
+		$fields->addFieldToTab('Root.Main', $thumbnail = new UploadField('Logo', 'Logo'),'Content');
 		$thumbnail->allowedExtensions = array('jpg', 'png', 'svg');
 		$thumbnail->setFolderName('partners');
 
-		$fields->addFieldToTab('Root.Main', new TextAreaField('Description', 'Description'));
+		$fields->addFieldToTab('Root.Main', new TextAreaField('Description', 'Short Description'),'Content');
 
 	  	/* Reset Defaults */
-		$fields->removeByName("Content");
+		//$fields->removeByName("Content");
 	
 		return $fields;
   }

@@ -1,11 +1,11 @@
 .features{
 	@include breakpoint-layout(break-2) {	
-		border-top: 1.5rem solid transparent;
+		border-top: 2rem solid transparent;
 	}
 	&__row{
 		@include clearfix;
 		@include breakpoint-layout(break-2) {	
-			border-bottom: 1.5rem solid transparent;
+			border-bottom: 2rem solid transparent;
 		}
 	}
 	&__block{
@@ -38,64 +38,70 @@
 			filter: none;
 			position: relative;	
 			box-sizing: border-box;	
-			@include rem(padding, 2.308rem);
-			@include rem(padding-top, 2.648rem);
-			@include rem(padding-bottom, 4.615rem);
+			@include rem(padding, 2.5rem);
+			@include rem(padding-top, 2.833rem);
+			@include rem(padding-bottom, 5rem);
 			@include breakpoint-layout(break-2) {
-				@include rem(padding, 3rem 3rem 4.3rem);
+				@include rem(padding, 4rem 4rem 6.167rem);
 				&.is-long{
-					@include rem(padding-top, 5rem);
-					@include rem(padding-bottom, 4.5rem);
+					@include rem(padding-top, 9.2rem);
+					@include rem(padding-bottom, 6.833rem);
 				}
 			}
 			
 		}
 		
-		&.seasonal-message{			
+		&.seasonal-message{	
+			&.span_9{
+				@include breakpoint-layout(break-2) {
+					width: 72.7%;				
+				}
+			}
 			.block-container{				
 				@include breakpoint-layout(break-2) {
-					max-width: 40rem;				
+					max-width: 56.67rem;				
 				}
 				&.is-long{
-					h2, .h2-style{
-						@include rem(margin-bottom, 1.6rem);
-						@include rem(padding-top, 0.8rem);
+					h2, .h2-style{						
+						@include rem(padding-top, 1.25rem);
+						@include rem(margin-bottom, 2.917rem);
 					}
 				}
 			}
 			h2, .h2-style{
 				color: site-color(white);				
 				font-weight: regular-of($display-type);
-				@include rem(margin-bottom, 2.1rem);
-				@include rem(padding-top, 0.3rem);
+				@include rem(margin-bottom, 3.8rem);
+				@include rem(padding-top, 2.333rem);
 			}
 			.arrow-link{
 				@include text-link(site-color(white));
 				@media screen and (max-width: 20em) {
-					font-size: 1.6rem;
+					font-size: 1.667rem;
 				}
 			}
 		}
 		&.newsletter{
-			.block-container{
+			&.span_3{
 				@include breakpoint-layout(break-2) {
-					@include rem(padding-left, 1.7rem);
-					@include rem(padding-right, 1.7rem);
+					width: 25.38%;				
 				}
 			}
+
 			h3{
 				font-weight: bold-of($display-type);
 				border-bottom: 0px;
-				@include rem(margin-top, 0.7rem);
+				padding-top: 0;
 			}
 			p.intro{
 				margin-bottom: 0.8em;
+				padding-top: 0;
 			}
 			input[type="email"]{
 				max-width: 100%;
 				background-color: site-color(white);
 				border: none;
-				@include rem(margin-bottom, 0.8rem);
+				@include rem(margin-bottom, 1.2rem);
 			}
 			input[type="submit"], button{
 				display: block;
@@ -107,16 +113,7 @@
 				border-bottom: 1px solid transparentize(site-color(blue), 0.75);
 				padding: 0;
 				cursor: pointer;
-				font-size: 1.231rem;
-				@include breakpoint-layout(break-1) {
-					font-size: 1.142rem;
-				}
-				@include breakpoint-layout(break-2) {
-					font-size: 1.06rem;
-				}
-				@include breakpoint-layout(break-3) {
-					font-size: 0.9412rem;
-				}
+				font-size: 1.333rem;				
 			}
 			.message_error{
 				background: site-color(red);
@@ -127,7 +124,7 @@
 			}
 			@include breakpoint-layout(break-2) {
 				input[type="email"], .message_error{
-					margin-left: -0.5rem;
+					margin-left: -0.7rem;
 				}				
 			}
 		}
@@ -136,7 +133,7 @@
 			.alumni-image{
 				display: none;
 				float: right;
-				width: 34%;						
+				width: 36%;						
 				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
 			filter: gray; /* IE6-9 */
 			-moz-filter: grayscale(100%); /* Moz */
@@ -152,22 +149,22 @@
 			.block-container{
 				@include breakpoint-layout(break-3) {
 					float: left;
-					width: 66%;				
+					width: 64%;				
 				}
 			}
 			h3{
 				font-weight: bold-of($display-type);
 				border-bottom: 0;
 				padding: 0;
-				@include rem(padding-bottom, 0.4rem);
-				border-top-width: 0.7rem;
 			}
 			blockquote{	
-				@include rem(padding-bottom, 3.8rem);
+				@include rem(padding-bottom, 6rem);
 					p{
+						border-top: 0px;
 						&:before{
 							@include breakpoint-layout(break-2) {
-								left: -0.38em;
+								left: -0.3em;
+								top: 0.4em;
 								font-size: 3.4em;
 							}
 					}
@@ -178,18 +175,17 @@
 			}
 		}
 		&.partners-section{	
-			h2{
-				border-top: 0;
+			h2{				
 				@include rem(padding-bottom, 4rem);
 				text-align: center;
 				font-weight: regular-of($display-type);
 				@include breakpoint-layout(break-2) {
-					@include rem(padding-bottom, 1.8rem);
+					@include rem(padding-bottom, 2.9rem);
 				}
 			}
 			.block-container{
 				@include breakpoint-layout(break-2) {
-					@include rem(padding, 3rem 3rem 3.6rem);
+					@include rem(padding, 3.2rem 4rem 5.1rem);
 				}
 			}
 			.view-more{
@@ -223,18 +219,24 @@
 				}			
 			}
 			&.seasonal-message{
+				
 				.block-container{
 					h2{
 						border-top: 0;
-						margin-bottom: 2.6rem;
+						@include rem(margin-bottom, 1.6rem);
+						@include rem(padding-top, 0.6rem);
 					}
 				}
 			}
-			&.newsletter{
+			&.newsletter{				
 				.block-container{
 					h3{
 						border-top: 0;
 						padding-top: 0;
+						margin-top: 0;
+					}
+					button{
+						margin-bottom: 0;
 					}
 				}
 			}

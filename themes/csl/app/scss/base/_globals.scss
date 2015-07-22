@@ -40,11 +40,11 @@ svg {
     @include set-container;
     @extend %typeset;
     clear: both;
-	@include rem(padding-left, 2.308rem);
-	@include rem(padding-right, 2.308rem);
+	@include rem(padding-left, px-to-rems(30px));
+	@include rem(padding-right, px-to-rems(30px));
 	@include breakpoint-layout(break-2) {
-		@include rem(padding-left, 3rem);
-		@include rem(padding-right, 3rem);	
+		@include rem(padding-left, px-to-rems(48px));
+		@include rem(padding-right, px-to-rems(48px));	
 		&.is-offset{
 			max-width: 100%;
 			padding-right: 0px;
@@ -55,7 +55,7 @@ svg {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	&.is-full{
-		padding: 0px;
+		padding: 0;
 	}
 }
 
@@ -68,9 +68,15 @@ svg {
 	background-color: site-color(white);
 	transition: all 0.2s ease;	
 	&--has-nav{
-		transform: translate3d(19.06rem, 0px, 0px);
+		transform: translate3d(px-to-rems(290px), 0px, 0px);
 		.no-csstransforms & {
-			@include rem(margin-left, 19.06rem);
+			@include rem(margin-left, px-to-rems(290px));	
 		}
+		@include breakpoint-layout(break-1) {
+			transform: translate3d(px-to-rems(305px), 0px, 0px);	
+			.no-csstransforms & {
+				@include rem(margin-left, px-to-rems(305px));	
+			}
+		}		
 	}	
 }

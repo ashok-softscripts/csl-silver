@@ -1,24 +1,24 @@
 .footer{		
-	@include rem(padding-bottom, 2.462rem);
+	@include rem(padding-bottom, 2.666rem);
 	@include clearfix;
 	@include breakpoint-layout(break-2) {
 		background: site-color(blue_ver_light);	
-		@include rem(padding-bottom, 4.2rem);
+		@include rem(padding-bottom, 5.95rem);
 	}
 	a{
 		background: none;
 	}
 	.thick-logo{
-		@include rem(padding-top, 2rem);
+		@include rem(padding-top, 2.16rem);
 		@include breakpoint-layout(break-1) {
 			@include span(5 of 12);
 			float: left;
-			@include rem(padding-top, 7.41rem);
+			@include rem(padding-top, 10.49rem);
 			.container{
-				@include rem(max-width, 29.4rem);			
+				@include rem(max-width, 42.666rem);			
 				margin-left: auto;
 				margin-right: 0px;
-				@include rem(padding-left, 3rem);
+				@include rem(padding-left, 4rem);
 				padding-right: 0px;
 				box-sizing: border-box;			
 			}
@@ -37,17 +37,17 @@
 			}
 		}
 		@include breakpoint-layout(break-1) {
-			@include rem(padding-top, 1.765rem);
+			@include rem(padding-top, 2.5rem);
 			@include span(7 of 12);
 			float: right;	
 			.container{
-				@include rem(height, 14.71rem);
+				@include rem(height, 20.83rem);
 				position: relative;
 				img{
 					margin: 0;
 					position: absolute;
-					@include rem(width, 31.18rem);
-					@include rem(left, -5.824rem);
+					@include rem(width, 44.16rem);
+					@include rem(left, -8.25rem);
 					//@include rem(max-width, 17rem);
 				}
 			}

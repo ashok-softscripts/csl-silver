@@ -2,26 +2,26 @@
 	@include clearfix;
 	&__container{
 		@include clearfix;
-		@include rem(padding-left, 2.308rem);
-		@include rem(padding-right, 2.308rem);
+		@include rem(padding-left, 2.5rem);
+		@include rem(padding-right, 2.5rem);
 		@include breakpoint-layout(break-2) {
 			padding: 0;
-			@include rem(max-width, 29.4rem);
+			@include rem(max-width, 42.4rem);
 			margin-left: auto;		
 		}
 	}
 	&__left{
 		background: site-color(blue_ver_light);	
 		@include rem(padding-top, 2.77rem);		
-		@include rem(padding-bottom, 5.385rem);			
+		@include rem(padding-bottom, 5.833rem);			
 		@include breakpoint-layout(break-2) {
 			background: transparent;
 			@include span(5 of 12);
 			float: left;
-			@include rem(padding-top, 5.6rem);		
-			@include rem(padding-bottom, 4.375rem);
+			@include rem(padding-top, 9.3rem);		
+			@include rem(padding-bottom, 6.1979rem);
 			.pre-footer__container{
-				@include rem(padding-left, 3rem);
+				@include rem(padding-left, 4rem);
 				box-sizing: border-box;
 			}
 		}
@@ -30,15 +30,15 @@
 	&__right{
 		background: site-color(blue_mid_light);	
 		@include rem(padding-top, 2.77rem);		
-		@include rem(padding-bottom, 5.385rem);	
+		@include rem(padding-bottom, 5.833rem);	
 		@include breakpoint-layout(break-2) {
 			background: site-color(blue_ver_light);	
 			@include span(7 of 12);
 			float: left;		
-			@include rem(padding-top, 5.6rem);		
-			@include rem(padding-bottom, 4.375rem);
+			@include rem(padding-top, 9.3rem);		
+			@include rem(padding-bottom, 6.1979rem);
 			.pre-footer__container{				
-				@include rem(max-width, 30.59rem);
+				@include rem(max-width, 44.4rem);
 				@include breakpoint-layout(break-2) {
 					@include rem(margin-left, 1rem);		
 					@include rem(margin-right, 1rem);		
@@ -49,12 +49,12 @@
 				}
 			}
 		
-		}
-		
+		}		
 	}
 	h3{
 		font-weight: bold-of($display-type);
-		border-bottom-width: 0.7rem;
+		padding-top: 0;
+		border-bottom-width: 0.8rem;
 	}
 	.footer-menu{
 		list-style: none;
@@ -79,9 +79,11 @@
 			@include breakpoint-layout(break-2) {
 				margin-bottom: 0;
 			}
+			&:first-child{
+				border-top-width: 0.5rem;
+			}
 		}		
-	}
-	
+	}	
 	.get-in-touch{
 		@include breakpoint-layout(break-2) {
 			float: left;			
@@ -91,33 +93,25 @@
 			@extend %intro-style;
 			padding-top: 0px;
 			border: 0px;
-			@include rem(margin-bottom, 2.6rem);
+			@include rem(margin-bottom, 3.6rem);
 		}		
 		.locations{
 			@include clearfix;
 			&__item{
-				@include rem(margin-bottom, 2.94rem);
+				@include rem(margin-bottom, 4.165rem);
 				strong{
-					font-size: 1.231rem;
-					@include breakpoint-layout(break-1) {
-						font-size: 1.142rem;
-					}
-					@include breakpoint-layout(break-2) {
-						font-size: 1.06rem;
-					}
-					@include breakpoint-layout(break-3) {
-						font-size: 0.9412rem;
-					}
+					font-size: 1.333rem;
 					display: block;
-					@include rem(margin-bottom, 0.4rem); 
 				}
 				p{										
 					@extend %small-style;					
 					margin-bottom: 0;
 					padding-top: 0;
-					@include rem(line-height, 1.66rem); 
 					span{
 						@include text-link(site-color(blue));					
+					}
+					&:last-child{
+						border-bottom: 0px;
 					}
 				}				
 				@include breakpoint-layout(break-1) {
@@ -136,24 +130,24 @@
 	.social-networks{		
 		a{
 			background: none;
-			@include rem(margin-right, 1.2rem);
+			@include rem(margin-right, 1.7rem);
 			img, svg{
-				@include rem(max-width, 1.846rem);
+				@include rem(max-width, 2rem);
 			}				
 		}
 		@include breakpoint-layout(break-2) {
 			float: right;
 			width: 20%;
 			a{
-				margin-right: 0;
-				img, svg{
-					@include rem(max-width, 1.412rem);
-				}
+				margin-right: 0;					
 			}
 		}
 		@include breakpoint-layout(break-3) {
 			a{
-				@include rem(margin-left, 0.2941rem);				
+				@include rem(margin-left, 0.833rem);
+				&:first-child{
+					margin-left: 0;	
+				}
 			}
 		}
 	}
