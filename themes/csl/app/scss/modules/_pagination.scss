@@ -2,8 +2,8 @@
     clear: both;
     text-align: center;
 	position: relative;
-	@include rem(margin-top, 2rem);
-	@include rem(margin-bottom, 3rem);
+	@include rem(margin-top, 5.125rem);
+	@include rem(margin-bottom, 5.125rem);
 	ul{
 		list-style: none;
 		margin: 0;
@@ -16,16 +16,18 @@
 			&.prev{
 				display: block;
 				float: left;
+				@include rem(padding-left, 2.16rem);
 			}
 			&.next{
 				display: block;
-				float: right;
+				float: right;				
+				@include rem(padding-right, 2.16rem);
 			}
 			@include breakpoint-layout(break-2) {			
-				@include rem(padding-left, 0.7059rem);
-				@include rem(padding-right, 0.7059rem);
+				@include rem(padding-left, 1.08rem);
+				@include rem(padding-right, 1.08rem);
 				display: inline-block;				
-				@include rem(font-size, 1.5rem);
+				@include rem(font-size, 2rem);
 				&.current{
 					color: site-color(blue_dark);
 				}

@@ -178,17 +178,8 @@ form {
 
 .drop-down {
 	position: relative;		
-	@include rem(width, 15.88rem);	
-	@include rem(height, 3.077rem);
-	@include breakpoint-layout(break-1) {			
-		@include rem(height, 2.857rem);
-	}
-	@include breakpoint-layout(break-2) {		
-		@include rem(height, 2.667rem);
-	}
-	@include breakpoint-layout(break-3) {		
-		@include rem(height, 2.353rem);
-	}
+	@include rem(width, 22.5rem);	
+	@include rem(height, 3.33rem);
 	ul {
 		position: absolute;
 		text-align: left;
@@ -205,35 +196,16 @@ form {
 		box-sizing: border-box;
 		overflow: hidden;
 		transition: all 0.3s ease-in-out, z-index 0s 0.3s;
-		@include rem(max-height, 2.769rem);
-		@include breakpoint-layout(break-1) {			
-			@include rem(max-height, 2.571rem);
-		}
-		@include breakpoint-layout(break-2) {		
-			@include rem(max-height, 2.4rem);
-		}
-		@include breakpoint-layout(break-3) {		
-			@include rem(max-height, 2.118rem);
-		}	
+		@include rem(max-height, 3rem);
 		z-index: 1;		
 		li{
 			display: block;
-			@include rem(padding, 0.3529rem 0.7647rem);
+			@include rem(padding, 0.5rem 1.083rem);
 			margin: 0;
 			border: 0;
 			cursor: pointer;
 			color: site-color(blue);
-			font-size: 1.231rem;
-			@include breakpoint-layout(break-1) {
-				font-size: 1.143rem;
-				line-height: 1.6rem;
-			}
-			@include breakpoint-layout(break-2) {
-				font-size: 1.067rem;
-			}
-			@include breakpoint-layout(break-3) {
-				font-size: 0.9412rem;
-			}	
+			font-size: 1.333rem;			
 			position: relative;			
 			&.active{
 				color: #00644c;

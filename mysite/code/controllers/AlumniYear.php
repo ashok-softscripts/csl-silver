@@ -2,6 +2,10 @@
     private static $db = array(
         'Name' => 'Varchar',
     );
+	
+	static $singular_name = "Add Alumni & Project";
+
+	static $plural_name = "Add Alumni & Projects";
 
 	public function canView($member = null) {
         return Permission::check('CMS_ACCESS_AlumniYearsAdmin', 'any', $member);

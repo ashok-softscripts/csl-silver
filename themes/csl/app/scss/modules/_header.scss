@@ -1,11 +1,11 @@
 .header{
 	background: site-color(blue_ver_light);
 	@include rem(padding-top, 0.9167rem);
-	@include rem(padding-bottom, 4.417rem);
+	@include rem(padding-bottom, 2.206rem);
 	
 	@include breakpoint-layout(break-1) {
 		@include rem(padding-top, 4.417rem);
-		@include rem(padding-bottom, 9rem);	
+		@include rem(padding-bottom, 4.3rem);		
 	}
 	
 	.container{
@@ -37,14 +37,17 @@
 			}			
 		}
 		.header-intro{		
-			@include rem(padding-top, 12.83rem);			
+			@include rem(padding-top, 12.83rem);
+			@include rem(padding-bottom, 2.206rem);
 			@include breakpoint-layout(break-2) {
 				@include rem(padding-top, 13.14rem);
+				@include rem(padding-bottom, 4.3rem);
 				@include rem(max-width, 73.33rem);				
 			}
 			&.header-home{
 				@include breakpoint-layout(break-2) {
 					@include rem(padding-top, 8.05999rem);	
+					@include rem(padding-bottom, 5.2rem);
 					@include rem(max-width, 45rem);
 				}
 				h1{
@@ -56,11 +59,7 @@
 				
 			}
 			&.header-alumni, &.header-program, &.header-news { // Content Alumni template
-				h1{
-					@include breakpoint-layout(break-3) {
-						border-bottom: 0;
-					}
-				}
+				@include rem(padding-bottom, 2.9rem);				
 				p{
 					
 					@extend %small-style;
@@ -72,14 +71,14 @@
 					display: block;
 					@include breakpoint-layout(break-1) {	
 						display: inline-block;
-						@include rem(margin-right, 2rem);	
+						@include rem(margin-right, 3.5rem);	
 					}					
 				}				
 			}
 			&.header-program-collection{
 				h1{
 					@include breakpoint-layout(break-3) {
-						font-size: 3.294rem;
+						font-size: 4.667rem;						
 					}
 				}
 			}

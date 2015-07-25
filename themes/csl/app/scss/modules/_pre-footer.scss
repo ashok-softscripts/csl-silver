@@ -124,6 +124,13 @@
 				@include breakpoint-layout(break-2) {
 					margin-bottom: 0;
 				}
+				@include breakpoint-layout(break-3) {
+					width: auto;
+					margin-right: 2.4rem;
+					&:nth-child(2n){
+						float: left;
+					}
+				}
 			}
 		}
 	}

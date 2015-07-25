@@ -11,7 +11,7 @@
 	<div class="container">
 		<% if Logo %>
 			<div class="alumni-picture">
-				$Logo
+				<div class="partner_logo_large">$Logo</div>
 			</div>
 		<% end_if %>
 		<div class="alumni-content">			

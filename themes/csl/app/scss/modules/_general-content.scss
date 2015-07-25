@@ -1,9 +1,9 @@
 .general{
-	@include rem(padding-top, 2.308rem);
-	@include rem(padding-bottom, 2.308rem);
+	@include rem(padding-top, 2.5rem);
+	@include rem(padding-bottom, 2.5rem);
 	@include breakpoint-layout(break-2) {
-		@include rem(padding-top, 5rem);
-		@include rem(padding-bottom, 5rem);	
+		@include rem(padding-top, 7.16rem);
+		@include rem(padding-bottom, 7.16rem);	
 	}
 	h2:first-child, h3:first-child{
 		padding-top: 0;

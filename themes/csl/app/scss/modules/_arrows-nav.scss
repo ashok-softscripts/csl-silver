@@ -11,12 +11,14 @@
 		@include breakpoint-layout(break-1) {	
 			display: inline-block;
 			vertical-align: top;
-			@include rem(margin-right, 7.4rem);
+			@include rem(margin-right, 7.6rem);
 		}
 	}
 	&__item{				
 		padding: 0;
-		@include rem(margin-bottom, -0.2rem);
+		margin-bottom: 0;
+		border-top-width: 1.3rem;
+  		border-bottom-width: 0.4rem;
 		&:before{
 			content: "";
 			display: inline-block;

@@ -1,13 +1,13 @@
 .programs{
 	@include clearfix;	
-	@include rem(margin-top, 1.5rem);
-	@include rem(margin-bottom, 2.5rem);
+	@include rem(margin-top, 2rem);
+	@include rem(margin-bottom, 4.1rem);
 	h3{
 		font-weight: bold-of($display-type);
 		border-bottom-width: 0.4rem;
 	}
 	&__item{		
-		@include rem(margin-bottom, 8rem);		
+		@include rem(margin-bottom, 11.32rem);		
 		@include breakpoint-layout(break-1) {
 			margin-right: 2.08%;
 			float: left;
@@ -29,17 +29,17 @@
 		&.is-open{
 			.programs__status{
 				color: site-color(green);
-				@include rem(padding-left, 1.1765rem);
+				@include rem(padding-left, 1.6667rem);
 				&:before{
 					content: "";
 					display: block;
-					@include rem(width, 0.7059rem);
-					@include rem(height, 0.7059rem);
+					@include rem(width, 1rem);
+					@include rem(height, 1rem);
 					background-color: site-color(green);
 					border-radius: 50%;
 					position: absolute;
 					left: 0;
-					@include rem(top, 0.2941rem);
+					@include rem(top, 0.416rem);
 				}
 			}
 		}
@@ -49,16 +49,16 @@
 				opacity: 0.5;				
 			}
 			.programs__status{	
-				@include rem(padding-left, 1.0588rem);
+				@include rem(padding-left, 1.4999rem);
 				&:before{
 					content: "";
 					display: block;
-					@include rem(width, 0.5882rem);
-					@include rem(height, 0.5882rem);
+					@include rem(width, 0.8333rem);
+					@include rem(height, 0.833rem);
 					background-color: site-color(orange);					
 					position: absolute;
 					left: 0;
-					@include rem(top, 0.2941rem);
+					@include rem(top, 0.4166rem);
 				}
 			}
 		}
@@ -81,28 +81,19 @@
         @extend %has-background-color;
         
     }
-	&__excerpt{		
-		@include breakpoint-layout(break-2) {
-			p{
-				font-size: 1rem;
-				line-height: 1.5rem;
-			}
-		}
+	&__excerpt{				
+		p{
+			font-size: 1.333rem;
+			line-height: 2rem;				
+			border-top-width: 0;
+			@include rem(padding-top, 1.2rem);
+		}		
 	}
 	&__status{
-		@include rem(margin-top, 2.5rem);
+		@include rem(margin-top, 4rem);
 		font-weight: regular-of($display-type);
 		position: relative;
-		font-size: 1.231rem;
-		@include breakpoint-layout(break-1) {
-			font-size: 1.142rem;
-		}
-		@include breakpoint-layout(break-2) {
-			font-size: 1.06rem;
-		}
-		@include breakpoint-layout(break-3) {
-			font-size: 0.9412rem;
-		}
+		font-size: 1.333rem;		
 	}
 		
 

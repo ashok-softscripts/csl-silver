@@ -7,7 +7,7 @@ class AlumniYearsAdmin extends ModelAdmin {
 
     private static $url_segment = 'alumniyear';
 
-    private static $menu_title = 'Alumni Years';
+    private static $menu_title = 'Alumni & Projects';
 
 	private static $menu_icon = "mysite/Assets/calendar.png";
 }

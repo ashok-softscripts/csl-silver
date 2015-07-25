@@ -61,7 +61,7 @@ caption, th, td {
 }
 @font-face {
   font-family: 'TradeGothicLTStd';
-  src: url("../webfonts/TradeGothicLTStd-Bold.eot?#iefix") format("embedded-opentype"), url("../webfonts/TradeGothicLTStd-Bold.otf") format("opentype"), url("../webfonts/TradeGothicLTStd-Bold.woff") format("woff"), url("../webfonts/TradeGothicLTStd-Bold.ttf") format("truetype"), url("../webfonts/TradeGothicLTStd-Bold.svg#TradeGothicLTStd-Bold") format("svg");
+  src: url("../webfonts/TradeGothicLTStd-Bd2.eot?#iefix") format("embedded-opentype"), url("../webfonts/TradeGothicLTStd-Bd2.otf") format("opentype"), url("../webfonts/TradeGothicLTStd-Bd2.woff") format("woff"), url("../webfonts/TradeGothicLTStd-Bd2.ttf") format("truetype"), url("../webfonts/TradeGothicLTStd-Bd2.svg#TradeGothicLTStd-Bd2") format("svg");
   font-weight: bold;
   font-style: normal;
 }
@@ -1314,11 +1314,6 @@ form #EditableLiteralField35 {
   font-size: 1.333rem;
   position: relative;
 }
-@media screen and (min-width: 30em) {
-  .drop-down ul li {
-    line-height: 1.6rem;
-  }
-}
 .drop-down ul li.active {
   color: #00644c;
 }
@@ -1711,15 +1706,15 @@ form #EditableLiteralField35 {
   background: #f3f9fa;
   padding-top: 11.0004px;
   padding-top: 0.9167rem;
-  padding-bottom: 53.004px;
-  padding-bottom: 4.417rem;
+  padding-bottom: 26.472px;
+  padding-bottom: 2.206rem;
 }
 @media screen and (min-width: 30em) {
   .header {
     padding-top: 53.004px;
     padding-top: 4.417rem;
-    padding-bottom: 108px;
-    padding-bottom: 9rem;
+    padding-bottom: 51.6px;
+    padding-bottom: 4.3rem;
   }
 }
 @media screen and (min-width: 67.5em) {
@@ -1773,11 +1768,15 @@ form #EditableLiteralField35 {
 .header .container .header-intro {
   padding-top: 153.96px;
   padding-top: 12.83rem;
+  padding-bottom: 26.472px;
+  padding-bottom: 2.206rem;
 }
 @media screen and (min-width: 47.9375em) {
   .header .container .header-intro {
     padding-top: 157.68px;
     padding-top: 13.14rem;
+    padding-bottom: 51.6px;
+    padding-bottom: 4.3rem;
     max-width: 879.96px;
     max-width: 73.33rem;
   }
@@ -1786,6 +1785,8 @@ form #EditableLiteralField35 {
   .header .container .header-intro.header-home {
     padding-top: 96.71988px;
     padding-top: 8.05999rem;
+    padding-bottom: 62.4px;
+    padding-bottom: 5.2rem;
     max-width: 540px;
     max-width: 45rem;
   }
@@ -1796,10 +1797,9 @@ form #EditableLiteralField35 {
     margin-bottom: -0.3333rem;
   }
 }
-@media screen and (min-width: 67.5em) {
-  .header .container .header-intro.header-alumni h1, .header .container .header-intro.header-program h1, .header .container .header-intro.header-news h1 {
-    border-bottom: 0;
-  }
+.header .container .header-intro.header-alumni, .header .container .header-intro.header-program, .header .container .header-intro.header-news {
+  padding-bottom: 34.8px;
+  padding-bottom: 2.9rem;
 }
 @media screen and (min-width: 30em) {
   .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p {
@@ -1812,13 +1812,13 @@ form #EditableLiteralField35 {
 @media screen and (min-width: 30em) {
   .header .container .header-intro.header-alumni .alumni-designation, .header .container .header-intro.header-alumni .program-schedule, .header .container .header-intro.header-alumni .news-author, .header .container .header-intro.header-program .alumni-designation, .header .container .header-intro.header-program .program-schedule, .header .container .header-intro.header-program .news-author, .header .container .header-intro.header-news .alumni-designation, .header .container .header-intro.header-news .program-schedule, .header .container .header-intro.header-news .news-author {
     display: inline-block;
-    margin-right: 24px;
-    margin-right: 2rem;
+    margin-right: 42px;
+    margin-right: 3.5rem;
   }
 }
 @media screen and (min-width: 67.5em) {
   .header .container .header-intro.header-program-collection h1 {
-    font-size: 3.294rem;
+    font-size: 4.667rem;
   }
 }
 
@@ -2018,6 +2018,15 @@ form #EditableLiteralField35 {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 67.5em) {
+  .pre-footer .get-in-touch .locations__item {
+    width: auto;
+    margin-right: 2.4rem;
+  }
+  .pre-footer .get-in-touch .locations__item:nth-child(2n) {
+    float: left;
+  }
+}
 .pre-footer .social-networks a {
   background: none;
   margin-right: 20.4px;
@@ -2153,14 +2162,15 @@ form #EditableLiteralField35 {
   .arrows-nav__list {
     display: inline-block;
     vertical-align: top;
-    margin-right: 88.8px;
-    margin-right: 7.4rem;
+    margin-right: 91.2px;
+    margin-right: 7.6rem;
   }
 }
 .arrows-nav__item {
   padding: 0;
-  margin-bottom: -2.4px;
-  margin-bottom: -0.2rem;
+  margin-bottom: 0;
+  border-top-width: 1.3rem;
+  border-bottom-width: 0.4rem;
 }
 .arrows-nav__item:before {
   content: "";
@@ -2855,16 +2865,16 @@ form #EditableLiteralField35 {
 }
 @media screen and (min-width: 47.9375em) {
   .features.general-features .features__block .block-container {
-    padding-bottom: 30px;
-    padding-bottom: 2.5rem;
+    padding-bottom: 43.2px;
+    padding-bottom: 3.6rem;
   }
 }
 .features.general-features .features__block.seasonal-message .block-container h2 {
   border-top: 0;
-  margin-bottom: 19.2px;
-  margin-bottom: 1.6rem;
-  padding-top: 7.2px;
-  padding-top: 0.6rem;
+  margin-bottom: 36px;
+  margin-bottom: 3rem;
+  padding-top: 15.6px;
+  padding-top: 1.3rem;
 }
 .features.general-features .features__block.newsletter .block-container h3 {
   border-top: 0;
@@ -2896,8 +2906,8 @@ form #EditableLiteralField35 {
 .news__item {
   float: left;
   width: 100%;
-  margin-bottom: 80.004px;
-  margin-bottom: 6.667rem;
+  margin-bottom: 89.76px;
+  margin-bottom: 7.48rem;
 }
 @media screen and (min-width: 30em) {
   .news__item {
@@ -2936,6 +2946,8 @@ form #EditableLiteralField35 {
 }
 .news h3 {
   font-weight: bold;
+  border-bottom-width: 4.8px;
+  border-bottom-width: 0.4rem;
 }
 .news__excerpt {
   margin-bottom: 12px;
@@ -2947,11 +2959,12 @@ form #EditableLiteralField35 {
     margin-bottom: 2rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
-  .news__excerpt p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
+.news__excerpt p {
+  font-size: 1.33rem;
+  line-height: 2rem;
+  border-top-width: 0;
+  padding-top: 14.4px;
+  padding-top: 1.2rem;
 }
 .news a {
   font-family: TradeGothicLTStd, sans-serif;
@@ -2976,6 +2989,10 @@ form #EditableLiteralField35 {
 }
 .news__publish {
   font-weight: 400;
+}
+.news.latest-news .news__item {
+  margin-bottom: 80.004px;
+  margin-bottom: 6.667rem;
 }
 @media screen and (min-width: 30em) {
   .news.latest-news .news__item {
@@ -3004,6 +3021,7 @@ form #EditableLiteralField35 {
 .news.latest-news h3 {
   border-bottom: none;
   padding-top: 0;
+  border-top-width: 10.8px;
   border-top-width: 0.9rem;
 }
 @media screen and (min-width: 47.9375em) {
@@ -3102,10 +3120,10 @@ form #EditableLiteralField35 {
 }
 
 .all_partners {
-  margin-top: 18px;
-  margin-top: 1.5rem;
-  margin-bottom: 30px;
-  margin-bottom: 2.5rem;
+  margin-top: 24px;
+  margin-top: 2rem;
+  margin-bottom: 42.48px;
+  margin-bottom: 3.54rem;
 }
 .all_partners__list:before, .all_partners__list:after {
   display: table;
@@ -3115,8 +3133,8 @@ form #EditableLiteralField35 {
   clear: both;
 }
 .all_partners__item {
-  margin-bottom: 57px;
-  margin-bottom: 4.75rem;
+  margin-bottom: 80.004px;
+  margin-bottom: 6.667rem;
 }
 @media screen and (min-width: 30em) {
   .all_partners__item {
@@ -3159,26 +3177,47 @@ form #EditableLiteralField35 {
 }
 .all_partners h3 {
   font-weight: bold;
+  border-bottom-width: 4.8px;
+  border-bottom-width: 0.4rem;
 }
-@media screen and (min-width: 47.9375em) {
-  .all_partners__excerpt p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
+.all_partners__excerpt p {
+  font-size: 1.333rem;
+  line-height: 2rem;
+  border-top-width: 0;
+  padding-top: 14.4px;
+  padding-top: 1.2rem;
+}
+
+.partner_logo_large {
+  overflow: hidden;
+  position: relative;
+  padding-top: 76.0683760684%;
+  height: 0;
+  display: block;
+  background: #e8f3f5 !important;
+}
+.partner_logo_large img {
+  position: absolute;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .general {
-  padding-top: 27.696px;
-  padding-top: 2.308rem;
-  padding-bottom: 27.696px;
-  padding-bottom: 2.308rem;
+  padding-top: 30px;
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+  padding-bottom: 2.5rem;
 }
 @media screen and (min-width: 47.9375em) {
   .general {
-    padding-top: 60px;
-    padding-top: 5rem;
-    padding-bottom: 60px;
-    padding-bottom: 5rem;
+    padding-top: 85.92px;
+    padding-top: 7.16rem;
+    padding-bottom: 85.92px;
+    padding-bottom: 7.16rem;
   }
 }
 .general h2:first-child, .general h3:first-child {
@@ -3190,10 +3229,10 @@ form #EditableLiteralField35 {
   clear: both;
   text-align: center;
   position: relative;
-  margin-top: 24px;
-  margin-top: 2rem;
-  margin-bottom: 36px;
-  margin-bottom: 3rem;
+  margin-top: 61.5px;
+  margin-top: 5.125rem;
+  margin-bottom: 61.5px;
+  margin-bottom: 5.125rem;
 }
 .pagination ul {
   list-style: none;
@@ -3215,20 +3254,24 @@ form #EditableLiteralField35 {
 .pagination ul li.prev {
   display: block;
   float: left;
+  padding-left: 25.92px;
+  padding-left: 2.16rem;
 }
 .pagination ul li.next {
   display: block;
   float: right;
+  padding-right: 25.92px;
+  padding-right: 2.16rem;
 }
 @media screen and (min-width: 47.9375em) {
   .pagination ul li {
-    padding-left: 8.4708px;
-    padding-left: 0.7059rem;
-    padding-right: 8.4708px;
-    padding-right: 0.7059rem;
+    padding-left: 12.96px;
+    padding-left: 1.08rem;
+    padding-right: 12.96px;
+    padding-right: 1.08rem;
     display: inline-block;
-    font-size: 18px;
-    font-size: 1.5rem;
+    font-size: 24px;
+    font-size: 2rem;
   }
   .pagination ul li.current {
     color: #31555c;
@@ -3252,6 +3295,7 @@ form #EditableLiteralField35 {
   clear: both;
 }
 .alumni-filters label {
+  font-size: 1.333rem;
   float: left;
   margin-right: 13.992px;
   margin-right: 1.166rem;
@@ -3302,8 +3346,8 @@ form #EditableLiteralField35 {
   clear: both;
 }
 .alumni__item {
-  margin-bottom: 84.96px;
-  margin-bottom: 7.08rem;
+  margin-bottom: 89.76px;
+  margin-bottom: 7.48rem;
 }
 @media screen and (min-width: 30em) {
   .alumni__item {
@@ -3342,14 +3386,16 @@ form #EditableLiteralField35 {
   right: 0;
   width: 100%;
 }
-@media screen and (min-width: 47.9375em) {
-  .alumni__excerpt {
-    margin-bottom: 3.36px;
-    margin-bottom: 0.28rem;
-  }
-  .alumni__excerpt p {
-    font-size: 1.333rem;
-  }
+.alumni__excerpt {
+  margin-bottom: 14.4px;
+  margin-bottom: 1.2rem;
+}
+.alumni__excerpt p {
+  font-size: 1.333rem;
+  line-height: 2rem;
+  border-top-width: 0;
+  padding-top: 14.4px;
+  padding-top: 1.2rem;
 }
 .alumni__type {
   margin-top: 33.96px;
@@ -3364,57 +3410,73 @@ form #EditableLiteralField35 {
 }
 .alumni h3 {
   font-weight: bold;
-  border-bottom-width: 0.56rem;
+  border-top-width: 1.3rem;
+  border-bottom-width: 0;
 }
 
 section .alumni-content blockquote p {
   color: #f36f43;
-  font-size: 27px;
-  font-size: 2.25rem;
-  line-height: 3rem;
+  font-size: 36px;
+  font-size: 3rem;
+  line-height: 4rem;
   padding-left: 0;
+  padding-top: 0;
+  border-bottom-width: 12px;
+  border-bottom-width: 1rem;
 }
 section .alumni-content blockquote p:before {
   color: rgba(243, 111, 67, 0.15);
   font-size: 2em;
+  top: 0.3em;
 }
 section .alumni-content h3 {
   font-weight: bold;
+  border-top-width: 33.6px;
+  border-top-width: 2.8rem;
+  border-bottom-width: 9.6px;
+  border-bottom-width: 0.8rem;
+}
+section .alumni-content p {
+  border-bottom-width: 18px;
+  border-bottom-width: 1.5rem;
 }
 @media screen and (min-width: 47.9375em) {
   section .alumni-content {
-    width: 50%;
     float: left;
+    width: 49%;
   }
 }
 section .alumni-picture {
-  margin-bottom: 36px;
-  margin-bottom: 3rem;
+  margin-bottom: 51px;
+  margin-bottom: 4.25rem;
 }
 @media screen and (min-width: 47.9375em) {
   section .alumni-picture {
-    width: 41.6666666667%;
-    float: left;
+    width: 40.4%;
     float: right;
   }
 }
 
 .more-alumnies h2 {
-  margin-bottom: 24px;
-  margin-bottom: 2rem;
+  margin-bottom: 33.96px;
+  margin-bottom: 2.83rem;
 }
 @media screen and (min-width: 47.9375em) {
   .more-alumnies {
-    padding-top: 60px;
-    padding-top: 5rem;
+    padding-top: 91.2px;
+    padding-top: 7.6rem;
   }
+}
+.more-alumnies .alumni__item {
+  margin-bottom: 50.16px;
+  margin-bottom: 4.18rem;
 }
 
 .programs {
-  margin-top: 18px;
-  margin-top: 1.5rem;
-  margin-bottom: 30px;
-  margin-bottom: 2.5rem;
+  margin-top: 24px;
+  margin-top: 2rem;
+  margin-bottom: 49.2px;
+  margin-bottom: 4.1rem;
 }
 .programs:before, .programs:after {
   display: table;
@@ -3428,8 +3490,8 @@ section .alumni-picture {
   border-bottom-width: 0.4rem;
 }
 .programs__item {
-  margin-bottom: 96px;
-  margin-bottom: 8rem;
+  margin-bottom: 135.84px;
+  margin-bottom: 11.32rem;
 }
 @media screen and (min-width: 30em) {
   .programs__item {
@@ -3455,22 +3517,22 @@ section .alumni-picture {
 }
 .programs__item.is-open .programs__status {
   color: #008266;
-  padding-left: 14.118px;
-  padding-left: 1.1765rem;
+  padding-left: 20.0004px;
+  padding-left: 1.6667rem;
 }
 .programs__item.is-open .programs__status:before {
   content: "";
   display: block;
-  width: 8.4708px;
-  width: 0.7059rem;
-  height: 8.4708px;
-  height: 0.7059rem;
+  width: 12px;
+  width: 1rem;
+  height: 12px;
+  height: 1rem;
   background-color: #008266;
   border-radius: 50%;
   position: absolute;
   left: 0;
-  top: 3.5292px;
-  top: 0.2941rem;
+  top: 4.992px;
+  top: 0.416rem;
 }
 .programs__item.is-closed {
   opacity: 0.7;
@@ -3479,21 +3541,21 @@ section .alumni-picture {
   opacity: 0.5;
 }
 .programs__item.is-closed .programs__status {
-  padding-left: 12.7056px;
-  padding-left: 1.0588rem;
+  padding-left: 17.9988px;
+  padding-left: 1.4999rem;
 }
 .programs__item.is-closed .programs__status:before {
   content: "";
   display: block;
-  width: 7.0584px;
-  width: 0.5882rem;
-  height: 7.0584px;
-  height: 0.5882rem;
+  width: 9.9996px;
+  width: 0.8333rem;
+  height: 9.996px;
+  height: 0.833rem;
   background-color: #f36f43;
   position: absolute;
   left: 0;
-  top: 3.5292px;
-  top: 0.2941rem;
+  top: 4.9992px;
+  top: 0.4166rem;
 }
 .programs__cover {
   overflow: hidden;
@@ -3510,33 +3572,19 @@ section .alumni-picture {
   right: 0;
   width: 100%;
 }
-@media screen and (min-width: 47.9375em) {
-  .programs__excerpt p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
+.programs__excerpt p {
+  font-size: 1.333rem;
+  line-height: 2rem;
+  border-top-width: 0;
+  padding-top: 14.4px;
+  padding-top: 1.2rem;
 }
 .programs__status {
-  margin-top: 30px;
-  margin-top: 2.5rem;
+  margin-top: 48px;
+  margin-top: 4rem;
   font-weight: 400;
   position: relative;
-  font-size: 1.231rem;
-}
-@media screen and (min-width: 30em) {
-  .programs__status {
-    font-size: 1.142rem;
-  }
-}
-@media screen and (min-width: 47.9375em) {
-  .programs__status {
-    font-size: 1.06rem;
-  }
-}
-@media screen and (min-width: 67.5em) {
-  .programs__status {
-    font-size: 0.9412rem;
-  }
+  font-size: 1.333rem;
 }
 
 .indexnav {

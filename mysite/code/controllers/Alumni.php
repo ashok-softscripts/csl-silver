@@ -41,7 +41,7 @@
 
 		$YearsData = DataObject::get('AlumniYear');
 		if ($YearsData) $YearSource = $YearsData->map('Name', 'Name');
-		$year_field = new DropdownField('Year', 'Select Year', $YearSource, $this->Year);
+		$year_field = new DropdownField('Year', 'Select Alumni & Project', $YearSource, $this->Year);
 		$year_field->setEmptyString('(Select one)');
 
 		$fields->addFieldToTab('Root.Main', $year_field ,'Content');

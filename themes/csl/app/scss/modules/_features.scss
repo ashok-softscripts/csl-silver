@@ -215,16 +215,15 @@
 			.block-container{
 				@include rem(padding-bottom, 2.6rem);
 				@include breakpoint-layout(break-2) {
-					@include rem(padding-bottom, 2.5rem);			
+					@include rem(padding-bottom, 3.6rem);			
 				}			
 			}
-			&.seasonal-message{
-				
+			&.seasonal-message{				
 				.block-container{
 					h2{
 						border-top: 0;
-						@include rem(margin-bottom, 1.6rem);
-						@include rem(padding-top, 0.6rem);
+						@include rem(margin-bottom, 3rem);
+						@include rem(padding-top, 1.3rem);
 					}
 				}
 			}

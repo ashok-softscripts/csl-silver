@@ -3,6 +3,7 @@
 	@include rem(padding-top, 1.666rem);
 	@include rem(padding-bottom, 1.666rem);	
 	label{
+		font-size: 1.333rem;
 		float: left;
 		@include rem(margin-right, 1.166rem);
 		@include rem(line-height, 3.33rem);
@@ -38,7 +39,7 @@
 .alumni{
 	@include clearfix;		
 	&__item{
-		@include rem(margin-bottom, 7.08rem);
+		@include rem(margin-bottom, 7.48rem);
 		@include breakpoint-layout(break-1) {
 			float: left;
 			width: 48.96%;
@@ -72,18 +73,20 @@
             left: 0;
             right: 0;
 			width: 100%;
+			
         }
 		// theming colors
         @extend %has-background-color;
         
     }
-	&__excerpt{
-		@include breakpoint-layout(break-2) {
-			@include rem(margin-bottom, 0.28rem);
-			p{
-				@extend %small-style;
-			}
-		}
+	&__excerpt{		
+		@include rem(margin-bottom, 1.2rem);
+		p{
+			font-size: 1.333rem;
+			line-height: 2rem;				
+			border-top-width: 0;
+			@include rem(padding-top, 1.2rem);
+		}		
 	}
 	&__type{
 		@include rem(margin-top, 2.83rem);
@@ -95,7 +98,8 @@
 	}
 	h3{
 		font-weight: bold-of($display-type);
-		border-bottom-width: 0.56rem;
+		border-top-width: 1.3rem;
+		border-bottom-width: 0;
 	}
 
 }
