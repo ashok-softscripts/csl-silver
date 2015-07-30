@@ -1,6 +1,7 @@
 <?php class ProgramAlumni extends Page {
 	private static $db = array(
 		'EnableNav' => "Boolean(1)",
+		'IntroText' => "Text",
 		'BackgroundColour' => "Enum('blue,blue_dark,blue_light,blue_mid_light,blue_ver_light,orange,orange_mid,orange_dark,green,green_light,green_dark,green_forest,green_lime,gray,gray_light,gray_dark,black,white,none','none')",
 	);
 
@@ -30,6 +31,8 @@
 		
 		$fields->addFieldToTab('Root.Main', new CheckboxField('EnableNav','Show In Navigation'),'Content'); 
 
+		$fields->addFieldToTab('Root.Main', new TextAreaField('IntroText', 'Intro Content'),'Content');
+		
 		$config = GridFieldConfig_RelationEditor::create(10);
 		$config->addComponent(new GridFieldSortableRows('SortAlumni'));
        	$config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(

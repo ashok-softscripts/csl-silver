@@ -176,7 +176,7 @@ a.stealth-link {
   background-image: none;
 }
 
-.nav__badge a, .nav--smaller .nav__item, .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .pre-footer .footer-menu li, .pre-footer .get-in-touch .locations__item p, .news__publish {
+.nav__badge a, .nav--smaller .nav__item, .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .header .container .header-intro.program-form-header p, .pre-footer .footer-menu li, .pre-footer .get-in-touch .locations__item p, .news__publish {
   line-height: 24px;
   line-height: 2rem;
   border-top: 12px solid transparent;
@@ -425,6 +425,7 @@ h4, .h4-style {
   padding-top: 0.50501rem;
   margin-bottom: -6.06012px;
   margin-bottom: -0.50501rem;
+  font-weight: bold;
 }
 
 h5, .h5-style {
@@ -860,12 +861,12 @@ table tr:nth-child(even) {
 }
 table th {
   font-weight: bold;
-  padding: 0.563em 1.250em 0.313em;
+  padding: 0.563em 1.250em 0.336em;
   border-bottom: 1px solid #97a8ab;
 }
 table td {
   font-weight: 300;
-  padding: 0.563em 1.250em 0.313em;
+  padding: 0.563em 1.250em 0.46em;
 }
 table td.bold {
   font-weight: bold;
@@ -1258,6 +1259,7 @@ form .required.message {
   }
 }
 form .field-submit {
+  margin-bottom: 24px;
   margin-bottom: 2rem;
 }
 form .dob-month, form .dob-day, form .dob-year {
@@ -1797,23 +1799,29 @@ form #EditableLiteralField35 {
     margin-bottom: -0.3333rem;
   }
 }
-.header .container .header-intro.header-alumni, .header .container .header-intro.header-program, .header .container .header-intro.header-news {
+.header .container .header-intro.header-alumni, .header .container .header-intro.header-program, .header .container .header-intro.header-news, .header .container .header-intro.program-form-header {
   padding-bottom: 34.8px;
   padding-bottom: 2.9rem;
 }
 @media screen and (min-width: 30em) {
-  .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p {
+  .header .container .header-intro.header-alumni p, .header .container .header-intro.header-program p, .header .container .header-intro.header-news p, .header .container .header-intro.program-form-header p {
     padding-top: 0;
   }
 }
-.header .container .header-intro.header-alumni .alumni-designation, .header .container .header-intro.header-alumni .program-schedule, .header .container .header-intro.header-alumni .news-author, .header .container .header-intro.header-program .alumni-designation, .header .container .header-intro.header-program .program-schedule, .header .container .header-intro.header-program .news-author, .header .container .header-intro.header-news .alumni-designation, .header .container .header-intro.header-news .program-schedule, .header .container .header-intro.header-news .news-author {
+.header .container .header-intro.header-alumni .alumni-designation, .header .container .header-intro.header-alumni .program-schedule, .header .container .header-intro.header-alumni .news-author, .header .container .header-intro.header-program .alumni-designation, .header .container .header-intro.header-program .program-schedule, .header .container .header-intro.header-program .news-author, .header .container .header-intro.header-news .alumni-designation, .header .container .header-intro.header-news .program-schedule, .header .container .header-intro.header-news .news-author, .header .container .header-intro.program-form-header .alumni-designation, .header .container .header-intro.program-form-header .program-schedule, .header .container .header-intro.program-form-header .news-author {
   display: block;
 }
 @media screen and (min-width: 30em) {
-  .header .container .header-intro.header-alumni .alumni-designation, .header .container .header-intro.header-alumni .program-schedule, .header .container .header-intro.header-alumni .news-author, .header .container .header-intro.header-program .alumni-designation, .header .container .header-intro.header-program .program-schedule, .header .container .header-intro.header-program .news-author, .header .container .header-intro.header-news .alumni-designation, .header .container .header-intro.header-news .program-schedule, .header .container .header-intro.header-news .news-author {
+  .header .container .header-intro.header-alumni .alumni-designation, .header .container .header-intro.header-alumni .program-schedule, .header .container .header-intro.header-alumni .news-author, .header .container .header-intro.header-program .alumni-designation, .header .container .header-intro.header-program .program-schedule, .header .container .header-intro.header-program .news-author, .header .container .header-intro.header-news .alumni-designation, .header .container .header-intro.header-news .program-schedule, .header .container .header-intro.header-news .news-author, .header .container .header-intro.program-form-header .alumni-designation, .header .container .header-intro.program-form-header .program-schedule, .header .container .header-intro.program-form-header .news-author {
     display: inline-block;
     margin-right: 42px;
     margin-right: 3.5rem;
+  }
+}
+@media screen and (min-width: 30em) {
+  .header .container .header-intro.header-program p {
+    border-top-width: 36px;
+    border-top-width: 3rem;
   }
 }
 @media screen and (min-width: 67.5em) {
@@ -2332,8 +2340,8 @@ form #EditableLiteralField35 {
 }
 
 .testimonial {
-  padding-top: 60px;
-  padding-top: 5rem;
+  padding-top: 84px;
+  padding-top: 7rem;
   padding-bottom: 48px;
   padding-bottom: 4rem;
 }
@@ -2344,9 +2352,11 @@ form #EditableLiteralField35 {
 }
 .testimonial__item blockquote p {
   color: #fff;
+  padding-top: 0;
 }
 .testimonial__item blockquote p:before {
   color: rgba(255, 255, 255, 0.15);
+  top: 0.28em;
 }
 .testimonial__item .arrow-link {
   font-family: TradeGothicLTStd, sans-serif;
@@ -2372,19 +2382,19 @@ form #EditableLiteralField35 {
 @media screen and (min-width: 47.9375em) {
   .testimonial__item {
     float: left;
-    max-width: 345px;
-    max-width: 28.75rem;
+    max-width: 468px;
+    max-width: 39rem;
   }
 }
 .testimonial__cover {
   display: none;
   float: left;
-  width: 179.28px;
-  width: 14.94rem;
-  margin-left: 45px;
-  margin-left: 3.75rem;
-  margin-top: -60px;
-  margin-top: -5rem;
+  width: 253.92px;
+  width: 21.16rem;
+  margin-left: 55.2px;
+  margin-left: 4.6rem;
+  margin-top: -84px;
+  margin-top: -7rem;
 }
 .testimonial__cover img {
   -webkit-filter: grayscale(100%);
@@ -2406,10 +2416,10 @@ form #EditableLiteralField35 {
 }
 @media screen and (min-width: 47.9375em) {
   .seansonal-section {
-    padding-top: 54px;
-    padding-top: 4.5rem;
-    padding-bottom: 60px;
-    padding-bottom: 5rem;
+    padding-top: 66px;
+    padding-top: 5.5rem;
+    padding-bottom: 78px;
+    padding-bottom: 6.5rem;
   }
 }
 @media screen and (min-width: 47.9375em) {
@@ -2419,7 +2429,7 @@ form #EditableLiteralField35 {
 }
 .seansonal-section h2, .seansonal-section .h2-style {
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   font-weight: 400;
 }
 .seansonal-section .arrow-link {
@@ -2457,15 +2467,15 @@ form #EditableLiteralField35 {
 }
 @media screen and (min-width: 47.9375em) {
   .faq-section {
-    padding-top: 54px;
-    padding-top: 4.5rem;
-    padding-bottom: 60px;
-    padding-bottom: 5rem;
+    padding-top: 88.8px;
+    padding-top: 7.4rem;
+    padding-bottom: 144px;
+    padding-bottom: 12rem;
   }
 }
 @media screen and (min-width: 47.9375em) {
   .faq-section__content {
-    width: 50%;
+    width: 55%;
   }
 }
 .faq-section h3 {
@@ -2474,7 +2484,14 @@ form #EditableLiteralField35 {
 @media screen and (min-width: 47.9375em) {
   .faq-section h3 {
     border-bottom: 0px;
+    margin-top: 6px;
+    margin-top: 0.5rem;
   }
+}
+.faq-section p:not(.intro) {
+  border-top: 0;
+  padding-top: 8.4px;
+  padding-top: 0.7rem;
 }
 
 @media screen and (min-width: 47.9375em) {
@@ -3580,8 +3597,8 @@ section .alumni-picture {
   padding-top: 1.2rem;
 }
 .programs__status {
-  margin-top: 48px;
-  margin-top: 4rem;
+  margin-top: 36px;
+  margin-top: 3rem;
   font-weight: 400;
   position: relative;
   font-size: 1.333rem;
@@ -3607,7 +3624,12 @@ section .alumni-picture {
 .indexnav__list {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.6em;
+  margin: 0;
+  margin-bottom: 4.18em;
+}
+.indexnav__item {
+  border-bottom-width: 6px;
+  border-bottom-width: 0.5rem;
 }
 .indexnav__link {
   font-weight: bold;
@@ -3649,6 +3671,9 @@ section .alumni-picture {
 }
 .indexnav .button {
   margin-bottom: 0;
+  margin-left: 4.2px;
+  margin-left: 0.35rem;
+  padding: 1em 2.54em 1em;
 }
 @media screen and (min-width: 47.9375em) {
   .indexnav {
@@ -3661,7 +3686,11 @@ section .alumni-picture {
   padding-top: 0;
 }
 .overview .program-content p {
-  padding-bottom: 1rem;
+  padding-bottom: 6px;
+  padding-bottom: 0.5rem;
+}
+.overview .program-content p:last-child {
+  border-bottom-width: 0.6rem;
 }
 .overview .program-content blockquote p {
   color: #f36f43;
@@ -3691,10 +3720,10 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .program-format {
-    padding-top: 60px;
-    padding-top: 5rem;
-    padding-bottom: 60px;
-    padding-bottom: 5rem;
+    padding-top: 84.96px;
+    padding-top: 7.08rem;
+    padding-bottom: 72px;
+    padding-bottom: 6rem;
   }
 }
 .program-format__right {
@@ -3706,11 +3735,13 @@ section .alumni-picture {
 @media screen and (min-width: 47.9375em) {
   .program-format__right {
     display: block;
+    padding-top: 26.4px;
+    padding-top: 2.2rem;
   }
 }
 .program-format__cover {
-  margin-bottom: 12px;
-  margin-bottom: 1rem;
+  margin-bottom: 21.6px;
+  margin-bottom: 1.8rem;
 }
 .program-format__cover img {
   width: 100%;
@@ -3725,20 +3756,20 @@ section .alumni-picture {
   margin: 0px;
   padding: 0px;
   list-style: none;
-  margin-top: 36px;
-  margin-top: 3rem;
+  margin-top: 54px;
+  margin-top: 4.5rem;
 }
 .program-format__item {
   padding: 0px;
-  margin-bottom: 6px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 7.2px;
+  margin-bottom: 0.6rem;
   position: relative;
 }
 .program-format__item:before {
   content: "";
   display: block;
-  width: 1.2307692308rem;
-  height: 1.2307692308rem;
+  width: 1.3333333333rem;
+  height: 1.3333333333rem;
   position: absolute;
   left: -1.2em;
   top: 0.4em;
@@ -3749,10 +3780,8 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .program-format__item:before {
-    width: 0.9411764706rem;
-    height: 0.9411764706rem;
-    top: 0.2em;
-    left: -1.6em;
+    top: 0.3em;
+    left: -1.7em;
   }
 }
 .program-format__item h3 {
@@ -3765,6 +3794,11 @@ section .alumni-picture {
     border-bottom: 0px;
   }
 }
+.program-format__item p {
+  border-top-width: 9.6px;
+  border-top-width: 0.8rem;
+  padding-top: 0;
+}
 
 .instructors {
   background-color: #b5dfdc;
@@ -3775,15 +3809,15 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .instructors {
-    padding-top: 60px;
-    padding-top: 5rem;
-    padding-bottom: 27px;
-    padding-bottom: 2.25rem;
+    padding-top: 84.96px;
+    padding-top: 7.08rem;
+    padding-bottom: 30px;
+    padding-bottom: 2.5rem;
   }
 }
 .instructors__content {
-  margin-bottom: 48px;
-  margin-bottom: 4rem;
+  margin-bottom: 69.6px;
+  margin-bottom: 5.8rem;
 }
 @media screen and (min-width: 47.9375em) {
   .instructors__content {
@@ -3803,8 +3837,8 @@ section .alumni-picture {
   }
 }
 .instructors__item {
-  margin-bottom: 57px;
-  margin-bottom: 4.75rem;
+  margin-bottom: 80.64px;
+  margin-bottom: 6.72rem;
 }
 @media screen and (min-width: 30em) {
   .instructors__item {
@@ -3815,6 +3849,10 @@ section .alumni-picture {
   .instructors__item:nth-child(2n) {
     margin-right: 0;
   }
+}
+.instructors__item p {
+  border-top-width: 10.8px;
+  border-top-width: 0.9rem;
 }
 .instructors__cover {
   overflow: hidden;
@@ -3833,6 +3871,7 @@ section .alumni-picture {
 }
 .instructors h3 {
   font-weight: bold;
+  border-bottom: 0;
 }
 
 .speakers {
@@ -3843,15 +3882,15 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .speakers {
-    padding-top: 60px;
-    padding-top: 5rem;
-    padding-bottom: 27px;
-    padding-bottom: 2.25rem;
+    padding-top: 98.4px;
+    padding-top: 8.2rem;
+    padding-bottom: 50.4px;
+    padding-bottom: 4.2rem;
   }
 }
 .speakers__content {
-  margin-bottom: 48px;
-  margin-bottom: 4rem;
+  margin-bottom: 69.6px;
+  margin-bottom: 5.8rem;
 }
 @media screen and (min-width: 47.9375em) {
   .speakers__content {
@@ -3871,8 +3910,8 @@ section .alumni-picture {
   }
 }
 .speakers__item {
-  margin-bottom: 57px;
-  margin-bottom: 4.75rem;
+  margin-bottom: 80.64px;
+  margin-bottom: 6.72rem;
 }
 @media screen and (min-width: 30em) {
   .speakers__item {
@@ -3896,6 +3935,9 @@ section .alumni-picture {
     margin-right: 0px;
   }
 }
+.speakers__item p {
+  padding-top: 0.3rem;
+}
 .speakers__cover {
   overflow: hidden;
   position: relative;
@@ -3913,6 +3955,8 @@ section .alumni-picture {
 }
 .speakers h3 {
   font-weight: bold;
+  padding-top: 0;
+  border-bottom: 0;
 }
 
 .program-applicants {
@@ -3924,10 +3968,10 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .program-applicants {
-    padding-top: 60px;
-    padding-top: 5rem;
-    padding-bottom: 27px;
-    padding-bottom: 2.25rem;
+    padding-top: 98.4px;
+    padding-top: 8.2rem;
+    padding-bottom: 40.8px;
+    padding-bottom: 3.4rem;
   }
 }
 .program-applicants__content {
@@ -3951,11 +3995,17 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .program-applicants blockquote p {
-    font-size: 1.116rem;
+    font-size: 18px;
+    font-size: 1.5rem;
+    line-height: 30px;
+    line-height: 2.5rem;
+    padding-top: 2.4px;
+    padding-top: 0.2rem;
   }
   .program-applicants blockquote p:before {
-    font-size: 2.6rem;
-    top: 0.54em;
+    font-size: 2.6em;
+    top: 0.33em;
+    left: -0.46em;
   }
 }
 .program-applicants h4 {
@@ -3963,7 +4013,8 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .program-applicants h4 {
-    border-top: 0px;
+    border-top: 0;
+    padding-top: 0;
   }
 }
 .program-applicants__list:before, .program-applicants__list:after {
@@ -3979,8 +4030,8 @@ section .alumni-picture {
   }
 }
 .program-applicants__item {
-  margin-bottom: 57px;
-  margin-bottom: 4.75rem;
+  margin-bottom: 80.64px;
+  margin-bottom: 6.72rem;
 }
 @media screen and (min-width: 30em) {
   .program-applicants__item {
@@ -4085,15 +4136,19 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .program-fees {
-    padding-top: 60px;
-    padding-top: 5rem;
-    padding-bottom: 27px;
-    padding-bottom: 2.25rem;
+    padding-top: 88.8px;
+    padding-top: 7.4rem;
+    padding-bottom: 52.8px;
+    padding-bottom: 4.4rem;
   }
 }
 @media screen and (min-width: 47.9375em) {
   .program-fees__content {
     width: 50%;
+  }
+  .program-fees__content p {
+    border-bottom-width: 18.24px;
+    border-bottom-width: 1.52rem;
   }
 }
 .program-fees h3 {
@@ -4102,15 +4157,50 @@ section .alumni-picture {
   margin-bottom: 1rem;
 }
 .program-fees table {
+  margin-top: 15px;
+  margin-top: 1.25rem;
   margin-bottom: 36px;
   margin-bottom: 3rem;
 }
+.program-fees .program-dates-section {
+  padding-top: 60px;
+  padding-top: 5rem;
+}
+.program-fees .program-dates-section h2 {
+  border-bottom-width: 8.4px;
+  border-bottom-width: 0.7rem;
+}
+
+.program-form-overview {
+  padding-top: 30px;
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+  padding-bottom: 2.5rem;
+}
+@media screen and (min-width: 47.9375em) {
+  .program-form-overview {
+    padding-top: 73.92px;
+    padding-top: 6.16rem;
+    padding-bottom: 97.2px;
+    padding-bottom: 8.1rem;
+  }
+}
+@media screen and (min-width: 47.9375em) {
+  .program-form-overview .program-content {
+    float: left;
+    width: 55%;
+  }
+}
+.program-form-overview p {
+  border-top-width: 19.2px;
+  border-top-width: 1.6rem;
+}
 
 .apply-form {
-  padding-top: 27.696px;
-  padding-top: 2.308rem;
-  padding-bottom: 27.696px;
-  padding-bottom: 2.308rem;
+  padding-top: 30px;
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+  padding-bottom: 2.5rem;
 }
 @media screen and (min-width: 47.9375em) {
   .apply-form {

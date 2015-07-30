@@ -5,7 +5,10 @@
 			padding-top: 0;
 		}
 		p{
-			padding-bottom: 1rem;
+			@include rem(padding-bottom, 0.5rem);
+			&:last-child{
+				border-bottom-width: 0.6rem;
+			}
 		}
 		blockquote{
 			p{

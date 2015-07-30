@@ -1,6 +1,7 @@
 <?php class ProgramFeesDates extends Page {
 	private static $db = array(
 		'EnableNav' => "Boolean(1)",
+		'IntroText' => "Text",
 		'DatesTitle' => "Text",
 		'DatesContent' => 'HTMLText',
 		'BackgroundColour' => "Enum('blue,blue_dark,blue_light,blue_mid_light,blue_ver_light,orange,orange_mid,orange_dark,green,green_light,green_dark,green_forest,green_lime,gray,gray_light,gray_dark,black,white,none','none')",
@@ -26,6 +27,8 @@
 
 		/* Reset Defaults */
 		$fields->removeByName("Metadata");
+		
+		$fields->addFieldToTab('Root.Main', new TextAreaField('IntroText', 'Intro Content'),'Content');
 		
 		$fields->addFieldToTab('Root.Main', new CheckboxField('EnableNav','Show In Navigation'),'Content'); 
  

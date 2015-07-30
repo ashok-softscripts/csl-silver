@@ -2,11 +2,11 @@
 	@include rem(padding-top, 2rem);
 	@include rem(padding-bottom, 1.25rem);
 	@include breakpoint-layout(break-2) {
-		@include rem(padding-top, 5rem);
-		@include rem(padding-bottom, 2.25rem);
+		@include rem(padding-top, 8.2rem);
+		@include rem(padding-bottom, 4.2rem);
 	}
 	&__content{
-		@include rem(margin-bottom, 4rem);
+		@include rem(margin-bottom, 5.8rem);
 		@include breakpoint-layout(break-2) {
 			width: 50%;
 		}
@@ -18,7 +18,7 @@
 		}
 	}
 	&__item{
-		@include rem(margin-bottom, 4.75rem);			
+		@include rem(margin-bottom, 6.72rem);			
 		@include breakpoint-layout(break-1) {
 			float: left;
 			width: 48.605%;
@@ -36,6 +36,9 @@
 			&:nth-child(3n){
 				margin-right: 0px;
 			}
+		}
+		p{
+			padding-top: 0.3rem;
 		}
 	}
 	&__cover {
@@ -57,7 +60,9 @@
         
     }
 	h3{
-		font-weight: bold-of($display-type);			
+		font-weight: bold-of($display-type);
+		padding-top: 0;
+		border-bottom: 0;
 	}
 	
 	@extend %has-background-color;

@@ -1,5 +1,5 @@
 .testimonial{
-	@include rem(padding-top, 5rem);
+	@include rem(padding-top, 7rem);
 	@include rem(padding-bottom, 4rem);		
 	&__item{		
 		h3{
@@ -10,8 +10,10 @@
 		blockquote{
 			p{
 				color: site-color(white);
+				padding-top: 0;
 				&:before{
-					color:rgba(255, 255, 255, 0.15);					
+					color:rgba(255, 255, 255, 0.15);
+					top: 0.28em;
 				}
 			}
 		}
@@ -20,15 +22,15 @@
 		}
 		@include breakpoint-layout(break-2) {
 			float: left;
-			@include rem(max-width, 28.75rem);
+			@include rem(max-width, 39rem);
 		}
 	}
 	&__cover{
 		display: none;
 		float: left;
-		@include rem(width, 14.94rem);
-		@include rem(margin-left, 3.75rem);
-		@include rem(margin-top, -5rem);
+		@include rem(width, 21.16rem);
+		@include rem(margin-left, 4.6rem);
+		@include rem(margin-top, -7rem);
 		img{
 			@include filter_elements(grayscale(100%));
 			opacity: 0.4;

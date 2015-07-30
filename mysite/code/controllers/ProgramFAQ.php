@@ -1,6 +1,6 @@
 <?php class ProgramFAQ extends DataObject {
 	private static $db = array(
-        'Name' => 'Varchar',
+        'Name' => 'Text',
 		'Answer' => 'HTMLText',
         'SortOrder'=>'Int'
     );
@@ -13,7 +13,9 @@
 
 	public function getCMSFields(){	
 		$fields = parent::getCMSFields();
-		$fields->renameField('Name', 'Question');
+		$fields->addFieldToTab('Root.Main', new TextField('Name', 'Question'));
+		
+		//$fields->renameField('Name', 'Question');
 
 		$Content = new HTMLEditorField('Answer', 'Answer');
 		$Content->setRows(15);

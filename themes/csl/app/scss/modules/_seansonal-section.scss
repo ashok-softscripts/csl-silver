@@ -2,8 +2,8 @@
 	@include rem(padding-top, 2.648rem);
 	@include rem(padding-bottom, 4.615rem);
 	@include breakpoint-layout(break-2) {
-		@include rem(padding-top, 4.5rem);
-		@include rem(padding-bottom, 5rem);	
+		@include rem(padding-top, 5.5rem);
+		@include rem(padding-bottom, 6.5rem);	
 	}
 	&__content{
 		@include breakpoint-layout(break-2) {
@@ -12,7 +12,7 @@
 	}
 	h2, .h2-style{
 		color: site-color(white);
-		margin-bottom: 1rem;
+		margin-bottom: 3rem;
 		font-weight: regular-of($display-type);
 	}
 	.arrow-link{

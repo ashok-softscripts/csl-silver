@@ -149,6 +149,7 @@ h3, .h3-style {
 // Heading level 4.
 h4, .h4-style {
 	@include type($display-type, 1.5rem, 2, 1, 1); 
+	font-weight: bold;
 }
 
 // Heading level 5.
@@ -479,12 +480,12 @@ table{
 	}
 	th{
 		font-weight: bold-of($body_type);
-		padding: 0.563em 1.250em 0.313em;
+		padding: 0.563em 1.250em 0.336em;
 		border-bottom: 1px solid site-color(gray_light);
 	}
 	td{
 		font-weight: regular-of($body_type);
-		padding: 0.563em 1.250em 0.313em;
+		padding: 0.563em 1.250em 0.46em;
 		&.bold{
 			font-weight: bold-of($body_type);			
 		}
@@ -513,4 +514,3 @@ table{
 .oldstyle-numerals {
     font-feature-settings: 'onum' 1, 'kern' 1;
 }
-

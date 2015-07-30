@@ -1,7 +1,7 @@
 <header class="header">
 	<div class="container">
 		<% include Logo %>
-		<div class="header-intro">
+		<div class="header-intro program-form-header">
 			<h1>$Title</h1>
 			<p><a href="$Parent.Link">See program overview</a></p>
 		</div>
@@ -14,7 +14,7 @@
 		<li class="indexnav__item"><a href="#" data-target="employment-education" class="indexnav__link">Employment, education and fee type</a></li>
 	</ul>						
 </div>
-<section class="general overview" id="introduction">        
+<section class="general program-form-overview" id="introduction">        
 	<div class="container">	
 		<div class="program-content">	
 			$Content		

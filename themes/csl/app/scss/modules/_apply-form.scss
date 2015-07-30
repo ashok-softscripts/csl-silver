@@ -1,6 +1,23 @@
+.program-form-overview{
+	@include rem(padding-top, 2.5rem);
+	@include rem(padding-bottom, 2.5rem);
+	@include breakpoint-layout(break-2) {
+		@include rem(padding-top, 6.16rem);
+		@include rem(padding-bottom, 8.1rem);	
+	}
+	.program-content{
+		@include breakpoint-layout(break-2) {
+			float: left;
+			width: 55%;
+		}
+	}
+	p{
+		@include rem(border-top-width, 1.6rem);
+	}
+}
 .apply-form{
-	@include rem(padding-top, 2.308rem);
-	@include rem(padding-bottom, 2.308rem);
+	@include rem(padding-top, 2.5rem);
+	@include rem(padding-bottom, 2.5rem);
 	@include breakpoint-layout(break-2) {
 		@include rem(padding-top, 2rem);
 		@include rem(padding-bottom, 5rem);	

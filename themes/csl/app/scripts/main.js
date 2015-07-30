@@ -79,11 +79,13 @@
 			return false;	
 		});
 		$contentNav.click(function(){
-			$('#primary-nav').removeClass('nav--open');
-			$('.content').removeClass('content--has-nav');			
-			adjustHeight();
-			setIndexnav();
-			offsetContainer();			
+			if($('#primary-nav').hasClass('nav--open')) {
+				$('#primary-nav').removeClass('nav--open');
+				$('.content').removeClass('content--has-nav');			
+				adjustHeight();
+				setIndexnav();
+				offsetContainer();	
+			}
 		});
 				
 	}

@@ -37,9 +37,10 @@
 
 	<% if ClassName = 'ProgramFormats' %>
 		<section class="program-format has-background_$BackgroundColour" id="$URLSegment">
-			<div class="container is-offset">					
-				<div class="program-format__left">
-					<h2>$Title</h2>
+			<div class="container is-offset">
+				<h2>$Title</h2>					
+				<div class="program-format__left">	
+					<% if IntroText %><p class="intro">$IntroText</p><% end_if %>
 					$Content
 					<% if ProgramFormatDatas %>
 						<ul class="program-format__list">
@@ -66,6 +67,7 @@
 			<div class="container">
 				<div class="instructors__content">
 					<h2>$Title</h2>
+					<% if IntroText %><p class="intro">$IntroText</p><% end_if %>
 					$Content
 				</div>
 				<% if Instructors %>
@@ -88,6 +90,7 @@
 			<div class="container">
 				<div class="speakers__content">
 					<h2>$Title</h2>
+					<% if IntroText %><p class="intro">$IntroText</p><% end_if %>
 					$Content
 				</div>
 				<% if Speakers %>
@@ -110,6 +113,7 @@
 			<div class="container">
 				<div class="program-applicants__content">
 					<h2>$Title</h2>
+					<% if IntroText %><p class="intro">$IntroText</p><% end_if %>
 					$Content
 				</div>
 				<h3>What alumni say</h3>
@@ -135,6 +139,7 @@
 			<div class="container">
 				<div class="program-fees__content">
 					<h2>$Title</h2>
+					<% if IntroText %><p class="intro">$IntroText</p><% end_if %>
 					$Content
 					<% if ProgramFees %>
 						<table class="table">
@@ -150,13 +155,13 @@
 							<% end_loop %>
 						</table>
 					<% end_if %>
-
+					<% if $ProgramDates %>
+					<div class="program-dates-section">
 					<% if $DatesTitle %>					
 						<h2>$DatesTitle</h2>
 						$DatesContent
 					<% end_if %>					
 		
-					<% if ProgramDates %>
 						<table class="table">
 							<tr>
 								<th width="60%">Event</th>
@@ -169,6 +174,7 @@
 								</tr>
 							<% end_loop %>
 						</table>
+					</div>
 					<% end_if %>					
 				</div>
 			</div>					 
@@ -195,6 +201,7 @@
 			<div class="container">
 				<div class="faq-section__content">
 					<h2>$Title</h2>
+					<% if IntroText %><p class="intro">$IntroText</p><% end_if %>
 					$Content
 					<% if ProgramFAQs %>
 						<% loop ProgramFAQs %>

@@ -58,7 +58,7 @@
 				
 				
 			}
-			&.header-alumni, &.header-program, &.header-news { // Content Alumni template
+			&.header-alumni, &.header-program, &.header-news, &.program-form-header { // Content Alumni template
 				@include rem(padding-bottom, 2.9rem);				
 				p{
 					
@@ -74,6 +74,13 @@
 						@include rem(margin-right, 3.5rem);	
 					}					
 				}				
+			}
+			&.header-program {
+				p{
+					@include breakpoint-layout(break-1) {
+						@include rem(border-top-width, 3rem);
+					}
+				}
 			}
 			&.header-program-collection{
 				h1{

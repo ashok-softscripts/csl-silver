@@ -2,19 +2,24 @@
 	@include rem(padding-top, 2rem);
 	@include rem(padding-bottom, 4rem);
 	@include breakpoint-layout(break-2) {
-		@include rem(padding-top, 4.5rem);
-		@include rem(padding-bottom, 5rem);
+		@include rem(padding-top, 7.4rem);
+		@include rem(padding-bottom, 12rem);
 	}		
 	&__content{
 		@include breakpoint-layout(break-2) {
-			width: 50%;
+			width: 55%;
 		}
 	}
 	h3{
 		font-weight: bold-of($display-type);
 		@include breakpoint-layout(break-2) {
 			border-bottom: 0px;
+			@include rem(margin-top, 0.5rem);
 		}
+	}
+	p:not(.intro){
+		border-top: 0;
+		@include rem(padding-top, 0.7rem);
 	}
 
 	@extend %has-background-color;

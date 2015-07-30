@@ -2,8 +2,8 @@
 	@include rem(padding-top, 2rem);
 	@include rem(padding-bottom, 2rem);
 	@include breakpoint-layout(break-2) {
-		@include rem(padding-top, 5rem);
-		@include rem(padding-bottom, 5rem);
+		@include rem(padding-top, 7.08rem);
+		@include rem(padding-bottom, 6rem);
 	}
 	&__right{
 		display: none;
@@ -11,10 +11,11 @@
 		float: right;
 		@include breakpoint-layout(break-2) {
 			display: block;
+			@include rem(padding-top, 2.2rem);
 		}
 	}
 	&__cover{
-		@include rem(margin-bottom, 1rem);
+		@include rem(margin-bottom, 1.8rem);
 		img{
 			width: 100%;
 		}
@@ -28,27 +29,25 @@
 		margin: 0px;
 		padding: 0px;
 		list-style: none;
-		@include rem(margin-top, 3rem);
+		@include rem(margin-top, 4.5rem);
 	}
 	&__item{
 		padding: 0px;
-		@include rem(margin-bottom, 0.5rem);
+		@include rem(margin-bottom, 0.6rem);
 		position: relative;
 		&:before{
 			content: "";
 			display: block;
-			width: 16/13 * 1rem;
-			height: 16/13 * 1rem;			
+			width: 16/12 * 1rem;
+			height: 16/12 * 1rem;			
 			position: absolute;			
 			left: -1.2em;
 			top: 0.4em;
 			@include svg-bg(icons/icon-date-blue);	
 			
 			@include breakpoint-layout(break-2) {
-				width: 16/17 * 1rem;
-				height: 16/17 * 1rem;
-				top: 0.2em;
-				left: -1.6em;
+				top: 0.3em;
+				left: -1.7em;
 			}
 		}
 		h3{
@@ -58,6 +57,10 @@
 			@include breakpoint-layout(break-2) {
 				border-bottom: 0px;
 			}
+		}
+		p{
+			@include rem(border-top-width, 0.8rem);
+  			padding-top: 0;
 		}
 	}
 

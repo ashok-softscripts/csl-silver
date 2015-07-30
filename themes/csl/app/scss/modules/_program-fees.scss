@@ -2,12 +2,15 @@
 	@include rem(padding-top, 2rem);
 	@include rem(padding-bottom, 1.25rem);
 	@include breakpoint-layout(break-2) {
-		@include rem(padding-top, 5rem);
-		@include rem(padding-bottom, 2.25rem);
+		@include rem(padding-top, 7.4rem);
+		@include rem(padding-bottom, 4.4rem);
 	}
 	&__content{		
 		@include breakpoint-layout(break-2) {
 			width: 50%;
+			p{
+				@include rem(border-bottom-width, 1.52rem);
+			}
 		}
 	}
 	h3{
@@ -15,7 +18,15 @@
 		@include rem(margin-bottom, 1rem);
 	}
 	table{
+		@include rem(margin-top, 1.25rem);
 		@include rem(margin-bottom, 3rem);
+	}
+	
+	.program-dates-section{
+		@include rem(padding-top, 5rem);
+		h2{
+			@include rem(border-bottom-width, 0.7rem);
+		}
 	}
 
 	@extend %has-background-color;
