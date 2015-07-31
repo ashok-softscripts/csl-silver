@@ -1100,8 +1100,8 @@ form .field-group, form fieldset > .field {
   position: relative;
 }
 form .field-group.text.nolabel, form fieldset > .field.text.nolabel {
-  margin-bottom: 16.8px;
-  margin-bottom: 1.4rem;
+  margin-bottom: 9.6px;
+  margin-bottom: 0.8rem;
 }
 form .field-group.sub-field, form fieldset > .field.sub-field {
   margin-right: 0.4%;
@@ -1728,8 +1728,8 @@ form #EditableLiteralField35 {
 .header .container .logo {
   float: right;
   width: 54%;
-  max-width: 129.2307692308px;
-  max-width: 10.7692307692rem;
+  max-width: 140px;
+  max-width: 11.6666666667rem;
   display: block;
   margin: 0;
   padding: 0;
@@ -4204,10 +4204,10 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .apply-form {
-    padding-top: 24px;
-    padding-top: 2rem;
-    padding-bottom: 60px;
-    padding-bottom: 5rem;
+    padding-top: 73.2px;
+    padding-top: 6.1rem;
+    padding-bottom: 165.6px;
+    padding-bottom: 13.8rem;
   }
 }
 .apply-form h3 {
