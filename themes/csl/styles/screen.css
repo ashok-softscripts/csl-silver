@@ -526,7 +526,7 @@ blockquote p:before {
   content: '\201C';
   position: absolute;
   top: 0.52em;
-  left: -0.6em;
+  left: -0.4em;
   color: rgba(49, 85, 92, 0.15);
   font-size: 2.5em;
   font-weight: bold;
@@ -2085,8 +2085,8 @@ form #EditableLiteralField35 {
   background: none;
 }
 .footer .thick-logo {
-  padding-top: 25.92px;
-  padding-top: 2.16rem;
+  padding-top: 30px;
+  padding-top: 2.5rem;
 }
 @media screen and (min-width: 30em) {
   .footer .thick-logo {
@@ -2382,6 +2382,7 @@ form #EditableLiteralField35 {
 @media screen and (min-width: 47.9375em) {
   .testimonial__item {
     float: left;
+    width: 54%;
     max-width: 468px;
     max-width: 39rem;
   }
@@ -2474,6 +2475,11 @@ form #EditableLiteralField35 {
   }
 }
 @media screen and (min-width: 47.9375em) {
+  .faq-section__content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 67.5em) {
   .faq-section__content {
     width: 55%;
   }
@@ -3707,6 +3713,12 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .overview .program-content {
+    width: 75%;
+    float: left;
+  }
+}
+@media screen and (min-width: 67.5em) {
+  .overview .program-content {
     width: 50%;
     float: left;
   }
@@ -3747,6 +3759,12 @@ section .alumni-picture {
   width: 100%;
 }
 @media screen and (min-width: 47.9375em) {
+  .program-format__left {
+    width: 50%;
+    float: left;
+  }
+}
+@media screen and (min-width: 67.5em) {
   .program-format__left {
     width: 41.6666666667%;
     float: left;
@@ -3821,6 +3839,11 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .instructors__content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 67.5em) {
+  .instructors__content {
     width: 50%;
   }
 }
@@ -3893,6 +3916,11 @@ section .alumni-picture {
   margin-bottom: 5.8rem;
 }
 @media screen and (min-width: 47.9375em) {
+  .speakers__content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 67.5em) {
   .speakers__content {
     width: 50%;
   }
@@ -3980,6 +4008,11 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .program-applicants__content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 67.5em) {
+  .program-applicants__content {
     width: 50%;
   }
 }
@@ -3992,6 +4025,12 @@ section .alumni-picture {
   margin-top: 12px;
   margin-top: 1rem;
   padding: 0px;
+}
+@media screen and (min-width: 30em) {
+  .program-applicants blockquote p:before {
+    font-size: 2.1em;
+    left: -0.36em;
+  }
 }
 @media screen and (min-width: 47.9375em) {
   .program-applicants blockquote p {
@@ -4144,11 +4183,16 @@ section .alumni-picture {
 }
 @media screen and (min-width: 47.9375em) {
   .program-fees__content {
-    width: 50%;
+    width: 70%;
   }
   .program-fees__content p {
     border-bottom-width: 18.24px;
     border-bottom-width: 1.52rem;
+  }
+}
+@media screen and (min-width: 67.5em) {
+  .program-fees__content {
+    width: 50%;
   }
 }
 .program-fees h3 {

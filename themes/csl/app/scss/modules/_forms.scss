@@ -15,7 +15,7 @@ form {
         @include rem(margin-bottom, 0.98rem);
         position: relative;
 		&.text.nolabel{
-			@include rem(margin-bottom, 1.4rem);
+			@include rem(margin-bottom, 0.8rem);
 		}
         &.sub-field{
             margin-right: 0.4%;

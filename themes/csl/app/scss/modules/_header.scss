@@ -15,7 +15,7 @@
 		.logo{
 			float: right;
 			width: span(2.16);
-			@include rem(max-width, 140/13 * 1rem);			
+			@include rem(max-width, 140/12 * 1rem);			
 			display: block;
 			margin: 0;
 			padding: 0;

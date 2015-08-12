@@ -9,7 +9,7 @@
 		background: none;
 	}
 	.thick-logo{
-		@include rem(padding-top, 2.16rem);
+		@include rem(padding-top, 2.5rem);
 		@include breakpoint-layout(break-1) {
 			@include span(5 of 12);
 			float: left;

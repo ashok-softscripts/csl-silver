@@ -22,6 +22,7 @@
 		}
 		@include breakpoint-layout(break-2) {
 			float: left;
+			width: 54%;
 			@include rem(max-width, 39rem);
 		}
 	}

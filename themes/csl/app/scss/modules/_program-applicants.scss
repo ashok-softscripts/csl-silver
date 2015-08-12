@@ -9,6 +9,9 @@
 	&__content{
 		@include rem(margin-bottom, 4rem);
 		@include breakpoint-layout(break-2) {
+			width: 70%;
+		}
+		@include breakpoint-layout(break-3) {
 			width: 50%;
 		}
 	}
@@ -19,6 +22,14 @@
 	blockquote{
 		@include rem(margin-top, 1rem);
 		padding: 0px;
+		@include breakpoint-layout(break-1) {
+			p{
+				&:before{
+					font-size: 2.1em;
+					left: -0.36em;
+				}
+			}
+		}
 		@include breakpoint-layout(break-2) {
 			p{				
 				@include rem(font-size, 1.5rem);

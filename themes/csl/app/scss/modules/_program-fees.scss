@@ -7,11 +7,14 @@
 	}
 	&__content{		
 		@include breakpoint-layout(break-2) {
-			width: 50%;
+			width: 70%;
 			p{
 				@include rem(border-bottom-width, 1.52rem);
 			}
 		}
+		@include breakpoint-layout(break-3) {
+			width: 50%;
+		}	
 	}
 	h3{
 		font-weight: bold-of($display-type);

@@ -9,8 +9,12 @@
 	&__content{
 		@include rem(margin-bottom, 5.8rem);
 		@include breakpoint-layout(break-2) {
+			width: 70%;
+		}
+		@include breakpoint-layout(break-3) {
 			width: 50%;
 		}
+		
 	}
 	&__list{
 		@include clearfix;

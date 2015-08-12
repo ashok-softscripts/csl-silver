@@ -19,8 +19,8 @@
 	@include rem(padding-top, 2.5rem);
 	@include rem(padding-bottom, 2.5rem);
 	@include breakpoint-layout(break-2) {
-		@include rem(padding-top, 2rem);
-		@include rem(padding-bottom, 5rem);	
+		@include rem(padding-top, 6.1rem);
+		@include rem(padding-bottom, 13.8rem);	
 	}
 	
 	@extend %has-background-color;

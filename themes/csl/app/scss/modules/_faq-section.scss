@@ -7,6 +7,9 @@
 	}		
 	&__content{
 		@include breakpoint-layout(break-2) {
+			width: 70%;			
+		}
+		@include breakpoint-layout(break-3) {
 			width: 55%;
 		}
 	}
