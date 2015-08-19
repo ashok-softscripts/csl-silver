@@ -1,6 +1,6 @@
 <div class="news__item">
 	<a href="$Link" class="news__cover filter-gray" title="<%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>">
-		$FeaturedImage.setWidth(368)
+		$FeaturedImage.CroppedImage(368,277)
 	</a>
 	<h3>
 		<a href="$Link" title="<%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>">

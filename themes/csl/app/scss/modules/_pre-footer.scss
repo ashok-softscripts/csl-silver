@@ -62,14 +62,22 @@
 		float: left;
 		&:last-child{
 			float: right;			
-		}
+		}		
 		@include breakpoint-layout(break-1) {
 			width: 43%;
 			&:last-child{
-				float: left;			
+				float: left;
 			}
 		}
-		
+		@include breakpoint-layout(break-2) {
+			margin-right: 6%;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		@include breakpoint-layout(break-3) {
+			margin-right: 0;
+		}
 		li{
 			padding: 0px;
 			border-bottom: 0px;

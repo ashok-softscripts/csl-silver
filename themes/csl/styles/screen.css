@@ -87,7 +87,7 @@ caption, th, td {
     clear: both;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .container {
     max-width: 100%;
     margin-left: auto;
@@ -130,7 +130,7 @@ html {
     font-size: 75%;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   html {
     font-size: 75%;
   }
@@ -169,8 +169,8 @@ a {
 }
 a:hover {
   color: #31555c;
-  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
 }
 a.stealth-link {
   background-image: none;
@@ -313,8 +313,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   color: #31555c;
-  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
 }
 h1 a.stealth-link, h2 a.stealth-link, h3 a.stealth-link, h4 a.stealth-link, h5 a.stealth-link, h6 a.stealth-link {
   background-image: none;
@@ -349,7 +349,7 @@ h1, .h1-style {
     margin-bottom: -1.01501rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   h1, .h1-style {
     line-height: 72px;
     line-height: 6rem;
@@ -380,7 +380,7 @@ h2, .h2-style {
   margin-bottom: -0.84001rem;
   font-weight: bold;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   h2, .h2-style {
     line-height: 48px;
     line-height: 4rem;
@@ -531,7 +531,7 @@ blockquote p:before {
   font-size: 2.5em;
   font-weight: bold;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   blockquote p:before {
     font-size: 3em;
     top: 0.46em;
@@ -572,7 +572,7 @@ cite {
     margin-bottom: -0.6208433333rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   cite {
     line-height: 24px;
     line-height: 2rem;
@@ -609,7 +609,7 @@ cite:after {
     margin-right: -1rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   cite {
     margin-right: 0;
     width: 80%;
@@ -960,7 +960,7 @@ svg {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .container {
     padding-left: 4em;
     padding-right: 4em;
@@ -1139,13 +1139,28 @@ form .optionset li {
   float: left;
   margin-right: 21.18px;
   margin-right: 1.765rem;
+  position: relative;
 }
 form .optionset li label {
   cursor: pointer;
-  display: inline;
+  display: inline-block;
   vertical-align: middle;
   font-weight: bold;
   color: #006d81;
+  margin-left: 26.4px;
+  margin-left: 2.2rem;
+}
+form .optionset li .radio-wrapper {
+  position: absolute;
+  display: block;
+  top: 2.88px;
+  top: 0.24rem;
+}
+form .optionset li .checkbox-wrapper {
+  position: absolute;
+  display: block;
+  top: 2.4px;
+  top: 0.2rem;
 }
 form .optionset_2col {
   max-width: 384px;
@@ -1179,7 +1194,7 @@ form .optionset_3col li {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   form .optionset_3col li {
     width: 32%;
     margin-right: 4%;
@@ -1307,13 +1322,15 @@ form #EditableLiteralField35 {
 }
 .drop-down ul li {
   display: block;
-  padding: 6px 12.996px;
-  padding: 0.5rem 1.083rem;
+  padding: 7.8px 12.996px;
+  padding: 0.65rem 1.083rem;
   margin: 0;
   border: 0;
   cursor: pointer;
   color: #006d81;
+  font-size: 15.996px;
   font-size: 1.333rem;
+  line-height: 2rem;
   position: relative;
 }
 .drop-down ul li.active {
@@ -1321,6 +1338,10 @@ form #EditableLiteralField35 {
 }
 .drop-down ul li.label {
   font-weight: bold;
+  padding-top: 7.2px;
+  padding-top: 0.6rem;
+  padding-bottom: 8.4px;
+  padding-bottom: 0.7rem;
 }
 .drop-down ul li.label:before {
   background-image: url(../images/arrows/t-arrow-bottom.png);
@@ -1330,26 +1351,14 @@ form #EditableLiteralField35 {
   content: "";
   position: absolute;
   top: 50%;
-  width: 6.462px;
-  width: 0.5385rem;
-  height: 3.6924px;
-  height: 0.3077rem;
-  right: 12px;
-  right: 1rem;
-  margin-top: -1.8456px;
-  margin-top: -0.1538rem;
-}
-@media screen and (min-width: 30em) {
-  .drop-down ul li.label:before {
-    width: 4.9416px;
-    width: 0.4118rem;
-    height: 2.8236px;
-    height: 0.2353rem;
-    right: 9.1764px;
-    right: 0.7647rem;
-    margin-top: -1.4112px;
-    margin-top: -0.1176rem;
-  }
+  width: 6.9996px;
+  width: 0.5833rem;
+  height: 3.9996px;
+  height: 0.3333rem;
+  right: 9.9996px;
+  right: 0.8333rem;
+  margin-top: -2.0004px;
+  margin-top: -0.1667rem;
 }
 .drop-down ul li.label span {
   padding-right: 3.5292px;
@@ -1362,11 +1371,11 @@ form #EditableLiteralField35 {
 .drop-down.expanded ul {
   max-height: inherit;
   z-index: 2;
-  background-color: #e8f3f5;
+  background-color: #f3f9fa;
   border-bottom: 0;
 }
 .drop-down.expanded ul li:hover {
-  background-color: #f3f9fa;
+  background-color: #e8f3f5;
 }
 .drop-down.expanded ul li.label {
   color: #31555c;
@@ -1389,7 +1398,7 @@ form #EditableLiteralField35 {
   margin-left: 0;
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_1 {
     width: 6.5705833333%;
     border-left-width: 0;
@@ -1398,7 +1407,7 @@ form #EditableLiteralField35 {
   }
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_2 {
     width: 15.0641666667%;
     border-left-width: 0;
@@ -1407,7 +1416,7 @@ form #EditableLiteralField35 {
   }
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_3 {
     width: 32.0513333333%;
     border-left-width: 0;
@@ -1424,7 +1433,7 @@ form #EditableLiteralField35 {
   }
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_4 {
     width: 32.0513333333%;
     border-left-width: 0;
@@ -1433,7 +1442,7 @@ form #EditableLiteralField35 {
   }
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_5 {
     width: 40.5449166667%;
     border-left-width: 0;
@@ -1442,7 +1451,7 @@ form #EditableLiteralField35 {
   }
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_6 {
     width: 49.0385%;
     border-left-width: 0;
@@ -1451,7 +1460,7 @@ form #EditableLiteralField35 {
   }
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_7 {
     width: 57.5320833333%;
     border-left-width: 0;
@@ -1460,7 +1469,7 @@ form #EditableLiteralField35 {
   }
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_8 {
     width: 66.0256666667%;
     border-left-width: 0;
@@ -1469,7 +1478,7 @@ form #EditableLiteralField35 {
   }
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_9 {
     width: 66.0256666667%;
     border-left-width: 0;
@@ -1486,7 +1495,7 @@ form #EditableLiteralField35 {
   }
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_10 {
     width: 83.0128333333%;
     border-left-width: 0;
@@ -1495,7 +1504,7 @@ form #EditableLiteralField35 {
   }
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .span_11 {
     width: 91.5064166667%;
     border-left-width: 0;
@@ -1515,7 +1524,7 @@ form #EditableLiteralField35 {
   left: 0;
   top: 0;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .nav {
     position: fixed;
   }
@@ -1532,7 +1541,7 @@ form #EditableLiteralField35 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .nav__badge {
     padding-left: 1.8333333333em;
   }
@@ -1594,7 +1603,7 @@ form #EditableLiteralField35 {
   padding-bottom: 3.083rem;
   display: none;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .nav__list {
     padding-left: 48px;
     padding-left: 4rem;
@@ -1623,8 +1632,8 @@ form #EditableLiteralField35 {
 }
 .nav__link.is-current:hover {
   color: #31555c;
-  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
 }
 .nav__link.is-current.stealth-link {
   background-image: none;
@@ -1674,7 +1683,7 @@ form #EditableLiteralField35 {
   padding-left: 12px;
   padding-left: 1rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .breadcrumb {
     padding: 21.996px;
     padding: 1.833rem;
@@ -1760,7 +1769,7 @@ form #EditableLiteralField35 {
     max-width: 15rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .header .container .logo {
     width: 23.6%;
     max-width: 271px;
@@ -1773,7 +1782,7 @@ form #EditableLiteralField35 {
   padding-bottom: 26.472px;
   padding-bottom: 2.206rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .header .container .header-intro {
     padding-top: 157.68px;
     padding-top: 13.14rem;
@@ -1783,7 +1792,7 @@ form #EditableLiteralField35 {
     max-width: 73.33rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .header .container .header-intro.header-home {
     padding-top: 96.71988px;
     padding-top: 8.05999rem;
@@ -1850,7 +1859,7 @@ form #EditableLiteralField35 {
 .pre-footer__container:after {
   clear: both;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .pre-footer__container {
     padding: 0;
     max-width: 508.8px;
@@ -1865,7 +1874,7 @@ form #EditableLiteralField35 {
   padding-bottom: 69.996px;
   padding-bottom: 5.833rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .pre-footer__left {
     background: transparent;
     width: 41.6666666667%;
@@ -1890,7 +1899,7 @@ form #EditableLiteralField35 {
   padding-bottom: 69.996px;
   padding-bottom: 5.833rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .pre-footer__right {
     background: #f3f9fa;
     width: 58.3333333333%;
@@ -1906,7 +1915,7 @@ form #EditableLiteralField35 {
     max-width: 44.4rem;
   }
 }
-@media screen and (min-width: 47.9375em) and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) and (min-width: 50em) {
   .pre-footer__right .pre-footer__container {
     margin-left: 12px;
     margin-left: 1rem;
@@ -1914,7 +1923,7 @@ form #EditableLiteralField35 {
     margin-right: 1rem;
   }
 }
-@media screen and (min-width: 47.9375em) and (min-width: 67.5em) {
+@media screen and (min-width: 50em) and (min-width: 67.5em) {
   .pre-footer__right .pre-footer__container {
     margin-right: auto;
     margin-left: auto;
@@ -1942,6 +1951,19 @@ form #EditableLiteralField35 {
     float: left;
   }
 }
+@media screen and (min-width: 50em) {
+  .pre-footer .footer-menu {
+    margin-right: 6%;
+  }
+  .pre-footer .footer-menu:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 67.5em) {
+  .pre-footer .footer-menu {
+    margin-right: 0;
+  }
+}
 .pre-footer .footer-menu li {
   padding: 0px;
   border-bottom: 0px;
@@ -1949,7 +1971,7 @@ form #EditableLiteralField35 {
   margin-bottom: 7.0584px;
   margin-bottom: 0.5882rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .pre-footer .footer-menu li {
     margin-bottom: 0;
   }
@@ -1957,7 +1979,7 @@ form #EditableLiteralField35 {
 .pre-footer .footer-menu li:first-child {
   border-top-width: 0.5rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .pre-footer .get-in-touch {
     float: left;
     width: 80%;
@@ -2003,8 +2025,8 @@ form #EditableLiteralField35 {
 }
 .pre-footer .get-in-touch .locations__item p span:hover {
   color: #006d81;
-  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(0, 109, 129, 0.25) 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 109, 129, 0.25) 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(0, 109, 129, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 109, 129, 0.75) 50%);
 }
 .pre-footer .get-in-touch .locations__item p span.stealth-link {
   background-image: none;
@@ -2021,7 +2043,7 @@ form #EditableLiteralField35 {
     float: right;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .pre-footer .get-in-touch .locations__item {
     margin-bottom: 0;
   }
@@ -2044,7 +2066,7 @@ form #EditableLiteralField35 {
   max-width: 24px;
   max-width: 2rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .pre-footer .social-networks {
     float: right;
     width: 20%;
@@ -2074,7 +2096,7 @@ form #EditableLiteralField35 {
 .footer:after {
   clear: both;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .footer {
     background: #f3f9fa;
     padding-bottom: 71.4px;
@@ -2085,8 +2107,8 @@ form #EditableLiteralField35 {
   background: none;
 }
 .footer .thick-logo {
-  padding-top: 30px;
-  padding-top: 2.5rem;
+  padding-top: 31.992px;
+  padding-top: 2.666rem;
 }
 @media screen and (min-width: 30em) {
   .footer .thick-logo {
@@ -2143,7 +2165,7 @@ form #EditableLiteralField35 {
     left: -8.25rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .footer .csl-footer-logo {
     background: #e8f3f5;
   }
@@ -2373,13 +2395,13 @@ form #EditableLiteralField35 {
 }
 .testimonial__item .arrow-link:hover {
   color: #fff;
-  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(255, 255, 255, 0.25) 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.25) 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(255, 255, 255, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.75) 50%);
 }
 .testimonial__item .arrow-link.stealth-link {
   background-image: none;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .testimonial__item {
     float: left;
     width: 54%;
@@ -2403,7 +2425,7 @@ form #EditableLiteralField35 {
   filter: grayscale(100%);
   opacity: 0.4;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .testimonial__cover {
     display: block;
   }
@@ -2415,7 +2437,7 @@ form #EditableLiteralField35 {
   padding-bottom: 55.38px;
   padding-bottom: 4.615rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .seansonal-section {
     padding-top: 66px;
     padding-top: 5.5rem;
@@ -2423,7 +2445,7 @@ form #EditableLiteralField35 {
     padding-bottom: 6.5rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .seansonal-section__content {
     width: 50%;
   }
@@ -2448,8 +2470,8 @@ form #EditableLiteralField35 {
 }
 .seansonal-section .arrow-link:hover {
   color: #fff;
-  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(255, 255, 255, 0.25) 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.25) 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(255, 255, 255, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.75) 50%);
 }
 .seansonal-section .arrow-link.stealth-link {
   background-image: none;
@@ -2466,7 +2488,7 @@ form #EditableLiteralField35 {
   padding-bottom: 48px;
   padding-bottom: 4rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .faq-section {
     padding-top: 88.8px;
     padding-top: 7.4rem;
@@ -2474,20 +2496,17 @@ form #EditableLiteralField35 {
     padding-bottom: 12rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .faq-section__content {
     width: 70%;
-  }
-}
-@media screen and (min-width: 67.5em) {
-  .faq-section__content {
-    width: 55%;
+    max-width: 576px;
+    max-width: 48rem;
   }
 }
 .faq-section h3 {
   font-weight: bold;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .faq-section h3 {
     border-bottom: 0px;
     margin-top: 6px;
@@ -2500,7 +2519,7 @@ form #EditableLiteralField35 {
   padding-top: 0.7rem;
 }
 
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features {
     border-top: 2rem solid transparent;
   }
@@ -2512,7 +2531,7 @@ form #EditableLiteralField35 {
 .features__row:after {
   clear: both;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__row {
     border-bottom: 2rem solid transparent;
   }
@@ -2520,7 +2539,7 @@ form #EditableLiteralField35 {
 .features__block {
   position: relative;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block {
     float: left;
   }
@@ -2547,7 +2566,7 @@ form #EditableLiteralField35 {
   -webkit-filter: grayscale(100%) sepia(100%);
   /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block .image-overlay {
     display: block;
     opacity: 0.7;
@@ -2566,7 +2585,7 @@ form #EditableLiteralField35 {
   padding-bottom: 60px;
   padding-bottom: 5rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block .block-container {
     padding: 48px 48px 74.004px;
     padding: 4rem 4rem 6.167rem;
@@ -2578,12 +2597,12 @@ form #EditableLiteralField35 {
     padding-bottom: 6.833rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block.seasonal-message.span_9 {
     width: 72.7%;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block.seasonal-message .block-container {
     max-width: 56.67rem;
   }
@@ -2617,8 +2636,8 @@ form #EditableLiteralField35 {
 }
 .features__block.seasonal-message .arrow-link:hover {
   color: #fff;
-  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(255, 255, 255, 0.25) 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.25) 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(255, 255, 255, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.75) 50%);
 }
 .features__block.seasonal-message .arrow-link.stealth-link {
   background-image: none;
@@ -2628,9 +2647,9 @@ form #EditableLiteralField35 {
     font-size: 1.667rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block.newsletter.span_3 {
-    width: 25.38%;
+    width: 25.36%;
   }
 }
 .features__block.newsletter h3 {
@@ -2668,9 +2687,9 @@ form #EditableLiteralField35 {
   border: 0;
   line-height: 1.5;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block.newsletter input[type="email"], .features__block.newsletter .message_error {
-    margin-left: -0.7rem;
+    margin-left: -1rem;
   }
 }
 .features__block.testimonial {
@@ -2717,7 +2736,7 @@ form #EditableLiteralField35 {
 .features__block.testimonial blockquote p {
   border-top: 0px;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block.testimonial blockquote p:before {
     left: -0.3em;
     top: 0.4em;
@@ -2739,8 +2758,8 @@ form #EditableLiteralField35 {
 }
 .features__block.testimonial .arrow-link:hover {
   color: #006d81;
-  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(0, 109, 129, 0.25) 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 109, 129, 0.25) 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(0, 109, 129, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 109, 129, 0.75) 50%);
 }
 .features__block.testimonial .arrow-link.stealth-link {
   background-image: none;
@@ -2751,13 +2770,13 @@ form #EditableLiteralField35 {
   text-align: center;
   font-weight: 400;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block.partners-section h2 {
     padding-bottom: 34.8px;
     padding-bottom: 2.9rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block.partners-section .block-container {
     padding: 38.4px 48px 61.2px;
     padding: 3.2rem 4rem 5.1rem;
@@ -2823,7 +2842,7 @@ form #EditableLiteralField35 {
 .features__block.has-mobile-background_white {
   background: #fff;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features__block.has-background_blue {
     background: #006d81;
   }
@@ -2886,7 +2905,7 @@ form #EditableLiteralField35 {
   padding-bottom: 31.2px;
   padding-bottom: 2.6rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .features.general-features .features__block .block-container {
     padding-bottom: 43.2px;
     padding-bottom: 3.6rem;
@@ -2914,7 +2933,7 @@ form #EditableLiteralField35 {
   padding-bottom: 27.696px;
   padding-bottom: 2.308rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .news {
     padding-top: 24px;
     padding-top: 2rem;
@@ -2927,6 +2946,7 @@ form #EditableLiteralField35 {
   }
 }
 .news__item {
+  display: block;
   float: left;
   width: 100%;
   margin-bottom: 89.76px;
@@ -2942,7 +2962,7 @@ form #EditableLiteralField35 {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .news__item {
     width: 31.91%;
   }
@@ -2972,24 +2992,7 @@ form #EditableLiteralField35 {
   border-bottom-width: 4.8px;
   border-bottom-width: 0.4rem;
 }
-.news__excerpt {
-  margin-bottom: 12px;
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 47.9375em) {
-  .news__excerpt {
-    margin-bottom: 24px;
-    margin-bottom: 2rem;
-  }
-}
-.news__excerpt p {
-  font-size: 1.33rem;
-  line-height: 2rem;
-  border-top-width: 0;
-  padding-top: 14.4px;
-  padding-top: 1.2rem;
-}
-.news a {
+.news h3 a {
   font-family: TradeGothicLTStd, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #31555c;
@@ -3002,13 +3005,30 @@ form #EditableLiteralField35 {
   -webkit-transition: color .1s ease, background .5s ease, outline 0.25s ease;
   transition: color .1s ease, background .5s ease, outline 0.25s ease;
 }
-.news a:hover {
+.news h3 a:hover {
   color: #31555c;
-  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
 }
-.news a.stealth-link {
+.news h3 a.stealth-link {
   background-image: none;
+}
+.news__excerpt {
+  margin-bottom: 12px;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 50em) {
+  .news__excerpt {
+    margin-bottom: 24px;
+    margin-bottom: 2rem;
+  }
+}
+.news__excerpt p {
+  font-size: 1.33rem;
+  line-height: 2rem;
+  border-top-width: 0;
+  padding-top: 14.4px;
+  padding-top: 1.2rem;
 }
 .news__publish {
   font-weight: 400;
@@ -3029,7 +3049,7 @@ form #EditableLiteralField35 {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 56.25em) {
   .news.latest-news .news__item {
     width: 23.44%;
     margin-right: 2.08%;
@@ -3041,13 +3061,38 @@ form #EditableLiteralField35 {
     margin-right: 0;
   }
 }
+.news.latest-news a {
+  background: transparent;
+  color: #31555c;
+}
 .news.latest-news h3 {
   border-bottom: none;
   padding-top: 0;
   border-top-width: 10.8px;
   border-top-width: 0.9rem;
 }
-@media screen and (min-width: 47.9375em) {
+.news.latest-news .news__excerpt span {
+  font-family: TradeGothicLTStd, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #31555c;
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 98%;
+  -webkit-transition: color .1s ease, background .5s ease, outline 0.25s ease;
+  transition: color .1s ease, background .5s ease, outline 0.25s ease;
+}
+.news.latest-news .news__excerpt span:hover {
+  color: #31555c;
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
+}
+.news.latest-news .news__excerpt span.stealth-link {
+  background-image: none;
+}
+@media screen and (min-width: 50em) {
   .news.latest-news .news__excerpt {
     margin-bottom: 12px;
     margin-bottom: 1rem;
@@ -3075,14 +3120,14 @@ form #EditableLiteralField35 {
   margin-bottom: 36px;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .single-news__image {
     width: 41.6666666667%;
     float: left;
     float: right;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .single-news.has-featured_image .single-news__content {
     width: 50%;
     float: left;
@@ -3113,7 +3158,7 @@ form #EditableLiteralField35 {
 .partners__item:nth-child(2n) {
   margin-right: 0;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .partners__item {
     width: 23.44%;
     margin-right: 2.08%;
@@ -3169,7 +3214,7 @@ form #EditableLiteralField35 {
     margin-right: 0px;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .all_partners__item {
     float: left;
     width: 31.94%;
@@ -3235,13 +3280,17 @@ form #EditableLiteralField35 {
   padding-bottom: 30px;
   padding-bottom: 2.5rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .general {
     padding-top: 85.92px;
     padding-top: 7.16rem;
     padding-bottom: 85.92px;
     padding-bottom: 7.16rem;
   }
+}
+.general .page-content {
+  max-width: 759.96px;
+  max-width: 63.33rem;
 }
 .general h2:first-child, .general h3:first-child {
   padding-top: 0;
@@ -3286,7 +3335,7 @@ form #EditableLiteralField35 {
   padding-right: 25.92px;
   padding-right: 2.16rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .pagination ul li {
     padding-left: 12.96px;
     padding-left: 1.08rem;
@@ -3333,24 +3382,29 @@ form #EditableLiteralField35 {
 }
 .alumni-filters .drop-down {
   float: left;
-  width: 100%;
   margin-right: 13.992px;
   margin-right: 1.166rem;
 }
-@media screen and (min-width: 30em) {
-  .alumni-filters .drop-down.filter-by-programs {
-    width: 189.96px;
-    width: 15.83rem;
-  }
-  .alumni-filters .drop-down.filter-by-role {
-    width: 255px;
-    width: 21.25rem;
+.alumni-filters .drop-down.filter-by-programs {
+  width: 189.96px;
+  width: 15.83rem;
+}
+.alumni-filters .drop-down.filter-by-role {
+  width: 255px;
+  width: 21.25rem;
+}
+@media screen and (max-width: 52.5rem) {
+  .alumni-filters .drop-down.filter-by-programs, .alumni-filters .drop-down.filter-by-role {
+    width: 100%;
   }
 }
 .alumni-filters .filter-alumni-form {
   float: right;
 }
-@media screen and (max-width: 42.5em) {
+.alumni-filters .filter-alumni-form input[type=search]::-webkit-search-cancel-button {
+  display: none;
+}
+@media screen and (max-width: 52.5rem) {
   .alumni-filters .filter-alumni-form {
     margin-top: 12px;
     margin-top: 1rem;
@@ -3382,7 +3436,7 @@ form #EditableLiteralField35 {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .alumni__item {
     float: left;
     width: 31.91%;
@@ -3463,7 +3517,7 @@ section .alumni-content p {
   border-bottom-width: 18px;
   border-bottom-width: 1.5rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   section .alumni-content {
     float: left;
     width: 49%;
@@ -3473,7 +3527,7 @@ section .alumni-picture {
   margin-bottom: 51px;
   margin-bottom: 4.25rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   section .alumni-picture {
     width: 40.4%;
     float: right;
@@ -3484,7 +3538,7 @@ section .alumni-picture {
   margin-bottom: 33.96px;
   margin-bottom: 2.83rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .more-alumnies {
     padding-top: 91.2px;
     padding-top: 7.6rem;
@@ -3526,7 +3580,7 @@ section .alumni-picture {
     margin-right: 0px;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .programs__item {
     float: left;
     width: 31.91%;
@@ -3657,8 +3711,8 @@ section .alumni-picture {
 }
 .indexnav__link.is-active:hover {
   color: #31555c;
-  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.25) 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(49, 85, 92, 0.75) 50%);
 }
 .indexnav__link.is-active.stealth-link {
   background-image: none;
@@ -3681,7 +3735,7 @@ section .alumni-picture {
   margin-left: 0.35rem;
   padding: 1em 2.54em 1em;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .indexnav {
     display: block;
   }
@@ -3711,16 +3765,12 @@ section .alumni-picture {
   top: 0.42em;
   left: -0.4em;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .overview .program-content {
     width: 75%;
     float: left;
-  }
-}
-@media screen and (min-width: 67.5em) {
-  .overview .program-content {
-    width: 50%;
-    float: left;
+    max-width: 576px;
+    max-width: 48rem;
   }
 }
 
@@ -3730,7 +3780,7 @@ section .alumni-picture {
   padding-bottom: 24px;
   padding-bottom: 2rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-format {
     padding-top: 84.96px;
     padding-top: 7.08rem;
@@ -3744,7 +3794,7 @@ section .alumni-picture {
   float: left;
   float: right;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-format__right {
     display: block;
     padding-top: 26.4px;
@@ -3758,16 +3808,12 @@ section .alumni-picture {
 .program-format__cover img {
   width: 100%;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-format__left {
     width: 50%;
     float: left;
-  }
-}
-@media screen and (min-width: 67.5em) {
-  .program-format__left {
-    width: 41.6666666667%;
-    float: left;
+    max-width: 576px;
+    max-width: 48rem;
   }
 }
 .program-format__list {
@@ -3796,7 +3842,7 @@ section .alumni-picture {
 .no-svg .program-format__item:before {
   background-image: url(../images/icons/icon-date-blue.png);
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-format__item:before {
     top: 0.3em;
     left: -1.7em;
@@ -3807,7 +3853,7 @@ section .alumni-picture {
   padding: 0px;
   font-weight: bold;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-format__item h3 {
     border-bottom: 0px;
   }
@@ -3825,7 +3871,7 @@ section .alumni-picture {
   padding-bottom: 15px;
   padding-bottom: 1.25rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .instructors {
     padding-top: 84.96px;
     padding-top: 7.08rem;
@@ -3837,14 +3883,11 @@ section .alumni-picture {
   margin-bottom: 69.6px;
   margin-bottom: 5.8rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .instructors__content {
     width: 70%;
-  }
-}
-@media screen and (min-width: 67.5em) {
-  .instructors__content {
-    width: 50%;
+    max-width: 576px;
+    max-width: 48rem;
   }
 }
 .instructors__list:before, .instructors__list:after {
@@ -3854,7 +3897,7 @@ section .alumni-picture {
 .instructors__list:after {
   clear: both;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .instructors__list {
     width: 66.31%;
   }
@@ -3903,7 +3946,7 @@ section .alumni-picture {
   padding-bottom: 15px;
   padding-bottom: 1.25rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .speakers {
     padding-top: 98.4px;
     padding-top: 8.2rem;
@@ -3915,14 +3958,11 @@ section .alumni-picture {
   margin-bottom: 69.6px;
   margin-bottom: 5.8rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .speakers__content {
     width: 70%;
-  }
-}
-@media screen and (min-width: 67.5em) {
-  .speakers__content {
-    width: 50%;
+    max-width: 576px;
+    max-width: 48rem;
   }
 }
 .speakers__list:before, .speakers__list:after {
@@ -3932,7 +3972,7 @@ section .alumni-picture {
 .speakers__list:after {
   clear: both;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .speakers__list {
     width: 74.86%;
   }
@@ -3951,7 +3991,7 @@ section .alumni-picture {
     margin-right: 0px;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .speakers__item {
     float: left;
     width: 31.47%;
@@ -3994,7 +4034,7 @@ section .alumni-picture {
   padding-bottom: 15px;
   padding-bottom: 1.25rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-applicants {
     padding-top: 98.4px;
     padding-top: 8.2rem;
@@ -4006,14 +4046,11 @@ section .alumni-picture {
   margin-bottom: 48px;
   margin-bottom: 4rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-applicants__content {
     width: 70%;
-  }
-}
-@media screen and (min-width: 67.5em) {
-  .program-applicants__content {
-    width: 50%;
+    max-width: 576px;
+    max-width: 48rem;
   }
 }
 .program-applicants h3 {
@@ -4032,7 +4069,7 @@ section .alumni-picture {
     left: -0.36em;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-applicants blockquote p {
     font-size: 18px;
     font-size: 1.5rem;
@@ -4050,7 +4087,7 @@ section .alumni-picture {
 .program-applicants h4 {
   font-weight: bold;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-applicants h4 {
     border-top: 0;
     padding-top: 0;
@@ -4063,7 +4100,7 @@ section .alumni-picture {
 .program-applicants__list:after {
   clear: both;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-applicants__list {
     width: 74.86%;
   }
@@ -4082,7 +4119,7 @@ section .alumni-picture {
     margin-right: 0px;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-applicants__item {
     float: left;
     width: 31.47%;
@@ -4173,7 +4210,7 @@ section .alumni-picture {
   padding-bottom: 15px;
   padding-bottom: 1.25rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-fees {
     padding-top: 88.8px;
     padding-top: 7.4rem;
@@ -4181,18 +4218,15 @@ section .alumni-picture {
     padding-bottom: 4.4rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-fees__content {
     width: 70%;
+    max-width: 576px;
+    max-width: 48rem;
   }
   .program-fees__content p {
     border-bottom-width: 18.24px;
     border-bottom-width: 1.52rem;
-  }
-}
-@media screen and (min-width: 67.5em) {
-  .program-fees__content {
-    width: 50%;
   }
 }
 .program-fees h3 {
@@ -4221,7 +4255,7 @@ section .alumni-picture {
   padding-bottom: 30px;
   padding-bottom: 2.5rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-form-overview {
     padding-top: 73.92px;
     padding-top: 6.16rem;
@@ -4229,7 +4263,7 @@ section .alumni-picture {
     padding-bottom: 8.1rem;
   }
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .program-form-overview .program-content {
     float: left;
     width: 55%;
@@ -4246,7 +4280,7 @@ section .alumni-picture {
   padding-bottom: 30px;
   padding-bottom: 2.5rem;
 }
-@media screen and (min-width: 47.9375em) {
+@media screen and (min-width: 50em) {
   .apply-form {
     padding-top: 73.2px;
     padding-top: 6.1rem;

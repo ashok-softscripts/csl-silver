@@ -8,7 +8,7 @@
 </header>
 <section class="general" id="overview">        
 	<div class="container row">
-		<div class="col span_9">
+		<div class="page-content">
 		$Content
 		$Form
 		</div>

@@ -45,15 +45,27 @@ form {
 			padding: 0;
 			float: left;	
 			@include rem(margin-right,1.765rem);
+			position: relative;
 			&.even{
 				
 			}
 			label{
 				cursor: pointer;
-				display: inline;
+				display: inline-block;
 				vertical-align: middle;
 				font-weight: bold-of($body-type);
 				color: site-color(blue);				
+				@include rem(margin-left, 2.2rem);
+			}
+			.radio-wrapper{
+				position: absolute;
+				display: block;
+				@include rem(top, 0.24rem);				
+			}
+			.checkbox-wrapper{
+				position: absolute;
+				display: block;
+				@include rem(top, 0.2rem);				
 			}
 		}
 		&_2col{
@@ -200,18 +212,21 @@ form {
 		z-index: 1;		
 		li{
 			display: block;
-			@include rem(padding, 0.5rem 1.083rem);
+			@include rem(padding, 0.65rem 1.083rem);
 			margin: 0;
 			border: 0;
 			cursor: pointer;
 			color: site-color(blue);
-			font-size: 1.333rem;			
+			@include rem(font-size, 1.333rem);
+			line-height: 2rem;
 			position: relative;			
 			&.active{
 				color: #00644c;
 			}
 			&.label{				
-				font-weight: bold_of($body-type);					
+				font-weight: bold_of($body-type);
+				@include rem(padding-top, 0.6rem);
+				@include rem(padding-bottom, 0.7rem);
 				&:before {
 					background-image: url(../images/arrows/t-arrow-bottom.png);
 					background-repeat: no-repeat;
@@ -220,16 +235,10 @@ form {
 					content: "";
 					position: absolute;
 					top: 50%;
-					@include rem(width, 0.5385rem);
-					@include rem(height, 0.3077rem);
-					@include rem(right, 1rem);
-					@include rem(margin-top, -0.1538rem);
-					@include breakpoint-layout(break-1) {
-						@include rem(width, 0.4118rem);
-						@include rem(height, 0.2353rem);
-						@include rem(right, 0.7647rem);
-						@include rem(margin-top, -0.1176rem);
-					}
+					@include rem(width, 0.5833rem);
+					@include rem(height, 0.3333rem);
+					@include rem(right, 0.8333rem);
+					@include rem(margin-top, -0.1667rem);					
 				}
 				span{
 					@include rem(padding-right,0.2941rem);
@@ -245,11 +254,11 @@ form {
 		ul{
 			max-height: inherit;
 			z-index: 2;
-			background-color: site-color(blue_mid_light);
+			background-color: site-color(blue_ver_light);
 			border-bottom: 0;
 			li{
 				&:hover{
-					background-color: site-color(blue_ver_light);
+					background-color: site-color(blue_mid_light);
 				}
 				&.label{
 					color: site-color(blue_dark);

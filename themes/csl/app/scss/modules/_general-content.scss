@@ -5,6 +5,9 @@
 		@include rem(padding-top, 7.16rem);
 		@include rem(padding-bottom, 7.16rem);	
 	}
+	.page-content{
+		@include rem(max-width, 63.33rem);
+	}
 	h2:first-child, h3:first-child{
 		padding-top: 0;
 		border-top: 0;

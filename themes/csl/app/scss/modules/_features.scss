@@ -84,7 +84,7 @@
 		&.newsletter{
 			&.span_3{
 				@include breakpoint-layout(break-2) {
-					width: 25.38%;				
+					width: 25.36%;				
 				}
 			}
 
@@ -124,7 +124,7 @@
 			}
 			@include breakpoint-layout(break-2) {
 				input[type="email"], .message_error{
-					margin-left: -0.7rem;
+					margin-left: -1rem;
 				}				
 			}
 		}

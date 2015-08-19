@@ -23,10 +23,8 @@
 	&__left{
 		@include breakpoint-layout(break-2) {
 			@include span(6 of 12);		
-		}
-		@include breakpoint-layout(break-3) {
-			@include span(5 of 12);		
-		}
+			@include rem(max-width, 48rem);
+		}		
 	}
 	&__list{
 		margin: 0px;

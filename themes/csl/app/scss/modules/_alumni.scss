@@ -14,20 +14,25 @@
 	}
 	.drop-down{
 		float: left;
-		width: 100%;
 		@include rem(margin-right, 1.166rem);		
-		@include breakpoint-layout(break-1) {	
-			&.filter-by-programs{
-				@include rem(width, 15.83rem);
-			}
-			&.filter-by-role{
-				@include rem(width, 21.25rem);
+		&.filter-by-programs{
+			@include rem(width, 15.83rem);
+		}
+		&.filter-by-role{
+			@include rem(width, 21.25rem);
+		}
+		@media screen and (max-width: 52.5rem) {	
+			&.filter-by-programs, &.filter-by-role{
+				width: 100%;
 			}
 		}
 	}
 	.filter-alumni-form{
-		float: right;		
-		@media screen and (max-width: 42.5em) {			
+		float: right;	
+		input[type=search]::-webkit-search-cancel-button{
+			display: none;
+		}
+		@media screen and (max-width: 52.5rem) {			
 			@include rem(margin-top, 1rem);		
 			width: 100%;
 			input[type=search]{
