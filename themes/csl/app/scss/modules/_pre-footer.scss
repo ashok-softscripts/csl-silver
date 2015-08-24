@@ -40,8 +40,8 @@
 			.pre-footer__container{				
 				@include rem(max-width, 44.4rem);
 				@include breakpoint-layout(break-2) {
-					@include rem(margin-left, 1rem);		
-					@include rem(margin-right, 1rem);		
+					@include rem(margin-left, 2.5rem);		
+					@include rem(margin-right, 2.5rem);		
 				}
 				@include breakpoint-layout(break-3) {
 					margin-right: auto;

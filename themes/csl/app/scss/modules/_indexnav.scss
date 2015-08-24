@@ -4,6 +4,7 @@
 	position: absolute;
 	margin-top: 5rem;
 	z-index: 1000;
+	@include rem(width, 16rem);
 	@include rem(padding, 1.5rem);
 	background: site-color(white);
 	&.fixed{

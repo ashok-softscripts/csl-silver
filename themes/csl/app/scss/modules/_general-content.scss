@@ -6,7 +6,10 @@
 		@include rem(padding-bottom, 7.16rem);	
 	}
 	.page-content{
-		@include rem(max-width, 63.33rem);
+		@include breakpoint-layout(break-2) {
+			@include span(9 of 12);		
+			@include rem(max-width, 48rem);			
+		}
 	}
 	h2:first-child, h3:first-child{
 		padding-top: 0;

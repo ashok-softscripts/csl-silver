@@ -480,7 +480,7 @@
 
     &:hover {
         color: $hover;
-        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,transparentize($hover, 0.25) 50%);
+        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,transparentize($hover, 0.50) 50%);
     }
 
     &.stealth-link {
