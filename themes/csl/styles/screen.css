@@ -2566,7 +2566,7 @@ form #EditableLiteralField35 {
   -webkit-filter: grayscale(100%) sepia(100%);
   /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
-@media screen and (min-width: 50em) {
+@media (min-width: 999px) {
   .features__block .image-overlay {
     display: block;
     opacity: 0.7;
@@ -2590,16 +2590,13 @@ form #EditableLiteralField35 {
     padding: 48px 48px 74.004px;
     padding: 4rem 4rem 6.167rem;
   }
+}
+@media (min-width: 999px) {
   .features__block .block-container.is-long {
     padding-top: 110.4px;
     padding-top: 9.2rem;
     padding-bottom: 81.996px;
     padding-bottom: 6.833rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .features__block.seasonal-message.span_9 {
-    width: 72.7%;
   }
 }
 @media screen and (min-width: 50em) {
@@ -2647,9 +2644,31 @@ form #EditableLiteralField35 {
     font-size: 1.667rem;
   }
 }
-@media screen and (min-width: 50em) {
+.features__block.seasonal-message.span_9 {
+  width: 100%;
+  margin-left: 0;
+}
+@media (min-width: 999px) {
+  .features__block.seasonal-message.span_9 {
+    width: 72.7%;
+  }
+}
+.features__block.seasonal-message.span_9 .block-container {
+  max-width: 100%;
+}
+@media (min-width: 999px) {
+  .features__block.seasonal-message.span_9 .block-container {
+    max-width: 56.67rem;
+  }
+}
+.features__block.newsletter.span_3 {
+  width: 100%;
+  margin-left: 0;
+}
+@media (min-width: 999px) {
   .features__block.newsletter.span_3 {
     width: 25.36%;
+    margin-left: 1.923%;
   }
 }
 .features__block.newsletter h3 {
@@ -2842,7 +2861,7 @@ form #EditableLiteralField35 {
 .features__block.has-mobile-background_white {
   background: #fff;
 }
-@media screen and (min-width: 50em) {
+@media (min-width: 999px) {
   .features__block.has-background_blue {
     background: #006d81;
   }
@@ -2905,7 +2924,7 @@ form #EditableLiteralField35 {
   padding-bottom: 31.2px;
   padding-bottom: 2.6rem;
 }
-@media screen and (min-width: 50em) {
+@media (min-width: 999px) {
   .features.general-features .features__block .block-container {
     padding-bottom: 43.2px;
     padding-bottom: 3.6rem;
