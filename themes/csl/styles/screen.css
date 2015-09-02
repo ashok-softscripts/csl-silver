@@ -2361,6 +2361,46 @@ form #EditableLiteralField35 {
   color: #97a8ab !important;
 }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 10px;
+  height: 0;
+  overflow: hidden;
+  margin-top: 36px;
+  margin-top: 3rem;
+  margin-bottom: 36px;
+  margin-bottom: 3rem;
+  margin-left: -24px;
+  margin-left: -2rem;
+  margin-right: -24px;
+  margin-right: -2rem;
+  padding-top: 36px;
+  padding-top: 3rem;
+}
+@media screen and (min-width: 30em) {
+  .video-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 55%;
+    padding-top: 0;
+  }
+}
+@media screen and (min-width: 50em) {
+  .video-container {
+    padding-bottom: 53.25%;
+  }
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .testimonial {
   padding-top: 84px;
   padding-top: 7rem;

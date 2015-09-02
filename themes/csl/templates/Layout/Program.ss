@@ -97,7 +97,7 @@
 					<div class="speakers__list">
 						<% loop Speakers %>
 							<div class="speakers__item">
-								<div class="speakers__cover">$Thumbnail.setWidth(270)</div>
+								<div class="speakers__cover">$Thumbnail.setWidth(368)</div>
 								<h3>$Title</h3>
 								$Description
 							</div>
@@ -150,7 +150,7 @@
 							<% loop ProgramFees %>
 								<tr>
 									<td>$Name</td>
-									<td class="bold">$Cost</td>
+									<td class="bold"><% if Link %><a href="$Link"><% end_if %>$Cost<% if Link %><a href="$Link"></a><% end_if %></td>
 								</tr>
 							<% end_loop %>
 						</table>
@@ -170,7 +170,7 @@
 							<% loop ProgramDates %>
 								<tr>
 									<td>$Name</td>
-									<td class="bold">$Date</td>
+									<td class="bold"><% if Link %><a href="$Link"><% end_if %>$Date<% if Link %><a href="$Link"></a><% end_if %></td>
 								</tr>
 							<% end_loop %>
 						</table>

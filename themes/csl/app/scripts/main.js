@@ -42,6 +42,7 @@
 	var $offsetContainer = $('.is-offset');
 	var $navToggle = $('.nav__badge');
 	var $contentNav = $('.content');
+	var $contentVideos = $('.content iframe, .content object, .content embed');
 	var $pre_footer = $('.pre-footer > div');
 	var $features = $('.features__block');
 	var $news_title = $('.news__item h3');		
@@ -68,6 +69,7 @@
 	var $dob_year = $('select.dob-year');
 	var $dob_day = $('select.dob-day');
 	
+	
 	// Nav togggle
 	if($navToggle.length > 0) {
 		$navToggle.click(function(){
@@ -89,6 +91,19 @@
 		});
 				
 	}
+	
+	
+	// set up video frames
+    $contentVideos.each(function() {
+        var $this = $(this);
+        var videoRatio = $this.outerHeight() / $this.outerWidth();
+        console.log(videoRatio);
+
+        if ($this.parent().is('p')) {
+            $this.unwrap();
+        }
+        $this.wrap('<div class="video-container" style="padding-bottom: ' + (videoRatio * 100) + '%"></div>');
+    });
 	
 	// Anchor spots
 	if ($indexnav.length > 0) {	
@@ -303,10 +318,10 @@
 	if (($header_section.length > 0) && ($indexnav.length > 0) ) {
 		var firstScrollTop = $header_section.outerHeight();
 		var lastSection = '#' + $indexnav.find('.indexnav__item:last-child').children('a').attr('data-target');
-		var lastScrollTop = $(lastSection).offset().top; 
+		var lastScrollTop = $(lastSection).offset().top + $(lastSection).height(); 
 		$(window).scroll(function(event){
 			var st = jQuery(this).scrollTop();
-			if (st > firstScrollTop && st < lastScrollTop){
+			if (st > firstScrollTop && st < lastScrollTop*0.96){
 				$indexnav.addClass('fixed');
 			} else {
 				$indexnav.removeClass('fixed');

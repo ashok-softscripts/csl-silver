@@ -1,7 +1,8 @@
 <?php class ProgramFees extends DataObject {
     private static $db = array(
-        'Name' => 'Varchar',
-		'Cost' => 'Varchar',
+        'Name' => 'Varchar(255)',
+		'Cost' => 'Varchar(255)',
+		'Link' => 'Varchar(255)',
         'SortOrder'=>'Int'
     );
 

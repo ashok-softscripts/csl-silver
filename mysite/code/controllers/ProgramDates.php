@@ -1,7 +1,8 @@
 <?php class ProgramDates extends DataObject {
 	private static $db = array(
-		'Name' => 'Varchar',
-		'Date' => 'Varchar',
+		'Name' => 'Varchar(255)',
+		'Date' => 'Varchar(255)',		
+		'Link' => 'Varchar(255)',
 		'SortOrder'=>'Int'
 	);
 
